@@ -1,0 +1,12 @@
+@claimcenter
+Feature: Searching recovery in claim center
+    As a user, I want to Create and Search Recovery in Claim Center
+
+    @search_recovery
+    Scenario: Searching recovery in claim center
+        Given the user logs into the claims center
+        When the user loads data "defaultDataSet" from json "SearchRecoveryCreationTestData"
+        And the user creates new FNOL
+        And the user search with claim number
+        And the user creates the recovery
+        Then the user search the recovery

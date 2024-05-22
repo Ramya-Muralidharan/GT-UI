@@ -1,0 +1,83 @@
+[
+  {
+    "description": "Feature: View Claim Summary",
+    "elements": [
+      {
+        "id": "ScenarioView Claim Summary;Scenario: Viewing the summary of an claim",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Viewing the summary of an claim",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\RasagnaYadavVanga\\OneDrive - ValueMomentum, Inc\\Documents\\GT_UI_New\\GT_UI_New\\behavior\\features\\gw\\cc\\ViewClaimSummary.feature:1:0"
+            },
+            "name": "Scenario: Viewing the summary of an claim",
+            "result": {
+              "duration": 89515,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Scenario: Viewing the summary of an claim</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      }
+    ],
+    "id": "Feature: View Claim Summary",
+    "keyword": "Feature",
+    "line": 0,
+    "metadata": {
+      "app": {},
+      "browser": {
+        "name": "chrome",
+        "version": "124.0.0.0"
+      },
+      "device": "Windows",
+      "platform": {
+        "name": "windows",
+        "version": "10"
+      }
+    },
+    "name": "View Claim Summary",
+    "runInfo": {
+      "endTime": "2024-05-21T08:58:03.965Z",
+      "passed": 1,
+      "startTime": "2024-05-21T08:56:34.400Z",
+      "testCount": 1,
+      "userAgents": [
+        "Chrome 124.0.0.0 / Windows 10"
+      ],
+      "warnings": []
+    },
+    "skipped": false,
+    "tags": [
+      {
+        "line": 0,
+        "name": "@view"
+      },
+      {
+        "line": 0,
+        "name": "@claim"
+      },
+      {
+        "line": 0,
+        "name": "@summary"
+      },
+      {
+        "line": 0,
+        "name": "@viewing"
+      }
+    ],
+    "uri": "C:\\Users\\RasagnaYadavVanga\\OneDrive - ValueMomentum, Inc\\Documents\\GT_UI_New\\GT_UI_New\\behavior\\features\\gw\\cc\\ViewClaimSummary.feature:1"
+  }
+]

@@ -1,0 +1,18 @@
+{
+    "defaultDataSet":{
+        "Address1": "4700 S MOLSTEADS LN",
+        "State": "Idaho",
+        "ZIPCode": "83814-5113",
+        "AddressType": "Billing",
+        "Organization": "a",
+        "OrganizationType": "Common ownership",
+        "OutsideObjectsAndStructuresLimit": "1000",
+        "OutsideObjectsAndStructuresDeductible": "250",
+        "EachLossCausedBywindLimit": "2000",
+        "EachLossCausedBywindDeductible": "200",
+        "ContentsOfOtherStructuresLimit": "1%",
+        "ContentsOfOtherStructuresDeductible": "150",
+        "RenewalCode": "Renew - account consideration"
+       
+    }
+}

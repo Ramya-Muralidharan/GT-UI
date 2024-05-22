@@ -1,0 +1,44 @@
+{
+  roles : {
+    PC: [{
+      userrole: "superuser",
+      username: "ra",
+      password: "va"
+    },
+      {
+        userrole: "producer",
+        username: "",
+        password: ""
+      },
+      {
+        userrole: "underwriter",
+        username: "",
+        password: ""
+      }],
+    CC: [{
+      userrole: "superuser",
+      username: "vishwajit",
+      password: "guidewire"
+    },
+      {
+        userrole: "adjuster",
+        username: "",
+        password: ""
+      },
+      {
+        userrole: "supervisor",
+        username: "",
+        password: ""
+      }],
+    BC: [{
+      userrole: "superuser",
+      username: "vishwajit",
+      password: "guidewire"
+    }],
+    CM: [{
+      userrole: "superuser",
+      username: "",
+      password: ""
+    }]
+  }
+}
