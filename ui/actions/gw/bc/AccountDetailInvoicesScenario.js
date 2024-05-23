@@ -30,4 +30,9 @@ export class AccountDetailInvoicesScenario{
         const actualBillDateValue = await accountDetailInvoices_New.accountDetailInvoices_BilledDateUpdated.component.innerText;
         await t.expect(actualBillDateValue).eql(dateFunction(billDateValue, 'MM/DD/YYYY'));
     }
+
+    async validateInvoiceResentMessageDisplayed(){
+        const accountDetailInvoices = new AccountDetailInvoices()
+        await accountDetailInvoices.accountDetailInvoicesScreenAccountDetailInvoices_InvoiceSentAlertBar.isAvailable();
+    }
 }
