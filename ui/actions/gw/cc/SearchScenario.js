@@ -3,6 +3,7 @@ import { SimpleClaimSearch } from "../../../pages/gw/generated/claimsolutions/pa
 import {SimpleClaimSearch_New} from "./scenarioPages/search/claimSearchesGroup/SimpleCliamSearch_New"
 import world from "../../../util/gw/world"
 import { t, Selector} from "testcafe"
+import { searchTableRecord } from "../../../util/gw/helper"
  
 let searchTabBar = new SearchTabBar()
 let simpleClaimSearch = new SimpleClaimSearch()
@@ -34,18 +35,6 @@ export class SearchScenario{
 
     async validatePolicySearchResult()
     {
-        await t.wait(1000)     
-        const tableRows = Selector('table').nth(0).find('tr');
-        const rowCount = await tableRows.count;
-        for (let i = 1; i < rowCount; i++) {
-            const cellText = await tableRows.nth(i).find('td').nth(3).textContent;
-            if (cellText.includes(world.dataMap.get('ClaimNo'))) {
-                await t.wait(2000)
-                await t.click(tableRows.nth(i).find('td').nth(3));
-                await t.wait(2000)
-                console.log('On Claim Summary Screen')  
-                break;    
-            }      
-        }   
+        searchTableRecord(3,world.dataMap.get('ClaimNo'))  
     }
 }

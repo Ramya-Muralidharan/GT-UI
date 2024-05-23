@@ -1,5 +1,4 @@
 const { When, Then } = require("@cucumber/cucumber")
-import { t } from "testcafe";
 import world from "../../../../ui/util/gw/world"
 import { NavigationScenario } from "../../../../ui/actions/gw/cc/NavigationScenario";
 import { SearchScenario } from "../../../../ui/actions/gw/cc/SearchScenario";

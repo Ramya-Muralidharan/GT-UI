@@ -4,7 +4,6 @@ export class ReadTestDataFiles {
         //reading and storing the data in a jsonData
         let jsonData
         jsonData = require(`../../testdata/${jsonFileName}.json`)
-        console.log("The loaded data is: ", '\n' + jsonData);
 
         let testCaseDataMap = new Map()
         //loading test data
