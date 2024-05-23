@@ -1,12 +1,13 @@
 @claimcenter
 
 Feature: Add Activity in Claim center
-    As a user I want to perform Add Activity transaction in claim center
+    As a user, I want to perform Add Activity transaction in claim center
 
-    @add_activity
-    Scenario: Adding the activity from the account level
-        Given the user logs into the policy center as superuser
-        When the user loads the data "defaultDataSet" from json "AddActivityTestData"
-        And the user creates personal account
-        And the user performs add activity transaction in account level
-        Then the add activity should be successful
+    @add_activity_cc
+    Scenario: Adding the activity
+        Given the user logs into the claims center
+        When the user loads the data "defaultDataSet" from json "FNOLTestData"
+        And the user creates new FNOL
+        And the user search with claim number
+        And the user performs add activity
+        Then the add activity is added successfully

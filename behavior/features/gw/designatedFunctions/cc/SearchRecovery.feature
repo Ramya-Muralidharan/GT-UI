@@ -9,4 +9,4 @@ Feature: Searching recovery in claim center
         And the user creates new FNOL
         And the user search with claim number
         And the user creates the recovery
-        Then the user search the recovery
+        Then the recovery is added successfully

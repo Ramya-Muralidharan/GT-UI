@@ -8,4 +8,4 @@ As a user I want to View Account Summary in policy center
       When the user loads the data "defaultDataSet" from json "PersonalLineAccountTestData"
       And the user creates personal account
       And the user search with an account number
-      Then the view account summary details should load
+      Then the view account summary details are loaded
