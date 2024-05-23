@@ -17,8 +17,8 @@
       }],
     CC: [{
       userrole: "superuser",
-      username: "vishwajit",
-      password: "guidewire"
+      username: "ra",
+      password: "va"
     },
       {
         userrole: "adjuster",
