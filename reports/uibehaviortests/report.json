@@ -1,12 +1,12 @@
 [
   {
-    "description": "Feature: Searching for an account",
+    "description": "Feature: Searching for a policy",
     "elements": [
       {
-        "id": "ScenarioSearching for an account;Scenario: Search for an existing commercial account",
+        "id": "ScenarioSearching for a policy;Scenario: Seaching with policy from Search Claims",
         "keyword": "Scenario",
         "line": 0,
-        "name": "Search for an existing commercial account",
+        "name": "Seaching with policy from Search Claims",
         "skipped": false,
         "sourceLine": "undefined",
         "status": "passed",
@@ -15,16 +15,16 @@
             "hidden": false,
             "keyword": ">",
             "match": {
-              "location": "C:\\Users\\RamyaMuralidharan\\GT_UI\\GT\\behavior\\features\\gw\\pc\\SearchAccount.feature:1:0"
+              "location": "C:\\Users\\RamyaMuralidharan\\GT_UI\\GT\\behavior\\features\\gw\\cc\\SearchPolicy.feature:1:0"
             },
-            "name": "Scenario: Search for an existing commercial account",
+            "name": "Scenario: Seaching with policy from Search Claims",
             "result": {
-              "duration": 68377,
+              "duration": 62365,
               "status": "passed"
             },
             "tags": [],
             "text": [
-              "<a href=\"#\">Scenario: Search for an existing commercial account</a>"
+              "<a href=\"#\">Scenario: Seaching with policy from Search Claims</a>"
             ]
           }
         ],
@@ -33,7 +33,7 @@
         "uri": ""
       }
     ],
-    "id": "Feature: Searching for an account",
+    "id": "Feature: Searching for a policy",
     "keyword": "Feature",
     "line": 0,
     "metadata": {
@@ -48,11 +48,11 @@
         "version": "10"
       }
     },
-    "name": "Searching for an account",
+    "name": "Searching for a policy",
     "runInfo": {
-      "endTime": "2024-05-23T04:58:28.489Z",
+      "endTime": "2024-05-23T07:38:37.299Z",
       "passed": 1,
-      "startTime": "2024-05-23T04:57:20.066Z",
+      "startTime": "2024-05-23T07:37:34.899Z",
       "testCount": 1,
       "userAgents": [
         "Chrome 125.0.0.0 / Windows 10"
@@ -71,7 +71,15 @@
       },
       {
         "line": 0,
-        "name": "@account"
+        "name": "@policy"
+      },
+      {
+        "line": 0,
+        "name": "@seaching"
+      },
+      {
+        "line": 0,
+        "name": "@from"
       },
       {
         "line": 0,
@@ -79,13 +87,9 @@
       },
       {
         "line": 0,
-        "name": "@existing"
-      },
-      {
-        "line": 0,
-        "name": "@commercial"
+        "name": "@claims"
       }
     ],
-    "uri": "C:\\Users\\RamyaMuralidharan\\GT_UI\\GT\\behavior\\features\\gw\\pc\\SearchAccount.feature:1"
+    "uri": "C:\\Users\\RamyaMuralidharan\\GT_UI\\GT\\behavior\\features\\gw\\cc\\SearchPolicy.feature:1"
   }
 ]
