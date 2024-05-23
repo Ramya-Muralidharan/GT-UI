@@ -1,5 +1,3 @@
-import { Selector } from "testcafe";
-import { t } from "testcafe";
 import { PolicyTabBar_New } from "./scenarioPages/navigation/tabBar/PolicyTabBar_New.js";
 import { PolicyTabBar } from "../../../../ui/pages/gw/generated/policysolutions/pages/navigation/tabBar/PolicyTabBar.js";
 import { NextSubmissionWizard } from "../../../pages/gw/generated/policysolutions/pages/navigation/submissionWizard/NextSubmissionWizard.js";
@@ -51,5 +49,11 @@ async openPolicy(policyNumber) { //0530992437
     await searchTabBar_New.tabBarSearchTab.click()
     await searchTabBar.searchTabSearch_AccountSearch.click()
     console.log('On Search Accounts Screen')
+  }
+
+  async navigateSearchPolicyScreen(){
+    await searchTabBar_New.tabBarSearchTab.click()
+    await searchTabBar.searchTabSearch_PolicySearch.click()
+    console.log('On Search Policy Screen')
   }
 }
