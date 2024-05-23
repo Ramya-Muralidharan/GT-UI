@@ -13,6 +13,14 @@ When(/^the user changes the invoice billed date/, async () => {
     await accountDetailInvoicesScenario.setInvoiceDate(world.dataMap.get('InvoiceDate'));
 });
 
+When(/^the user resends invoice/, async () => {
+    await accountDetailInvoicesScenario.selectInvoiceRecord(world.dataMap.get('InvoiceStatus'));
+});
+
 Then(/^the user verifies invoice billed date is updated/, async () => {
     await accountDetailInvoicesScenario.validateBilledDate(world.dataMap.get('InvoiceDate'));
+});
+
+Then(/^the user verifies invoice resent confirmation message is displayed/, async () => {
+    await accountDetailInvoicesScenario.validateInvoiceResentMessageDisplayed();
 });
