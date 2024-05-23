@@ -1,16 +1,16 @@
 const { When, Then } = require("@cucumber/cucumber")
 import { t } from "testcafe";
 import { NavigationScenario } from "../../../../ui/actions/gw/pc/NavigationScenario";
-import { SearchPolicyScenario } from "../../../../ui/actions/gw/pc/SearchPolicyScenario"; 
+import { SearchScenario } from "../../../../ui/actions/gw/cc/SearchScenario"; 
 
 const navigationScenario = new NavigationScenario()
-const searchPolicyScenario = new SearchPolicyScenario()
+const searchScenario = new SearchScenario()
 
 When(/^the user searches for the policy with policy number/, async function () {
     await navigationScenario.navigateSearchPolicyScreen()
-    await searchPolicyScenario.searchWithPolicyNumber(t.ctx.PolicyNumber)
+    await searchScenario.searchWithPolicy(t.ctx.PolicyNumber)
 });
 
 Then(/^the policy details are loaded successfully/, async function () {
-    await searchPolicyScenario.verifyPolicyDetails()
+    await searchScenario.validatePolicySearchResult()
 });

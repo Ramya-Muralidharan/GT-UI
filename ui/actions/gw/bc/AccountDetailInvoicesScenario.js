@@ -7,6 +7,7 @@ const accountDetailInvoices_New = new AccountDetailInvoices_New();
 
 export class AccountDetailInvoicesScenario{
     async selectInvoiceRecord(invoiceStatus){
+
         const tableRows = Selector('table').nth(0).find('tr');
         const rowCount = await tableRows.count;
         for (let i = 0; i < rowCount; i++) {

@@ -1,4 +1,5 @@
 const moment = require('moment');
+import { t, Selector} from 'testcafe';
 
     //To generate date from current date in MMDDYYYY format
     export function dateFunction(noOfDays, dateFormat='MMDDYYYY') {
@@ -23,3 +24,20 @@ const moment = require('moment');
         }
         return randomString;
     }
+
+    //To click on a specific record in a table.
+    //This function by default considers first table in a page
+    export async function searchTableRecord(columnIndex, stringValue){
+        await t.wait(1000)     
+        const tableRows = Selector('table').nth(0).find('tr');
+        const rowCount = await tableRows.count;
+        for (let i = 1; i < rowCount; i++) {
+            const cellText = await tableRows.nth(i).find('td').nth(Number.parseInt(columnIndex)).textContent;
+            if (cellText.includes(stringValue)) {
+                await t.click(tableRows.nth(i).find('td').nth(Number.parseInt(columnIndex)));
+                await t.wait(2000)
+                break;    
+            }      
+        }   
+    
+}

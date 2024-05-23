@@ -1,6 +1,7 @@
 import {PolicySubmissionScenario} from "../../../../ui/actions/gw/pc/PolicySubmissionScenario"
 import world from "../../../../ui/util/gw/world"
 const { When, Then } = require('@cucumber/cucumber')
+
 const policySubmissionScenario = new PolicySubmissionScenario()
 
 When(/^the user bind the new submission/, async function (t) {

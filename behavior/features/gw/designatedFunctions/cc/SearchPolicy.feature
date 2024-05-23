@@ -5,6 +5,6 @@ Feature: Searching for a policy
     @SearchPolicy_002
     Scenario Outline: Seaching with policy from Search Claims
         Given the user logs into the claims center
-        When the user loads data "defaultDataSet" from json "SearchPolicyTestData"
+        When the user loads the data "defaultDataSet" from json "SearchPolicyTestData"
         And the user searches for the policy in Search Claims
         Then the claim details are loaded successfully

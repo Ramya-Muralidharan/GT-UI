@@ -5,7 +5,7 @@ Feature: Searching for a policy
     @SearchPolicy_001
     Scenario Outline: Seaching with policy from Search tab
         Given the user logs into the policy center as superuser
-        When the user loads data "defaultDataSet" from json "RenewalTestData"
+        When the user loads the data "defaultDataSet" from json "RenewalTestData"
         When the user creates commercial account
         And the user creates commercial policy
         And the user searches for the policy with policy number
