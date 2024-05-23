@@ -1,0 +1,4 @@
+{
+    "cucumberautocomplete.syncfeatures": "behavior/features/**/**/*.feature",
+    "cucumberautocomplete.steps": "behavior/steps/**/**/*.js"
+}
