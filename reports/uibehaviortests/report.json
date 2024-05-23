@@ -1,12 +1,12 @@
 [
   {
-    "description": "Feature: View Claim Summary",
+    "description": "Feature: Searching for an account",
     "elements": [
       {
-        "id": "ScenarioView Claim Summary;Scenario: Viewing the summary of an claim",
+        "id": "ScenarioSearching for an account;Scenario: Search for an existing commercial account",
         "keyword": "Scenario",
         "line": 0,
-        "name": "Viewing the summary of an claim",
+        "name": "Search for an existing commercial account",
         "skipped": false,
         "sourceLine": "undefined",
         "status": "passed",
@@ -15,16 +15,16 @@
             "hidden": false,
             "keyword": ">",
             "match": {
-              "location": "C:\\Users\\RasagnaYadavVanga\\OneDrive - ValueMomentum, Inc\\Documents\\GT_UI_New\\GT_UI_New\\behavior\\features\\gw\\cc\\ViewClaimSummary.feature:1:0"
+              "location": "C:\\Users\\RamyaMuralidharan\\GT_UI\\GT\\behavior\\features\\gw\\pc\\SearchAccount.feature:1:0"
             },
-            "name": "Scenario: Viewing the summary of an claim",
+            "name": "Scenario: Search for an existing commercial account",
             "result": {
-              "duration": 89515,
+              "duration": 68377,
               "status": "passed"
             },
             "tags": [],
             "text": [
-              "<a href=\"#\">Scenario: Viewing the summary of an claim</a>"
+              "<a href=\"#\">Scenario: Search for an existing commercial account</a>"
             ]
           }
         ],
@@ -33,14 +33,14 @@
         "uri": ""
       }
     ],
-    "id": "Feature: View Claim Summary",
+    "id": "Feature: Searching for an account",
     "keyword": "Feature",
     "line": 0,
     "metadata": {
       "app": {},
       "browser": {
         "name": "chrome",
-        "version": "124.0.0.0"
+        "version": "125.0.0.0"
       },
       "device": "Windows",
       "platform": {
@@ -48,14 +48,14 @@
         "version": "10"
       }
     },
-    "name": "View Claim Summary",
+    "name": "Searching for an account",
     "runInfo": {
-      "endTime": "2024-05-21T08:58:03.965Z",
+      "endTime": "2024-05-23T04:58:28.489Z",
       "passed": 1,
-      "startTime": "2024-05-21T08:56:34.400Z",
+      "startTime": "2024-05-23T04:57:20.066Z",
       "testCount": 1,
       "userAgents": [
-        "Chrome 124.0.0.0 / Windows 10"
+        "Chrome 125.0.0.0 / Windows 10"
       ],
       "warnings": []
     },
@@ -63,21 +63,29 @@
     "tags": [
       {
         "line": 0,
-        "name": "@view"
+        "name": "@searching"
       },
       {
         "line": 0,
-        "name": "@claim"
+        "name": "@for"
       },
       {
         "line": 0,
-        "name": "@summary"
+        "name": "@account"
       },
       {
         "line": 0,
-        "name": "@viewing"
+        "name": "@search"
+      },
+      {
+        "line": 0,
+        "name": "@existing"
+      },
+      {
+        "line": 0,
+        "name": "@commercial"
       }
     ],
-    "uri": "C:\\Users\\RasagnaYadavVanga\\OneDrive - ValueMomentum, Inc\\Documents\\GT_UI_New\\GT_UI_New\\behavior\\features\\gw\\cc\\ViewClaimSummary.feature:1"
+    "uri": "C:\\Users\\RamyaMuralidharan\\GT_UI\\GT\\behavior\\features\\gw\\pc\\SearchAccount.feature:1"
   }
 ]
