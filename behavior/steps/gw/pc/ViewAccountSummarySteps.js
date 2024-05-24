@@ -6,7 +6,7 @@ import { t } from "testcafe"
 const viewAccountSummaryScenario = new ViewAccountSummaryScenario()
 const navigationScenario = new NavigationScenario()
 
-When(/^the view account summary details should load/, async function () {
+When(/^the view account summary details are loaded/, async function () {
     await viewAccountSummaryScenario.viewAccountSummary();
 })
 

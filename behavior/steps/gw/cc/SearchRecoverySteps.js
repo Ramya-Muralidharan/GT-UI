@@ -5,6 +5,6 @@ import { t } from "testcafe"
 
 const searchRecoveryScenario = new SearchRecoveryScenario();
 
-Then(/^the user search the recovery/, async function (t) {
+Then(/^the recovery is added successfully/, async function (t) {
     await searchRecoveryScenario.searchRecovery(t.ctx.claimNo);
 });
