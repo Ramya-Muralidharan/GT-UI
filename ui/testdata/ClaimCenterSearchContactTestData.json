@@ -1,7 +1,6 @@
 {
     "defaultDataSet": {
         "Type": "Contact",
-        "Name/Last Name": "test"
-       
+        "Last Name": "test"  
     }
 }
