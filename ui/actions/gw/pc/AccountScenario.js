@@ -21,31 +21,6 @@ const organizationSearchPopup_New = new OrganizationSearchPopup_New()
 
 export class AccountScenario {
 
-    async personalAccountCreation() {
-        console.log("***Personal Line Account creation starts***")
-        await accountTabBar_New.accountTab.click()
-        await accountTabBar.accountTabAccountTab_NewAccount.click()
-        await newAccount.newAccountNewAccountScreenNewAccountSearchDVGlobalContactNameInputSetName.setValue(generateRandomStringFunction(3))
-        await newAccount.newAccountNewAccountScreenNewAccountSearchDVSearchAndResetInputSetSearchLinksInputSetSearch.click()
-        await newAccount.newAccountScreenNewAccountButton.click()
-        await newAccount.newAccountButtonNewAccount_Person.click()
-        await newAccount_New.CreateAccount_FirstName.setValue(world.dataMap.generateRandomStringFunction(5))
-        await newAccount_New.CreateAccount_LastName.setValue(world.dataMap.generateRandomStringFunction(5))
-        await newAccount_New.CreateAccount_State.selectOptionByLabel(world.dataMap.get('State'));
-        await newAccount_New.zipCode.setValue(world.dataMap.get('ZIPCode'));
-        await newAccount_New.CreateAccount_AddressLine1.setValue(world.dataMap.get('Address1'));
-        await newAccount_New.city.setValue(world.dataMap.get('City'));
-        await newAccount_New.CreateAccount_AddressType.click();
-        await newAccount_New.CreateAccount_AddressType.selectOptionByLabel(world.dataMap.get('AddressType'))
-        await organizationBranchSearchPopup_New.organizationTextBox.click();
-        //await organizationBranchSearchPopup_New.organizationTextBox.setValue(world.dataMap.get('Organization'));
-        await organizationBranchSearchPopup.organizationBranchSearchPopupOrganizationBranchSearchScreenOrganizationBranchSearchDVSearchAndResetInputSetSearchLinksInputSetSearch.click()
-        await organizationBranchSearchPopup_New.organizationSearchPopup_ProducerCode.selectFirstOptionWithValue()
-        await newAccount_New.CreateAccount_Update.click()
-        t.ctx.personalAccountNumber = await summary_New.accountDetailsDetailViewTile_DVAccountNumber.component.innerText
-        console.log("The newly created Personal Line Account Number is: " + t.ctx.personalAccountNumber)
-    }
-
     async createCommercialAccount() {
         await newAccount_New.company_Name.setValue(generateRandomStringFunction(5))
         await newAccount_New.acc_Search_btn.click()
@@ -64,8 +39,10 @@ export class AccountScenario {
         await newAccount_New.CreateNewAccount_Btn.click()
         //selecting Person
         await newAccount.newAccountButtonNewAccount_Person.click()
-        await newAccount_New.CreateAccount_FirstName.setValue(generateRandomStringFunction(5))
-        await newAccount_New.CreateAccount_LastName.setValue(generateRandomStringFunction(5))
+        t.ctx.FirstName = generateRandomStringFunction(5)
+        t.ctx.LastName = generateRandomStringFunction(5)
+        await newAccount_New.CreateAccount_FirstName.setValue(t.ctx.FirstName)
+        await newAccount_New.CreateAccount_LastName.setValue(t.ctx.LastName)
         await newAccount_New.acc_State_Dropdown.selectOptionByLabel(world.dataMap.get('State'))
         await newAccount_New.acc_zipcode_TxtBox.setValue(world.dataMap.get('ZIPCode'))
         await newAccount_New.acc_AddressLine1_TxtBox.setValue(world.dataMap.get('Address1'))
