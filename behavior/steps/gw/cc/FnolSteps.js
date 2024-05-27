@@ -16,7 +16,6 @@ When(/^the user creates new FNOL/, async function (t) {
 When(/^the user search with claim number/, async function (t) {
     await navigationScenario.openClaim(t.ctx.claimNo);
 });
-
  
 Then(/^the FNOL is added successfully/, async function () {
     await searchScenario.claimSimpleSearch()

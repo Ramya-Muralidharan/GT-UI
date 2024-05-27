@@ -6,18 +6,6 @@ import { t, Selector } from 'testcafe'
 const accountDetailInvoices_New = new AccountDetailInvoices_New();
 
 export class AccountDetailInvoicesScenario{
-    async selectInvoiceRecord(invoiceStatus){
-
-        const tableRows = Selector('table').nth(0).find('tr');
-        const rowCount = await tableRows.count;
-        for (let i = 0; i < rowCount; i++) {
-            const cellText = await tableRows.nth(i).find('td').nth(5).textContent;
-            if (cellText.includes(invoiceStatus)) {
-                await t.click(tableRows.nth(i).find('td').nth(5));
-                break;
-            }
-        }
-    }
 
     async setInvoiceDate(billDateValue){
         let accountDetailInvoices = new AccountDetailInvoices();

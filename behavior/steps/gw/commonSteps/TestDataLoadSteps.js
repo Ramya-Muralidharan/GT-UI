@@ -4,9 +4,10 @@ import { ReadTestDataFiles } from "../../../../ui/util/gw/ReadTestDataFiles";
  
 const readTestDataFiles = new ReadTestDataFiles()
  
-When(/^the user loads the data (.*) from json (.*)/, async function (t, stepArguments) {
-    const identifier = stepArguments[0].replace(/["]/g, "")
-    const jsonFileName = stepArguments[1].replace(/["]/g, "")
+When(/^the user loads (.*) data (.*) from json (.*)/, async function (t, stepArguments) {
+    const module = stepArguments[0].replace(/["]/g, "")
+    const identifier = stepArguments[1].replace(/["]/g, "")
+    const jsonFileName = stepArguments[2].replace(/["]/g, "")
     world.dataMap.clear()
-    world.dataMap = await readTestDataFiles.loadTestData(identifier, jsonFileName)
+    world.dataMap = await readTestDataFiles.loadTestData(identifier,module, jsonFileName)
 });

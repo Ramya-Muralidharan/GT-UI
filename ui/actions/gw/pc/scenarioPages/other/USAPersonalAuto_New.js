@@ -1,4 +1,5 @@
-import { PcfButton, PcfSelectInput, PcfTextInput, PcfCheckBox } from "@gtui/gt-ui-framework"
+import { PcfButton, PcfSelectInput, PcfTextInput } from "@gtui/gt-ui-framework"
+
 export class USAPersonalAuto_New {
     SubmissionWizard_LineStandardCoveragesTab = PcfButton('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-UALWizardStepGroup-UALUsaPersonalAutoScreen-UALUsaPersonalAutoPanelSet-LineStandardCoveragesTab')
     SubmissionWizard_AddPersonalVehicle = PcfButton('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-UALWizardStepGroup-UALPersonalVehicleScreen-UALPersonalVehicleListPanelSet-AddPersonalVehicle')

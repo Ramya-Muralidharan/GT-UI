@@ -203,13 +203,6 @@ export class PolicySubmissionScenario {
     await newSubmission.editPolicyTransaction_Btn.click()
   }
 
-  async renewalCovCp() {
-    await newSubmission.propertyLineCov_FluctuationinRawMaterialValues.click()
-    await newSubmission.propertyLineCov_FluctuationinRawMaterialValues_Limit.selectNthOption(1)
-    await newSubmission.propertyLineCov_FursJewelleryWatchesandPreciousStones.click()
-    await newSubmission.propertyLineCov_FursJewelleryWatchesandPreciousStones_Limit.selectNthOption(1)
-  }
-
   async polChangeQuoteIssue() {
     await newSubmission.Quote_Btn.click()
     await newSubmission.polChange_Issue_btn.click()

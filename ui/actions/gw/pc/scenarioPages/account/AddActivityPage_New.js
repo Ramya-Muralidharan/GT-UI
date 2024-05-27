@@ -1,5 +1,4 @@
 import { PcfButton, PcfComponent, PcfSelectInput } from "@gtui/gt-ui-framework";
-import { t, Selector } from 'testcafe';
 
 export class AddActivityPage_New {
     actionsMenu = PcfButton('#AccountFile-AccountFileMenuActions > div.gw-action--inner');

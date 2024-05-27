@@ -1,4 +1,3 @@
-import { PcfComponent } from '@gtui/gt-ui-framework';
 import { PcfTextInput } from '@gtui/gt-ui-framework';
 import { PcfSelectInput } from '@gtui/gt-ui-framework';
 import { PcfButton } from '@gtui/gt-ui-framework';

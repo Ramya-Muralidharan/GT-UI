@@ -1,7 +1,5 @@
 import { PcfSelectInput } from '@gtui/gt-ui-framework';
 import { PcfTextInput } from '@gtui/gt-ui-framework';
-import { PcfButton } from '@gtui/gt-ui-framework';
-import { PcfListView } from '@gtui/gt-ui-framework';
 
 export class OrganizationBranchSearchPopup_New {
 	organizationSearchPopup_ProducerCode=PcfSelectInput('#CreateAccount-CreateAccountScreen-CreateAccountDV-ProducerSelectionInputSet-ProducerCode')

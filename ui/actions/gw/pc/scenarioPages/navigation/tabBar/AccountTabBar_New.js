@@ -1,5 +1,4 @@
-import { PcfComponent,PcfButton,PcfTextInput } from '@gtui/gt-ui-framework';
-import { Selector } from 'testcafe';
+import { PcfButton,PcfTextInput } from '@gtui/gt-ui-framework';
 
 export class AccountTabBar_New {
 	accountTab = PcfButton('#TabBar-AccountTab > div.gw-action--expand-button > div')

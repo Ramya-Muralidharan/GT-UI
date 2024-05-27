@@ -1,9 +1,6 @@
-import { PcfComponent } from '@gtui/gt-ui-framework';
 import { PcfTextInput } from '@gtui/gt-ui-framework';
-import { PcfSelectInput } from '@gtui/gt-ui-framework';
 import { PcfButton } from '@gtui/gt-ui-framework';
-import { PcfListView } from '@gtui/gt-ui-framework';
-import { PcfCheckBox } from '@gtui/gt-ui-framework';
+
 
 export class OrganizationSearchPopup_New {
 	PolicyDropDowmBtn = PcfButton('#TabBar-PolicyTab > div.gw-action--expand-button > div')

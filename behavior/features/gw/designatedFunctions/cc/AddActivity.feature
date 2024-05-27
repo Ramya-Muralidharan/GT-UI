@@ -6,8 +6,8 @@ Feature: Add Activity in Claim center
     @add_activity_cc
     Scenario: Adding the activity
         Given the user logs into the claims center
-        When the user loads the data "defaultDataSet" from json "FNOLTestData"
+        When the user loads "cc" data "defaultDataSet" from json "FNOLTestData"
         And the user creates new FNOL
         And the user search with claim number
-        And the user performs add activity
+        And the user adds an activity
         Then the add activity is added successfully

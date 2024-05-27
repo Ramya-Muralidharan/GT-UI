@@ -1,4 +1,4 @@
-const{ Given, When,Then} = require("@cucumber/cucumber");
+const{Then} = require("@cucumber/cucumber");
 import {ViewClaimSummaryScenario} from '../../../../ui/actions/gw/cc/ViewClaimSummaryScenario.js'
 import {ClaimMenuLinks} from '../../../../ui/pages/gw/generated/claimsolutions/pages/navigation/menuLinks/ClaimMenuLinks.js'
 

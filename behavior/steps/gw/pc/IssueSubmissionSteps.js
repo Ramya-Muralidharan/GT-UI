@@ -1,4 +1,4 @@
-import { PolicySubmissionScenario} from "../../../../ui/actions/gw/pc/PolicySubmissionScenario"
+import { PolicySubmissionScenario } from "../../../../ui/actions/gw/pc/PolicySubmissionScenario"
 import world from "../../../../ui/util/gw/world"
 
 const { When, Then } = require('@cucumber/cucumber')
@@ -20,8 +20,8 @@ When(/^the user issue the new submission/, async function (t) {
     await policySubmissionScenario.issuePolicy()
     await policySubmissionScenario.verifyIssue()
     await policySubmissionScenario.viewSubmission()
-}) 
+})
 
 Then(/^the issue policy should be successful/, async function (t, stepArguments) {
- await policySubmissionScenario.saveIssuedPolicy()
+    await policySubmissionScenario.saveIssuedPolicy()
 })

@@ -4,10 +4,10 @@ import { SearchContactScenario} from "../../../../ui/actions/gw/cc/SearchContact
 
 const searchContactScenario = new SearchContactScenario();
 
-When(/^the user search the contact/, async function (t) {
+When(/^the user search the contact/, async function () {
     await searchContactScenario.searchContact()
 });
 
-Then(/^the search contact details are loaded/, async function (t) {
+Then(/^the search contact details are loaded/, async function () {
     await searchContactScenario.searchValidation();
 });

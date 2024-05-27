@@ -18,10 +18,7 @@ export class AddNoteScenario {
     }
 
     async validateNote() {
-        t.ctx.addnote = await notes_New.noteAdded.component.textContent;
-        console.log('Activity is added successfully:', t.ctx.addnote)
-        await t.expect(t.ctx.addnote).eql('General')
-
+        await t.expect(await notes_New.noteAdded.component.textContent).eql('General')
     }
 }
 

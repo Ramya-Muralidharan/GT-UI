@@ -1,4 +1,4 @@
-import { PcfButton, PcfComponent, PcfSelectInput } from '@gtui/gt-ui-framework';
+import { PcfComponent, PcfSelectInput } from '@gtui/gt-ui-framework';
 
 export class ClaimMenuActions_New {
     otherTabRecovery= PcfComponent('#Claim-ClaimMenuActions-ClaimMenuActions_NewTransaction-ClaimMenuActions_NewOtherTrans')
