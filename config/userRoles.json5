@@ -2,8 +2,8 @@
   roles : {
     PC: [{
       userrole: "superuser",
-      username: "ra",
-      password: "va"
+      username: "sudharsan",
+      password: "guidewire"
     },
       {
         userrole: "producer",
@@ -17,8 +17,8 @@
       }],
     CC: [{
       userrole: "superuser",
-      username: "ra",
-      password: "va"
+      username: "sudharsan",
+      password: "guidewire"
     },
       {
         userrole: "adjuster",

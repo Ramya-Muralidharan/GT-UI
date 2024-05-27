@@ -9,7 +9,7 @@ const navigationScenario = new NavigationScenario()
 const searchAccountScenario = new SearchAccountScenario()
 const accountSummaryScenario = new AccountSummaryScenario()
 
-When(/^the user searches for the account with account number/, async function () {
+When(/^the user searches for an account with account number/, async function () {
     await navigationScenario.navigateSearchAccountScreen()
     await searchAccountScenario.searchWithAccountNumber()
 });

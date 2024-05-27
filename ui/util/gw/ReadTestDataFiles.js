@@ -1,9 +1,9 @@
 export class ReadTestDataFiles {
 
-    async loadTestData(testCaseID, jsonFileName) {
+    async loadTestData(testCaseID, module, jsonFileName) {
         //reading and storing the data in a jsonData
         let jsonData
-        jsonData = require(`../../testdata/${jsonFileName}.json`)
+        jsonData = require(`../../testdata/${module}/${jsonFileName}.json`)
 
         let testCaseDataMap = new Map()
         //loading test data

@@ -1,10 +1,8 @@
 import { PolicySearch } from '../../../pages/gw/generated/policysolutions/pages/search/PolicySearch';
-import { t, Selector } from 'testcafe'
-import { Summary } from "../../../pages/gw/generated/policysolutions/pages/account/Summary";
+import { t } from 'testcafe'
 import { Summary_New } from './scenarioPages/account/Summary_New';
 
 const policySearch = new PolicySearch()
-const summary = new Summary()
 const summary_New = new Summary_New()
 
 export class SearchPolicyScenario {
@@ -17,6 +15,4 @@ export class SearchPolicyScenario {
     async verifyPolicySummaryHeader() {
         await t.expect((summary_New.policySummaryHeader).component.exists).ok();
     }
-
-
 }
