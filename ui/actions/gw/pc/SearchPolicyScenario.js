@@ -15,6 +15,4 @@ export class SearchPolicyScenario {
     async verifyPolicySummaryHeader() {
         await t.expect((summary_New.policySummaryHeader).component.exists).ok();
     }
-
-
 }

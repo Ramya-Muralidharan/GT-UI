@@ -5,8 +5,6 @@ const newActivity_New = new NewActivity_New()
 
 export class AddActivityScenario {
     async activityValidation() {
-        t.ctx.subject = await newActivity_New.plannedActivities.component.textContent;
-        console.log('Activity is added successfully:', t.ctx.subject)
-        await t.expect(t.ctx.subject).eql('Autopilot - Action Required')
+        await t.expect(newActivity_New.plannedActivities.component.textContent).eql('Autopilot - Action Required')
     }
 }

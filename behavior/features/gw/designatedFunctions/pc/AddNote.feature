@@ -9,4 +9,4 @@ Feature: Add Note in policy center
         When the user loads "pc" data "defaultDataSet" from json "PolicyCenterAddNoteTestData"
         And the user creates personal account
         And the user adds the note
-        And the add note should be successful
+        Then the add note should be successful

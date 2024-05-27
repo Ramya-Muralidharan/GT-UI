@@ -5,7 +5,7 @@ import {ClaimMenuLinks} from '../../../../ui/pages/gw/generated/claimsolutions/p
 const claimMenuLinks = new ClaimMenuLinks();
 const viewClaimSummaryScenario = new ViewClaimSummaryScenario()
 
-Then(/^the claim summary details are loaded/, async function (t) {
+Then(/^the claim summary details are loaded/, async function () {
 await claimMenuLinks.claim_ClaimSummaryGroupClaimSummaryGroup_ClaimStatus.click()
 await viewClaimSummaryScenario.viewClaimSummary()
 });

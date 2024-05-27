@@ -3,7 +3,7 @@ Feature: Searching for a policy
     As a user I want to search with policy from Search tab
 
     @SearchPolicy_pc
-    Scenario Outline: Seaching with policy from Search tab
+    Scenario: Seaching with policy from Search tab
         Given the user logs into the policy center as superuser
         When the user loads "pc" data "defaultDataSet" from json "RenewalTestData"
         When the user creates commercial account

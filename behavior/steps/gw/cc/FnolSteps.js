@@ -7,13 +7,13 @@ const fnolScenario = new FnolScenario()
 const searchScenario = new SearchScenario()
 const navigationScenario = new NavigationScenario()
  
-When(/^the user creates new FNOL/, async function (t) {
+When(/^the user creates new FNOL/, async function () {
     await navigationScenario.navigateToNewClaimWizard()
     await fnolScenario.newFnolCreation()
     await fnolScenario.readClaimNumber()  
 });
 
-When(/^the user search with claim number/, async function (t) {
+When(/^the user search with claim number/, async function () {
     await navigationScenario.openClaim(t.ctx.claimNo);
 });
  

@@ -1,6 +1,6 @@
 @claimcenter
 Feature: Searching for a policy
-    As a user I want to for a policy in Claim center
+    As a user, I want to search for a policy in Claim center
 
     @SearchPolicy_cc
     Scenario Outline: Seaching with policy from Search Claims

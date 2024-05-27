@@ -8,7 +8,7 @@ const { When, Then } = require("@cucumber/cucumber")
 const addActivitypage_New = new AddActivityPage_New()
 const addActivityScenario = new AddActivityScenario()
  
-When(/^the user performs add activity transaction in account level/, async function () {
+When(/^the user performs add activity transaction/, async function () {
     await addActivitypage_New.actionsMenu.click();
     await addActivitypage_New.newActivity.click();
     await addActivitypage_New.newActivity.click();

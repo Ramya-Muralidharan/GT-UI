@@ -8,5 +8,5 @@ Feature: Add Activity in policy center
         Given the user logs into the policy center as superuser
         When the user loads "pc" data "defaultDataSet" from json "AddActivityTestData"
         And the user creates personal account
-        And the user performs add activity transaction in account level
+        And the user performs add activity transaction
         Then the add activity should be successful
