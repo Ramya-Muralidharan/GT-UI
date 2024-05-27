@@ -1,4 +1,4 @@
-@search_policy
+@policycenter
 Feature: Searching for a policy
     As a user I want to search with policy from Search tab
 

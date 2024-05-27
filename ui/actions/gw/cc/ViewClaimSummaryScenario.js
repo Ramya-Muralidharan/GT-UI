@@ -1,7 +1,9 @@
 import { ClaimStatus } from "../../../../ui/pages/gw/generated/claimsolutions/pages/claim/claimSummaryGroup/ClaimStatus";
-import { t } from 'testcafe'
+import { ClaimSummary_New } from "./scenarioPages/claim/claimSummaryGroup/ClaimSummary_New";
+import { t, Selector} from 'testcafe'
 
 const claimStatus = new ClaimStatus()
+const claimSummary_New = new ClaimSummary_New()
 
 export class ViewClaimSummaryScenario {
     async viewClaimSummary() {
@@ -10,6 +12,9 @@ export class ViewClaimSummaryScenario {
         console.log("Loss Type is:" + t.ctx.LossType)
         console.log("Claim Status is:" + t.ctx.Claimstatus)
         await t.expect(t.ctx.Claimstatus).eql('Open')
-
     }
+
+    async verifySummaryHeader(){
+        await t.expect((claimSummary_New.summaryHeader).component.exists).ok();
+        }
 }

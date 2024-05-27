@@ -32,7 +32,7 @@
       }],
     BC: [{
       userrole: "superuser",
-      username: "vishwajit",
+      username: "sudharsan",
       password: "guidewire"
     }],
     CM: [{

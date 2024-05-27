@@ -1,6 +1,6 @@
 const{When,Then} = require("@cucumber/cucumber")
 import { FnolScenario } from "../../../../ui/actions/gw/cc/FNOLScenario";
-import { SearchScenario } from "../../../../ui/actions/gw/cc/searchScenario";
+import { SearchScenario } from "../../../../ui/actions/gw/cc/SearchScenario";
 import { NavigationScenario } from "../../../../ui/actions/gw/cc/NavigationScenario";
  
 const fnolScenario = new FnolScenario()

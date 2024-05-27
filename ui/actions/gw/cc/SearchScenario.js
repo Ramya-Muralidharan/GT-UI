@@ -32,9 +32,4 @@ export class SearchScenario{
     await t.expect(insuredName).eql(t.ctx.insuredName)
     await t.expect(policyNumber).eql(world.dataMap.get('PolicyNumber'))
     }
-
-    async validatePolicySearchResult()
-    {
-        searchTableRecord(3,world.dataMap.get('ClaimNo'))  
-    }
 }

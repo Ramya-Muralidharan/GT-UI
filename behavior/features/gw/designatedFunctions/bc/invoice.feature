@@ -1,4 +1,4 @@
-@invoice
+@billingcenter
 Feature: Invoice in billing center
 As a user I want to update Invoices in Billing center
 

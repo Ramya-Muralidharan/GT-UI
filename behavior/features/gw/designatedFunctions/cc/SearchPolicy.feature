@@ -1,4 +1,4 @@
-@search_policy
+@claimcenter
 Feature: Searching for a policy
     As a user I want to for a policy in Claim center
 

@@ -1,11 +1,9 @@
-import {t, stepArguements} from "testcafe";
 import { AccountScenario } from '../../../../ui/actions/gw/pc/AccountScenario'
 import { NavigationScenario } from "../../../../ui/actions/gw/pc/NavigationScenario";
+const{ When } = require("@cucumber/cucumber")
 
 const accountScenario = new AccountScenario();
 const navigationScenario = new NavigationScenario();
-
-const{Given, When, Then} = require("@cucumber/cucumber")
  
 When(/^the user creates personal account/,async function(){
     await navigationScenario.navigateNewAccountScreen()
