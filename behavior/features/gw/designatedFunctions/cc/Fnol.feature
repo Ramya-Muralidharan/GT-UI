@@ -4,7 +4,7 @@ Feature: Capturing first notice of loss
 
     @fnol
     Scenario: Creating a new FNOL with commercial policy
-        Given the user logs into the claims center
+         Given the user logs into the claims center as "superuser"
         When the user loads "cc" data "defaultDataSet" from json "FNOLTestData"
         And the user creates new FNOL
         Then the FNOL is added successfully
