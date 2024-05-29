@@ -1,18 +1,16 @@
 const { Then, When } = require("@cucumber/cucumber");
-import { NoteCreationScenario } from '../../../../ui/actions/gw/cc/NoteCreationScenario'
+import { AddNoteScenario } from "../../../../ui/actions/gw/cc/AddNoteScenario"; 
 import { NavigationScenario } from "../../../../ui/actions/gw/cc/NavigationScenario";
 
-
-const noteCreationScenario = new NoteCreationScenario();
+const addNoteScenario = new AddNoteScenario();
 const navigationScenario = new NavigationScenario()
 
 When(/^the user creates the note/, async function (t) {
     await navigationScenario.openClaim(t.ctx.claimNo);
-    await noteCreationScenario.noteScenario();
+    await addNoteScenario.noteScenario();
 });
 
 Then(/^the note is added successfully/, async function (t) {
     await navigationScenario.openClaim(t.ctx.claimNo);
-    await noteCreationScenario.validateAddedNote();
-    
+    await addNoteScenario.validateAddedNote();    
 });  

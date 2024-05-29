@@ -10,4 +10,3 @@ Feature: Searching contact in policy center
         And the user searches contact in policycenter
         Then the contact details are loaded successfully
 
-        

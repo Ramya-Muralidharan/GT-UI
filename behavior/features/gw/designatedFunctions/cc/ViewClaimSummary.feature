@@ -2,9 +2,9 @@
 Feature: View Claim Summary
     As a user, I want to View Claim Summary Page
 
-    @ViewClaimSummary @search_claim
+    @view_claim_summary @search_claim
     Scenario: Viewing the summary of an claim
-         Given the user logs into the claims center as "superuser"
+        Given the user logs into the claims center as "superuser"
         When the user loads "cc" data "defaultDataSet" from json "CreateClaimAddNoteTestData"
         And the user creates new FNOL
         And the user search with claim number

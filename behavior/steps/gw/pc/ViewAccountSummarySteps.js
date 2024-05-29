@@ -1,7 +1,6 @@
 const { Given, When, Then } = require("@cucumber/cucumber")
 import { ViewAccountSummaryScenario } from "../../../../ui/actions/gw/pc/ViewAccountSummaryScenario";
 import { NavigationScenario } from "../../../../ui/actions/gw/pc/NavigationScenario";
-import { t } from "testcafe"
 
 const viewAccountSummaryScenario = new ViewAccountSummaryScenario()
 const navigationScenario = new NavigationScenario()

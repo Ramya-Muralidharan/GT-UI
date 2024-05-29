@@ -18,7 +18,7 @@ const searchTabBar = new SearchTabBar()
 
 export class NavigationScenario {
 
-async openPolicy(policyNumber) { //0530992437
+async openPolicy(policyNumber) {
     await policyTabBar_New.tabBarPolicyTab.click()
     await policyTabBar.policyTabPolicyTab_PolicyRetrievalItem.setValue(policyNumber)
     await policyTabBar_New.tabBar_PolicyRetrievalItem_Button.click()

@@ -36,9 +36,9 @@
       password: "guidewire"
     }],
     CM: [{
-      userrole: "superuser",
-      username: "",
-      password: ""
+      userrole: "producer",
+      username: "sudharsan",
+      password: "guidewire"
     }]
   }
 }

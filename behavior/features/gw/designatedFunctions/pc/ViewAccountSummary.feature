@@ -1,6 +1,6 @@
 @policycenter
 Feature: creating an account in policy center
-As a user, I want to View Account Summary in policy center
+   As a user, I want to View Account Summary in policy center
 
    @view_account_summary
    Scenario: View Personal Account Summary
