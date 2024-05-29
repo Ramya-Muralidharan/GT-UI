@@ -13,6 +13,6 @@ When(/^the user searches for the policy with policy number/, async function () {
 });
 
 Then(/^the policy details are loaded successfully/, async function () {
-    await searchTableRecord(4, t.ctx.policyNumber)
+    await searchTableRecord(2, t.ctx.PolicyNumber)
     await searchPolicyScenario.verifyPolicySummaryHeader()
 });

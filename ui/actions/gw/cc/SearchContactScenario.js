@@ -15,10 +15,7 @@ export class SearchContactScenario {
         await addressBookSearch.addressBookSearchAddressBookSearchScreenAddressBookSearchDVNameInputSetGlobalContactNameInputSetName.setValue(world.dataMap.get('LastName'));
         await addressBookSearch.addressBookSearchAddressBookSearchScreenAddressBookSearchDVSearchAndResetInputSetSearchLinksInputSetSearch.click()
     }
-    async searchValidation() {
-        t.ctx.AddressBookTabBar_New = await addressBookTabBar_New.addressBookTabNameSearch.component.textContent
-        console.log("Contact search sucessfully" + t.ctx.addressBookTabBar_New)
-        await t.expect(t.ctx.AddressBookTabBar_New).eql('driver test')
-
+    async searchValidation() {        
+        await t.expect(addressBookTabBar_New.addressBookTabNameSearch.component.textContent).eql('driver test')
     }
 }

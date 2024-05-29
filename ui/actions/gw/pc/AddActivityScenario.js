@@ -5,9 +5,7 @@ const addActivityPage_New = new AddActivityPage_New()
 
 export class AddActivityScenario {
     async activityValidation() {
-        t.ctx.activityName = await addActivityPage_New.activitiesAdded.component.textContent;
-        console.log('Activity is added successfully:', t.ctx.activityName)
-        await t.expect(t.ctx.activityName).eql('Meet with Insured')
+        await t.expect(addActivityPage_New.activitiesAdded.component.textContent).eql('Meet with Insured')
     }
 
     async radioOptionMandatory(value) {

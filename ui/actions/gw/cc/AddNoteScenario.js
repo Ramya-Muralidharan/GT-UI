@@ -1,7 +1,7 @@
-import { ClaimNotes } from "../../../../ui/pages/gw/generated/claimsolutions/pages/claim/ClaimNotes.js";
-import { ClaimMenuLinks } from "../../../../ui/pages/gw/generated/claimsolutions/pages/navigation/menuLinks/ClaimMenuLinks.js";
-import { NewNoteWorksheet } from "../../../../ui/pages/gw/generated/claimsolutions/pages/other/NewNoteWorksheet.js";
-import { NoteCreation_New } from "../../../actions/gw/cc/scenarioPages/notes/NoteCreation_New.js"
+import { ClaimNotes } from "../../../pages/gw/generated/claimsolutions/pages/claim/ClaimNotes.js";
+import { ClaimMenuLinks } from "../../../pages/gw/generated/claimsolutions/pages/navigation/menuLinks/ClaimMenuLinks.js";
+import { NewNoteWorksheet } from "../../../pages/gw/generated/claimsolutions/pages/other/NewNoteWorksheet.js";
+import { NoteCreation_New } from "./scenarioPages/notes/NoteCreation_New.js"
 import world from "../../../util/gw/world.js"
 import { t, Selector } from "testcafe"
 
@@ -10,7 +10,7 @@ let claimMenuNotes = new ClaimMenuLinks();
 let newNoteWorkSheet = new NewNoteWorksheet();
 let noteCreation_New = new NoteCreation_New();
 
-export class NoteCreationScenario{
+export class AddNoteScenario{
     async noteScenario() {
         await claimMenuNotes.menuLinksClaim_ClaimNotes.click();
         await claimNotes.notesSearchScreenNotesSearchScreen_NewNote.click();

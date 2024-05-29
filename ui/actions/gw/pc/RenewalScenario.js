@@ -53,8 +53,7 @@ export class RenewalScenario {
     }
     
     async verifyRenewal() {
-        let titleText = await jobComplete_New.jobComplete_Title.component.innerText
-        await t.expect(titleText).eql("Renewal Renewing")
+        await t.expect(jobComplete_New.jobComplete_Title.component.innerText).eql("Renewal Renewing")
         console.log("Renewal is Successful")
     }
 
