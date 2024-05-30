@@ -7,6 +7,6 @@ When(/^the user performs add activity transaction/, async function () {
     await addActivityScenario.addActivity();
 });
   
-Then(/^the add activity should be successful/, async function (t) {
+Then(/^the add activity should be successful/, async function () {
   await addActivityScenario.activityValidation();
 });

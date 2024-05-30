@@ -1,5 +1,5 @@
 import { AddActivityPage_New } from "../../../../ui/actions/gw/pc/scenarioPages/account/AddActivityPage_New";
-import {t, Selector} from "testcafe"
+import {t} from "testcafe"
 import world from "../../../util/gw/world"
 
 const addActivityPage_New = new AddActivityPage_New()
