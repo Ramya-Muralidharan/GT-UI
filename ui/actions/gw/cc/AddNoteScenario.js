@@ -12,11 +12,11 @@ let noteCreation_New = new NoteCreation_New();
 
 export class AddNoteScenario{
     async noteScenario() {
-        await claimMenuNotes.menuLinksClaim_ClaimNotes.click();
+        await claimMenuNotes.menuLinksClaim_ClaimNotes.click(); 
         await claimNotes.notesSearchScreenNotesSearchScreen_NewNote.click();
         await newNoteWorkSheet.newNoteWorksheetNewNoteScreenNoteDetailDVTopic.selectOptionByLabel(world.dataMap.get('Topic'));
         await newNoteWorkSheet.newNoteWorksheetNewNoteScreenNoteDetailDVRelatedTo.selectOptionByLabel(world.dataMap.get('RelatedTO'));
-        await t.typeText(Selector("#NewNoteWorksheet-NewNoteScreen-NoteDetailDV-Body > div > textarea"),world.dataMap.get('Text'));
+        await t.typeText(newNoteWorkSheet.newNoteTextArea.component, world.dataMap.get('Text') );
         await newNoteWorkSheet.newNoteScreenUpdate.click()
     }
 

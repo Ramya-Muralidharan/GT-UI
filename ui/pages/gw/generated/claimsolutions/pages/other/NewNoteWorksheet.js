@@ -17,6 +17,7 @@ export class NewNoteWorksheet {
 	newNoteWorksheetNewNoteScreenNoteDetailDVTopic = PcfSelectInput('#NewNoteWorksheet-NewNoteScreen-NoteDetailDV-Topic');
 	newNoteScreenUpdate = PcfButton('#NewNoteWorksheet-NewNoteScreen-Update');
 	newNoteScreen_msgs = PcfButton('#NewNoteWorksheet-NewNoteScreen-_msgs');
+	newNoteTextArea= PcfComponent('#NewNoteWorksheet-NewNoteScreen-NoteDetailDV-Body > div > textarea')
 	newNoteWorksheetNewNoteWorksheet_UpLink = PcfButton('#NewNoteWorksheet-NewNoteWorksheet_UpLink');
 	newNoteWorksheet_Paging = PcfButton('#NewNoteWorksheet-_Paging');
 	newNoteWorksheet__crumb__ = PcfComponent('#NewNoteWorksheet-__crumb__');

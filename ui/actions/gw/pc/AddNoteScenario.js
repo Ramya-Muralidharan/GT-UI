@@ -13,7 +13,7 @@ export class AddNoteScenario {
         await accountMenuActions.accountFileMenuActions_CreateAccountFileMenuActions_NewNote.click()
         await notes_New.topicDropdown.selectOptionByLabel(world.dataMap.get("Topic"))
         await notes_New.securityLevelDropdown.selectOptionByLabel(world.dataMap.get("SecurityLevel"))
-        await t.typeText(Selector("#NewAccountNoteWorksheet-NewNoteScreen-NewNoteDV-Text > div > textarea"), world.dataMap.get("Text"))
+        await t.typeText(notes_New.textbox.component, world.dataMap.get("Text"))
         await notes_New.updateButton.click()
     }
 
