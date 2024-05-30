@@ -1,4 +1,4 @@
-import { PcfButton, PcfComponent, PcfSelectInput } from "@gtui/gt-ui-framework";
+import { PcfButton, PcfCheckBox, PcfComponent, PcfSelectInput } from "@gtui/gt-ui-framework";
 
 export class AddActivityPage_New {
     actionsMenu = PcfButton('#AccountFile-AccountFileMenuActions > div.gw-action--inner');
@@ -10,4 +10,6 @@ export class AddActivityPage_New {
     securityLevel = PcfSelectInput('#NewActivityWorksheet-NewActivityScreen-ActivityDetailNoteDV-SecurityLevel > div > div > select');
     okButton = PcfButton('#NewActivityWorksheet-NewActivityScreen-NewActivityScreen_UpdateButton > div');
     activitiesAdded = PcfComponent('#AccountFile_Summary-AccountSummaryDashboard-CurrentActivitiesAccountListViewTile-CurrentActivitiesAccountListViewTile_LV-0-Subject_button');
+    radioOptionMandatory = PcfComponent('#NewActivityWorksheet-NewActivityScreen-NewActivityDV-Mandatory span')
+    radioOptionRecurring= PcfComponent('#NewActivityWorksheet-NewActivityScreen-NewActivityDV-Mandatory span')
 }
