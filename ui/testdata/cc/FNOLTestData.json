@@ -11,7 +11,7 @@
         "City":"Pewaukee",
         "State": "Wisconsin"
     },
-    "createPolicy_01":{
+    "createActivity_01":{
         "PolicyNumber": "7407354463",
         "SearchCreatePolicy": "Create Unverified Policy",
         "Type":"Commercial Property",

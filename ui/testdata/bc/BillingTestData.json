@@ -4,12 +4,12 @@
         "InvoiceStatus": "Planned",
         "InvoiceDate": "+0"
     },
-    "Invoice_due_01": {
+    "invoiceDue_01": {
         "AccountNumber": "S000212121",
         "InvoiceStatus": "Planned",
         "InvoiceDate": "+0"
     },
-    "Invoice_billed_01": {
+    "invoiceBilled_01": {
         "AccountNumber": "S000212121",
         "InvoiceStatus": "Billed",
         "InvoiceDate": "+0"
