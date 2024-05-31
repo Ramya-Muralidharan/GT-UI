@@ -6,7 +6,7 @@ Feature: New Submission to Quote
         @quote_submission
         Scenario: Creating personal auto quote
                 Given the user logs into the policy center as "superuser"
-                When the user loads "pc" data "defaultDataSet" from json "NewSubmissionTestData"
+                When the user loads "pc" data "newSubmission_01" from json "NewSubmissionTestData"
                 And the user creates personal account
                 And the user quote the new submission
                 Then the quote policy should be successful

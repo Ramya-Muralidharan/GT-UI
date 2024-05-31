@@ -2,5 +2,9 @@
     "defaultDataSet": {
         "PolicyNumber": "7407354463",
         "ClaimNo": "000-00-000766"
+    },
+    "searchPolicy_01": {
+        "PolicyNumber": "7407354463",
+        "ClaimNo": "000-00-000766"
     }
 }

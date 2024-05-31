@@ -5,7 +5,7 @@ Feature: Searching recovery in claim center
     @search_recovery
     Scenario: Searching recovery in claim center
         Given the user logs into the claims center as "superuser"
-        When the user loads "cc" data "defaultDataSet" from json "SearchRecoveryCreationTestData"
+        When the user loads "cc" data "searchRecovery_01" from json "SearchRecoveryCreationTestData"
         And the user creates new FNOL
         And the user search with claim number
         And the user creates the recovery

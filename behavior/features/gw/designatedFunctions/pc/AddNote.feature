@@ -6,7 +6,7 @@ Feature: Add Note in policy center
     @add_note_pc
     Scenario: Adding the note from the account level
         Given the user logs into the policy center as "superuser"
-        When the user loads "pc" data "defaultDataSet" from json "PolicyCenterAddNoteTestData"
+        When the user loads "pc" data "addNote_01" from json "AddNoteTestData"
         And the user creates personal account
         And the user adds the note
         Then the add note should be successful

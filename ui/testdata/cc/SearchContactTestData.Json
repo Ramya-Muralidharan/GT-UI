@@ -2,5 +2,9 @@
     "defaultDataSet": {
         "Type": "Contact",
         "LastName": "test"  
+    },
+    "searchContact_01": {
+        "Type": "Contact",
+        "LastName": "test"  
     }
 }
