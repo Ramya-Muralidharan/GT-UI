@@ -14,10 +14,10 @@ When(/^the user resends invoice/, async () => {
     await searchTableRecord(5, world.dataMap.get('InvoiceStatus'))
 });
 
-Then(/^the user verifies invoice billed date is updated/, async () => {
+Then(/^the invoice billed date is updated/, async () => {
     await accountDetailInvoicesScenario.validateBilledDate(world.dataMap.get('InvoiceDate'));
 });
 
-Then(/^the user verifies invoice resent confirmation message is displayed/, async () => {
+Then(/^the invoice resent confirmation message is displayed/, async () => {
     await accountDetailInvoicesScenario.validateInvoiceResentMessageDisplayed();
 });

@@ -9,4 +9,4 @@ Feature: New Submission to Quote
                 When the user loads "pc" data "newSubmission_01" from json "NewSubmissionTestData"
                 And the user creates personal account
                 And the user quote the new submission
-                Then the quote policy should be successful
+                Then the quote is created successfully

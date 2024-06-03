@@ -18,7 +18,7 @@ When(/^the user quote the new submission/, async function (t) {
     await policySubmissionScenario.verifyQuote()
 }) 
 
-Then(/^the quote policy should be successful/, async function () {
+Then(/^the quote is created successfully/, async function () {
     await policySubmissionScenario.saveQuote()
 }) 
 
