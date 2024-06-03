@@ -7,7 +7,7 @@ const navigationScenario = new NavigationScenario()
 const renewalScenario = new RenewalScenario()
 const policySubmissionScenario = new PolicySubmissionScenario()
  
-When(/^the renewal should be successful/, async function () {
+When(/^the renewal is applied successfully/, async function () {
     await renewalScenario.verifyRenewal()
 })
  

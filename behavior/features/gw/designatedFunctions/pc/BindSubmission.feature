@@ -9,4 +9,4 @@ Feature: New Submission to Bind
         When the user loads "pc" data "newSubmission_01" from json "NewSubmissionTestData"
         And the user creates personal account
         And the user bind the new submission
-        Then the bind policy should be successful
+        Then the policy is bound successfully

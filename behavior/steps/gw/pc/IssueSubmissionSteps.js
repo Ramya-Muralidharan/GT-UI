@@ -22,6 +22,6 @@ When(/^the user issue the new submission/, async function () {
     await policySubmissionScenario.viewSubmission()
 })
 
-Then(/^the issue policy should be successful/, async function () {
+Then(/^the policy is issued/, async function () {
     await policySubmissionScenario.saveIssuedPolicy()
 })

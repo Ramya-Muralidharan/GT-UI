@@ -9,4 +9,4 @@ Feature: Add Activity in policy center
         When the user loads "pc" data "addActivity_01" from json "AddActivityTestData"
         And the user creates personal account
         And the user performs add activity transaction
-        Then the add activity should be successful
+        Then the activity is added successfully

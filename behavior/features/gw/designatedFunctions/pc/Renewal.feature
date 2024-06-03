@@ -9,4 +9,4 @@ Feature: Processing a renewal
         And the user creates commercial account
         And the user creates commercial policy
         And the user performs renewal transaction on the policy
-        Then the renewal should be successful
+        Then the renewal is applied successfully

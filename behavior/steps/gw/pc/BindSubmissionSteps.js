@@ -22,6 +22,6 @@ When(/^the user bind the new submission/, async function (t) {
     await policySubmissionScenario.viewSubmission()
 }) 
 
-Then(/^the bind policy should be successful/, async function (t, stepArguments) {
+Then(/^the policy is bound successfully/, async function (t, stepArguments) {
  await policySubmissionScenario.saveBindPolicy()
 })

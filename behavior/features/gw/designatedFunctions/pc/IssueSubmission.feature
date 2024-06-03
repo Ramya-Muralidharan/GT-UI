@@ -9,4 +9,4 @@ Feature: New Submission to Issue
         When the user loads "pc" data "newSubmission_01" from json "NewSubmissionTestData"
         And the user creates personal account
         And the user issue the new submission
-        Then the issue policy should be successful
+        Then the policy is issued
