@@ -1,5 +1,5 @@
-import { PcfComponent, PcfTextInput } from '@gtui/gt-ui-framework';
+import { PcfComponent} from '@gtui/gt-ui-framework';
 
 export class ClaimFinancialsChecksDetail_New {
-    checkDetailsHeader= PcfComponent('#ClaimFinancialsChecksDetail-ClaimFinancialsChecksDetailScreen-ttlBar')	
+    checkDetailsHeader = PcfComponent('#ClaimFinancialsChecksDetail-ClaimFinancialsChecksDetailScreen-ttlBar')
 }  

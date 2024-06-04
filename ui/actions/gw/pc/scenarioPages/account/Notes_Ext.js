@@ -1,7 +1,7 @@
-import { PcfComponent} from '@gtui/gt-ui-framework';
+import { PcfComponent } from '@gtui/gt-ui-framework';
 import { PcfSelectInput } from '@gtui/gt-ui-framework';
 import { PcfButton } from '@gtui/gt-ui-framework';
-import {Notes} from '../../../../../pages/gw/generated/policysolutions/pages/account/Notes'
+import { Notes } from '../../../../../pages/gw/generated/policysolutions/pages/account/Notes'
 
 export class Notes_Ext extends Notes {
     topicDropdown = PcfSelectInput("#NewAccountNoteWorksheet-NewNoteScreen-NewNoteDV-Topic")
