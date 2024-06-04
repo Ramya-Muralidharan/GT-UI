@@ -1,9 +1,9 @@
 import { AccountDetailInvoices } from '../../../../ui/pages/gw/generated/billingsolutions/pages/accountGroup/AccountDetailInvoices'
-import { AccountDetailInvoices_New } from '../../../../ui/actions/gw/bc/scenarioPages/navigation/AccountDetailInvoices_New'
+import { AccountDetailInvoices_Ext } from '../../../../ui/actions/gw/bc/scenarioPages/navigation/AccountDetailInvoices_Ext'
 import { dateFunction } from "../../../../ui/util/gw/helper"
 import { t} from 'testcafe'
 
-const accountDetailInvoices_New = new AccountDetailInvoices_New();
+const accountDetailInvoices_Ext = new AccountDetailInvoices_Ext();
 const accountDetailInvoices = new AccountDetailInvoices();
 
 export class AccountDetailInvoicesScenario{
@@ -16,7 +16,7 @@ export class AccountDetailInvoicesScenario{
     }
 
     async validateBilledDate(billDateValue){
-        await t.expect(accountDetailInvoices_New.accountDetailInvoices_BilledDateUpdated.component.innerText).eql(dateFunction(billDateValue, 'MM/DD/YYYY'));
+        await t.expect(accountDetailInvoices_Ext.accountDetailInvoices_BilledDateUpdated.component.innerText).eql(dateFunction(billDateValue, 'MM/DD/YYYY'));
     }
 
     async validateInvoiceResentMessageDisplayed(){
