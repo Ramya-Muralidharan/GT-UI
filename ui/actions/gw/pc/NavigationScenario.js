@@ -1,59 +1,54 @@
-import { PolicyTabBar_New } from "./scenarioPages/navigation/tabBar/PolicyTabBar_New.js";
-import { PolicyTabBar } from "../../../../ui/pages/gw/generated/policysolutions/pages/navigation/tabBar/PolicyTabBar.js";
+import { PolicyTabBar_Ext } from "./scenarioPages/navigation/tabBar/PolicyTabBar_Ext";
 import { NextSubmissionWizard } from "../../../pages/gw/generated/policysolutions/pages/navigation/submissionWizard/NextSubmissionWizard.js";
-import { AccountTabBar_New } from './scenarioPages/navigation/tabBar/AccountTabBar_New.js'
+import { AccountTabBar_Ext } from './scenarioPages/navigation/tabBar/AccountTabBar_Ext.js'
 import { Renewal_New } from "./scenarioPages/renewalWizard/Renewal_New.js";
-import { NewAccount_New } from "./scenarioPages/account/NewAccount_New.js";
-import { SearchTabBar } from "../../../pages/gw/generated/policysolutions/pages/navigation/tabBar/SearchTabBar.js";
-import { SearchTabBar_New } from "./scenarioPages/navigation/tabBar/SearchTabBar_New.js";
+import { NewAccount_Ext } from "./scenarioPages/account/NewAccount_Ext.js";
+import { SearchTabBar_Ext } from "./scenarioPages/navigation/tabBar/SearchTabBar_Ext.js";
 
-const policyTabBar = new PolicyTabBar()
-const policyTabBar_New = new PolicyTabBar_New()
+const policyTabBar_Ext = new PolicyTabBar_Ext()
 const nextSubmissionWizard = new NextSubmissionWizard()
-const accountTabBar_New = new AccountTabBar_New()
+const accountTabBar_Ext = new AccountTabBar_Ext()
 const renewal_New = new Renewal_New();
-const newAccount_New = new NewAccount_New();
-const searchTabBar_New = new SearchTabBar_New();
-const searchTabBar = new SearchTabBar()
+const newAccount_Ext = new NewAccount_Ext();
+const searchTabBar_Ext = new SearchTabBar_Ext();
 
 export class NavigationScenario {
 
-async openPolicy(policyNumber) {
-    await policyTabBar_New.tabBarPolicyTab.click()
-    await policyTabBar.policyTabPolicyTab_PolicyRetrievalItem.setValue(policyNumber)
-    await policyTabBar_New.tabBar_PolicyRetrievalItem_Button.click()
+  async openPolicy(policyNumber) {
+    await policyTabBar_Ext.tabBarPolicyTab.click()
+    await policyTabBar_Ext.policyTabPolicyTab_PolicyRetrievalItem.setValue(policyNumber)
+    await policyTabBar_Ext.tabBar_PolicyRetrievalItem_Button.click()
   }
 
   async clickNext() {
     await nextSubmissionWizard.submissionWizardNext.click()
   }
 
-  async openAccount(accountNumber)
-  {
-    await accountTabBar_New.accountTab.click();
-    await accountTabBar_New.accountSearch.setValue(accountNumber);
-    await accountTabBar_New.accountSearch_Button.click();
+  async openAccount(accountNumber) {
+    await accountTabBar_Ext.accountTab.click();
+    await accountTabBar_Ext.accountSearch.setValue(accountNumber);
+    await accountTabBar_Ext.accountSearch_Button.click();
   }
 
-  async renewalNext()  {
+  async renewalNext() {
     await renewal_New.NextRenewalWizard.click()
   }
 
   async navigateNewAccountScreen() {
     console.log("On Enter Account Information Screen")
-    await newAccount_New.account_dropdown.click()
-    await newAccount_New.acc_NewAccount.click()
+    await newAccount_Ext.account_dropdown.click()
+    await newAccount_Ext.acc_NewAccount.click()
   }
 
-  async navigateSearchAccountScreen(){
-    await searchTabBar_New.tabBarSearchTab.click()
-    await searchTabBar.searchTabSearch_AccountSearch.click()
+  async navigateSearchAccountScreen() {
+    await searchTabBar_Ext.tabBarSearchTab.click()
+    await searchTabBar_Ext.searchTabSearch_AccountSearch.click()
     console.log('On Search Accounts Screen')
   }
 
-  async navigateSearchPolicyScreen(){
-    await searchTabBar_New.tabBarSearchTab.click()
-    await searchTabBar.searchTabSearch_PolicySearch.click()
+  async navigateSearchPolicyScreen() {
+    await searchTabBar_Ext.tabBarSearchTab.click()
+    await searchTabBar_Ext.searchTabSearch_PolicySearch.click()
     console.log('On Search Policy Screen')
   }
 }
