@@ -1,11 +1,11 @@
-import { AccountsTabBar_New } from '../../../../ui/actions/gw/bc/scenarioPages/navigation/AccountsTabBar_New'
+import { AccountsTabBar_Ext } from '../../../../ui/actions/gw/bc/scenarioPages/navigation/AccountsTabBar_Ext'
 
-const accountsTabBar = new AccountsTabBar_New();
+const accountsTabBar_Ext = new AccountsTabBar_Ext();
 
 export class AccountsTabBarScenario {
     async openExistingAccount(accountNumber) {
-        await accountsTabBar.accountsTab_ExpandButton.click();
-        await accountsTabBar.accountSearch.setValue(accountNumber);
-        await accountsTabBar.accountSearch_Button.click();
+        await accountsTabBar_Ext.accountsTab_ExpandButton.click();
+        await accountsTabBar_Ext.accountSearch.setValue(accountNumber);
+        await accountsTabBar_Ext.accountSearch_Button.click();
     }
 }
