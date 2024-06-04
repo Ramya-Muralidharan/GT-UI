@@ -1,0 +1,10 @@
+{
+    "defaultDataSet": {
+        "ClaimNumber":"000-00-000554",
+        "Name": "TEST"       
+    },
+    "searchCheck_01": {
+        "ClaimNumber":"000-00-000554",
+        "Name": "TEST Auto"       
+    }
+}
