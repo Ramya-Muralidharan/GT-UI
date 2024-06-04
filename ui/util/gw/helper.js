@@ -9,7 +9,6 @@ import { t, Selector} from 'testcafe';
 
     //Splits the string and returns value based on index
     export function splitFunction(value, delimiter, index) {
-        console.log("b4" + value)
         var stringValue = value.split(delimiter);
         var splitValue = stringValue[index];
         return splitValue;
