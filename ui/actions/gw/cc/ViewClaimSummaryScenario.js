@@ -1,9 +1,9 @@
 import { ClaimStatus } from "../../../../ui/pages/gw/generated/claimsolutions/pages/claim/claimSummaryGroup/ClaimStatus";
-import { ClaimSummary_New } from "./scenarioPages/claim/claimSummaryGroup/ClaimSummary_New";
+import { ClaimSummary_Ext } from "./scenarioPages/claim/claimSummaryGroup/ClaimSummary_Ext";
 import { t } from 'testcafe'
 
 const claimStatus = new ClaimStatus()
-const claimSummary_New = new ClaimSummary_New()
+const claimSummary_Ext = new ClaimSummary_Ext()
 
 export class ViewClaimSummaryScenario {
     async viewClaimSummary() {
@@ -11,6 +11,6 @@ export class ViewClaimSummaryScenario {
     }
 
     async verifySummaryHeader() {
-        await t.expect((claimSummary_New.summaryHeader).component.exists).ok();
+        await t.expect((claimSummary_Ext.summaryHeader).component.exists).ok();
     }
 }
