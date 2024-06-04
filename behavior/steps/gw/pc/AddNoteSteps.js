@@ -7,6 +7,6 @@ When(/^the user adds the note/, async function () {
     await addNoteScenario.createNote()
 });  
  
-Then(/^the note is added successfully/, async function () {
+Then(/^the note is added successfully to account/, async function () {
     await addNoteScenario.validateNote()
 });

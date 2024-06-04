@@ -8,4 +8,4 @@ Feature: Adding note in claim center
         When the user loads "cc" data "createClaim_01" from json "AddNoteTestData"
         And the user creates new FNOL
         And the user creates the note
-        Then the note is added successfully
+        Then the note is added successfully to claim

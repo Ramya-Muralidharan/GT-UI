@@ -10,7 +10,7 @@ When(/^the user creates the note/, async function (t) {
     await addNoteScenario.noteScenario();
 });
 
-Then(/^the note is added successfully/, async function (t) {
+Then(/^the note is added successfully to claim/, async function (t) {
     await navigationScenario.openClaim(t.ctx.claimNo);
     await addNoteScenario.validateAddedNote();    
 });  
