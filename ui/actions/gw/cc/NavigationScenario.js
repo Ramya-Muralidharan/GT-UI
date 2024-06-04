@@ -1,16 +1,14 @@
-import { ClaimTabBar_New } from "../../../../ui/actions/gw/cc/scenarioPages/navigations/tabBar/ClaimTabBar_New"
-import { SearchTabBar_New } from "../pc/scenarioPages/navigation/tabBar/SearchTabBar_New"
-import { SearchTabBar } from "../../../pages/gw/generated/claimsolutions/pages/navigation/tabBar/SearchTabBar"
+import { ClaimTabBar_Ext } from "./scenarioPages/navigation/tabBar/ClaimTabBar_Ext"
+import { SearchTabBar_Ext } from "./scenarioPages/search/claimSearchesGroup/SearchTabBar_Ext"
 
-let claimTabBar_New = new ClaimTabBar_New()
-let searchTabBar_New = new SearchTabBar_New()
-let searchTabBar = new SearchTabBar()
+const claimTabBar_Ext = new ClaimTabBar_Ext()
+const searchTabBar_Ext = new SearchTabBar_Ext()
  
 export class NavigationScenario {
  
 async navigateToNewClaimWizard() {
-  await claimTabBar_New.tabBarClaimChevron.click()
-  await claimTabBar_New.claimTabClaimTab_FNOLWizard.click()
+  await claimTabBar_Ext.tabBarClaimChevron.click()
+  await claimTabBar_Ext.claimTabClaimTab_FNOLWizard.click()
   }
  
   async clickNext() {
@@ -19,14 +17,14 @@ async navigateToNewClaimWizard() {
 
   async openClaim(claimNumber)
   {
-    await claimTabBar_New.tabBarClaimChevron.click();
-    await claimTabBar_New.claimTabClaimTab_FindClaim.setValue(claimNumber);
-    await claimTabBar_New.claimTabSearch.click();
+    await claimTabBar_Ext.tabBarClaimChevron.click();
+    await claimTabBar_Ext.claimTabClaimTab_FindClaim.setValue(claimNumber);
+    await claimTabBar_Ext.claimTabSearch.click();
   }
 
   async navigateSearchPolicyScreen(){
-    await searchTabBar_New.tabBarSearchTab.click()
-    await searchTabBar.tabBarSearchTab.click()
+    await searchTabBar_Ext.tabBarSearchTab.click()
+    await searchTabBar_Ext.tabBarSearchTab.click()
     console.log('On Search Claims Screen')
   } 
 }
