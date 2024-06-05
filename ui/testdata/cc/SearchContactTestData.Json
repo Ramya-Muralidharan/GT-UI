@@ -5,6 +5,7 @@
     },
     "searchContact_01": {
         "Type": "Contact",
-        "LastName": "test"  
+        "LastName": "test",
+        "Name": "driver test"
     }
 }

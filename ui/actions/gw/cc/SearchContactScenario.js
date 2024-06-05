@@ -1,12 +1,12 @@
 import { AddressBookTabBar } from "../../../../ui/pages/gw/generated/claimsolutions/pages/navigation/tabBar/AddressBookTabBar.js"
 import { AddressBookSearch } from "../../../../ui/pages/gw/generated/claimsolutions/pages/addressBook/AddressBookSearch.js"
-import { AddressBookTabBar_New } from "../../../../ui/actions/gw/cc/scenarioPages/navigation/tabBar/AddressBookTabBar_New.js"
+import { AddressBookTabBar_Ext } from "./scenarioPages/navigation/tabBar/AddressBookTabBar_Ext.js"
 import world from "../../../util/gw/world.js"
 import { t } from 'testcafe'
 
 const addressBookTabBar = new AddressBookTabBar();
 const addressBookSearch = new AddressBookSearch();
-const addressBookTabBar_New = new AddressBookTabBar_New()
+const addressBookTabBar_Ext = new AddressBookTabBar_Ext()
 
 export class SearchContactScenario {
     async searchContact() {
@@ -16,6 +16,6 @@ export class SearchContactScenario {
         await addressBookSearch.addressBookSearchAddressBookSearchScreenAddressBookSearchDVSearchAndResetInputSetSearchLinksInputSetSearch.click()
     }
     async searchValidation() {        
-        await t.expect(addressBookTabBar_New.addressBookTabNameSearch.component.textContent).eql('driver test')
+        await t.expect(addressBookTabBar_Ext.addressBookTabNameSearch.component.textContent).eql(world.dataMap.get('Name'))
     }
 }
