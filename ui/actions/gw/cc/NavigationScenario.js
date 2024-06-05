@@ -10,7 +10,7 @@ async navigateToNewClaimWizard() {
   await claimTabBar_Ext.tabBarClaimChevron.click()
   await claimTabBar_Ext.claimTabClaimTab_FNOLWizard.click()
   }
- 
+
   async clickNext() {
     await nextSubmissionWizard.submissionWizardNext.click()
   }
@@ -26,5 +26,5 @@ async navigateToNewClaimWizard() {
     await searchTabBar_Ext.tabBarSearchTab.click()
     await searchTabBar_Ext.tabBarSearchTab.click()
     console.log('On Search Claims Screen')
-  } 
+  }
 }

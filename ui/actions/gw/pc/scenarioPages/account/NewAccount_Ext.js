@@ -32,5 +32,4 @@ export class NewAccount_Ext extends NewAccount {
     newAccountScreenNewAccountButton = PcfButton('#NewAccount-NewAccountScreen-NewAccountButton');
     newAccountButtonNewAccount_Company = PcfButton('#NewAccount-NewAccountScreen-NewAccountButton-NewAccount_Company');
     newAccountButtonNewAccount_FromAB = PcfButton('#NewAccount-NewAccountScreen-NewAccountButton-NewAccount_FromAB');
-    newAccountButtonNewAccount_Person = PcfButton('#NewAccount-NewAccountScreen-NewAccountButton-NewAccount_Person');
 }
