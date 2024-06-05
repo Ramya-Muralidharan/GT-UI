@@ -6,5 +6,5 @@ Feature: Searching contact in claim center
     Scenario: Searching contact in claim center
         Given the user logs into the claims center as "superuser"
         When the user loads "cc" data "searchContact_01" from json "SearchContactTestData"
-        And the user search the contact
+        And the user searches the contact
         Then the search contact details are loaded

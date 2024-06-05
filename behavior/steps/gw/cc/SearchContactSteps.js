@@ -4,7 +4,7 @@ import { SearchContactScenario} from "../../../../ui/actions/gw/cc/SearchContact
 
 const searchContactScenario = new SearchContactScenario();
 
-When(/^the user search the contact/, async function () {
+When(/^the user searches the contact/, async function () {
     await searchContactScenario.searchContact()
 });
 
