@@ -5,8 +5,8 @@ const accountSearch = new AccountSearch()
 
 export class SearchAccountScenario {
 
-    async searchWithAccountNumber() {
-        await accountSearch.accountSearchDVAccountNumber.setValue(world.dataMap.get('AccountNumber'))
+    async searchWithAccountNumber(accountNumber) {
+        await accountSearch.accountSearchDVAccountNumber.setValue(accountNumber)
         await accountSearch.accountSearchAccountSearchScreenAccountSearchDVSearchAndResetInputSetSearchLinksInputSetSearch.click()
     }
 }

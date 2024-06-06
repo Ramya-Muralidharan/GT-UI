@@ -11,7 +11,7 @@ const accountSummaryScenario = new AccountSummaryScenario()
 
 When(/^the user searches for an account with account number/, async function () {
     await navigationScenario.navigateSearchAccountScreen()
-    await searchAccountScenario.searchWithAccountNumber()
+    await searchAccountScenario.searchWithAccountNumber(world.dataMap.get('AccountNumber'))
 });
 
 Then(/^the account details are loaded/, async function () {
