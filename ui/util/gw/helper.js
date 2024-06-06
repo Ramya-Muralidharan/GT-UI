@@ -34,10 +34,9 @@ export async function searchTableRecord(columnIndex, stringValue) {
     for (let i = 1; i < rowCount; i++) {
         const cellText = await tableRows.nth(i).find('td').nth(Number.parseInt(columnIndex)).textContent;
         if (cellText.includes(stringValue)) {
-            await t.click(tableRows.nth(i).find('td').nth(Number.parseInt(columnIndex)).find('div[role="button"]'));
+            await t.click(tableRows.nth(i).find('td').nth(Number.parseInt(columnIndex)).find('div.gw-value-readonly-wrapper, div.gw-ActionValueWidget'));
             await t.wait(2000)
             break;
         }
     }
-
 }
