@@ -4,6 +4,7 @@ import { AccountTabBar_Ext } from './scenarioPages/navigation/tabBar/AccountTabB
 import { Renewal_New } from "./scenarioPages/renewalWizard/Renewal_New.js";
 import { NewAccount_Ext } from "./scenarioPages/account/NewAccount_Ext.js";
 import { SearchTabBar_Ext } from "./scenarioPages/navigation/tabBar/SearchTabBar_Ext.js";
+import { t } from "testcafe";
 
 const policyTabBar_Ext = new PolicyTabBar_Ext()
 const nextSubmissionWizard = new NextSubmissionWizard()

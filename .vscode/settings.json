@@ -1,4 +1,6 @@
 {
-    "cucumberautocomplete.syncfeatures": "behavior/features/**/**/*.feature",
-    "cucumberautocomplete.steps": "behavior/steps/**/**/*.js"
+    "cucumberautocomplete.steps": [
+        "behavior/steps/**/**/*.js",
+    ],
+    "cucumberautocomplete.strictGherkinCompletion": true
 }

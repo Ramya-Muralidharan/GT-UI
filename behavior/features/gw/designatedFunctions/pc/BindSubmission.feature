@@ -1,4 +1,4 @@
-@policycenter
+@policycenter @designatedfunction
 
 Feature: New Submission to Bind
     As a user, I want to perform Bind Policy transaction in policy center

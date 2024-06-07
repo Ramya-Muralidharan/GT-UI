@@ -1,4 +1,4 @@
-@policycenter
+ @policycenter @designatedfunction
 Feature: Searching contact in policy center
     As a user, I want to search contact in policy center
 

@@ -1,4 +1,4 @@
-@claimcenter
+@claimcenter @designatedfunction
 Feature: Searching recovery in claim center
     As a user, I want to Create and Search Recovery in Claim Center
 

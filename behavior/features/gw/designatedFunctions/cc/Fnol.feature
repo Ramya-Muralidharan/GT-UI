@@ -1,4 +1,4 @@
-@claimcenter
+@claimcenter @designatedfunction
 Feature: Capturing first notice of loss
     As a user, I want to create a new FNOL in Claim Center
 

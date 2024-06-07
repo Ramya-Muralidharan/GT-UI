@@ -1,4 +1,4 @@
-@policycenter
+@policycenter @designatedfunction
 
 Feature: New Submission to Quote
         As a user, I want to perform Quote Policy transaction in policy center

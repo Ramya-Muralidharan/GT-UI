@@ -1,4 +1,4 @@
-@claimcenter
+@claimcenter @designatedfunction
 Feature: Searching for a policy
     As a user, I want to search for a policy in Claim center
 

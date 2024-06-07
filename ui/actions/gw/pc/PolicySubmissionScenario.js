@@ -8,6 +8,10 @@ import { NewAPDPolicyInvolvedPartyPopup } from "../../../pages/gw/generated/poli
 import { PolicyTabBar_Ext } from "./scenarioPages/navigation/tabBar/PolicyTabBar_Ext.js";
 import { NewSubmission_Ext } from "./scenarioPages/policy/NewSubmission_Ext.js";
 import { generateRandomStringFunction } from '../../../util/gw/helper'
+import { LOBWizardStepGroupSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/LOBWizardStepGroupSubmissionWizard_Ext"
+import { CLLCpBlanketPopup_New } from "./scenarioPages/navigation/submissionWizard/CLLCpBlanketPopup_New"
+import { SubmissionWizard_New } from "./scenarioPages/navigation/submissionWizard/SubmissionWizard_New"
+import { JobWizardInfoBarSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/JobWizardInfoBarSubmissionWizard_Ext";
 import world from "../../../../ui/util/gw/world"
 
 const accountMenuActions = new AccountMenuActions()
@@ -17,6 +21,10 @@ const usaPersonalAuto_New = new USAPersonalAuto_New()
 const newAPDPolicyInvolvedPartyPopup = new NewAPDPolicyInvolvedPartyPopup()
 const policyTabBar_Ext = new PolicyTabBar_Ext()
 const newSubmission_Ext = new NewSubmission_Ext()
+const lOBWizardStepGroupSubmissionWizard_Ext = new LOBWizardStepGroupSubmissionWizard_Ext()
+const cLLCpBlanketPopup_New = new CLLCpBlanketPopup_New()
+const submissionWizard_New = new SubmissionWizard_New()
+const jobWizardInfoBarSubmissionWizard_Ext = new JobWizardInfoBarSubmissionWizard_Ext()
 
 export class PolicySubmissionScenario {
   async selectProduct() {
@@ -32,6 +40,7 @@ export class PolicySubmissionScenario {
     await t.click(Selector(`[aria-label="${Screenname}"]`))
   }
   async policyInfo() {
+    console.log("On Policy Info screen")
     await policyInfoScreen.accountInfoInputSetOrganizationType.selectOptionByLabel(world.dataMap.get('OrganizationType'))
 
   }
@@ -74,57 +83,37 @@ export class PolicySubmissionScenario {
     await t.expect(status).eql('Submission (Quoted)')
   }
   async saveQuote() {
-    let quotenum = await nextSubmissionWizard_Ext.Quotenumber.component.textContent
-    console.log(quotenum, 'Submission is quoted successfully')
+    t.ctx.QuoteNumber = await submissionWizard_New.submissionWizard_QuoteNumber.component.textContent
+    console.log(t.ctx.QuoteNumber, 'Submission is quoted successfully')
   }
 
   async bindPolicy() {
     await t.wait(2000)
-    await nextSubmissionWizard_Ext.BindOptions.click()
-    await nextSubmissionWizard_Ext.bindpolicy.click()
-    console.log('clicked on bind policy')
+    await submissionWizard_New.submissionWizard_Bind.click()
+    await t.setNativeDialogHandler(() => true);
+    await submissionWizard_New.submissionWizard_BindOptions.click()
   }
   async verifyIssue() {
-    let status = await nextSubmissionWizard_Ext.issuestatus.component.textContent
+    const status = await jobWizardInfoBarSubmissionWizard_Ext.jobWizardInfoBar_IssueStatus.component.textContent
     console.log(status)
     await t.expect(status).eql('Submission Bound')
   }
-  async verifyBind() {
-    let status = await nextSubmissionWizard_Ext.issuestatus.component.textContent
-    console.log(status)
-    await t.expect(status).eql('Submission Bound')
-  }
+
   async viewSubmission() {
-    await nextSubmissionWizard_Ext.viewsubmission.click()
+    await jobWizardInfoBarSubmissionWizard_Ext.jobWizardInfoBar_Viewsubmission.click()
     await t.wait(1000)
     await t.takeScreenshot()
   }
-  async saveIssuedPolicy() {
-    let policynum = await nextSubmissionWizard_Ext.policynumber.component.textContent
-    console.log(policynum + 'New submission policy is created successfully')
-  }
-  async saveBindPolicy() {
-    let policynum = await nextSubmissionWizard_Ext.policynumber.component.textContent
-    console.log(policynum + 'New submission policy is created successfully')
-  }
+  
 
-  async quoteSubmission() {
-    await newSubmission_Ext.Quote_Btn.click()
-    await t.wait(2000)
-    let submissionNo = await newSubmission_Ext.SubmissionNo.textContent
-    console.log("Submission number is: " + submissionNo)
-    await newSubmission_Ext.BindOptions.click()
-    await t.wait(2000)
-    await newSubmission_Ext.Issue_Btn.click()
-  }
-
+ 
   async initiateNewSubmissionPolicy() {
     console.log("On New Submissions screen")
     await policyTabBar_Ext.tabBarPolicyTab.click()
     await policyTabBar_Ext.policyTabPolicyTab_NewSubmission.click()
     await newSubmission_Ext.newSubmissionAccountNumber.setValue(t.ctx.AccountNumber)
     await newSubmission_Ext.accountSelectAccount.click()
-    await newSubmission_Ext.productSelection_ComProperty_Btn.click()
+    await newSubmission_Ext.newSubmission_GoCommercialPropertySelect.click()
     console.log("On Policy Info screen")
     await policyInfoScreen.accountInfoInputSetOrganizationType.selectOptionByLabel(world.dataMap.get('OrganizationType'))
     await t.wait(2000)
@@ -135,57 +124,56 @@ export class PolicySubmissionScenario {
     console.log("On GoCommercialPropertyLine screen")
     switch (coverageName) {
       case ('Outside Objects and Structures'):
-        await newSubmission_Ext.propertyLineCov_OutsideObjectsandStructures.click()
-        await newSubmission_Ext.propertyLineCov_OutsideObjectsandStructures_Limit.setValue(world.dataMap.get('OutsideObjectsAndStructuresLimit'))
-        await newSubmission_Ext.propertyLineCov_OutsideObjectsandStructures_Deductible.setValue(world.dataMap.get('OutsideObjectsAndStructuresDeductible'))
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures.click()
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures_Limit.setValue(world.dataMap.get('OutsideObjectsAndStructuresLimit'))
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures_Deductible.setValue(world.dataMap.get('OutsideObjectsAndStructuresDeductible'))
         break;
       case ('Each loss caused by wind'):
-        await newSubmission_Ext.propertyLineCov_Eachlosscausedbywind.click()
-        await newSubmission_Ext.propertyLineCov_Eachlosscausedbywind_Limit.setValue(world.dataMap.get('EachLossCausedBywindLimit'))
-        await newSubmission_Ext.propertyLineCov_Eachlosscausedbywind_Deductible.setValue(world.dataMap.get('EachLossCausedBywindDeductible'))
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind.click()
+        await lOBWizardStepGroupSubmissionWizard_Ext.EachLossCausedByWind_Limit.setValue(world.dataMap.get('EachLossCausedBywindLimit'))
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind_Deductible.setValue(world.dataMap.get('EachLossCausedBywindDeductible'))
         break;
-      case ('Contents of Other Structures'):
-        await newSubmission_Ext.propertyLineCov_ContentsofotherStructures.click()
-        await newSubmission_Ext.propertyLineCov_ContentsofotherStructures_Limit.selectOptionByLabel(world.dataMap.get('ContentsOfOtherStructuresLimit'))
-        await newSubmission_Ext.propertyLineCov_ContentsofotherStructures_Deductible.setValue(world.dataMap.get('ContentsOfOtherStructuresDeductible'))
+      case ('Terrorism'):
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_Terrorism.click()
         break;
       default:
-        await newSubmission_Ext.propertyLineCov_OutsideObjectsandStructures.click()
-        await newSubmission_Ext.propertyLineCov_OutsideObjectsandStructures_Limit.setValue('100')
-        await newSubmission_Ext.propertyLineCov_OutsideObjectsandStructures_Deductible.setValue('100')
-        await newSubmission_Ext.propertyLineCov_Eachlosscausedbywind.click()
-        await newSubmission_Ext.propertyLineCov_Eachlosscausedbywind_Limit.setValue('200')
-        await newSubmission_Ext.propertyLineCov_Eachlosscausedbywind_Deductible.setValue('200')
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures.click()
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures_Limit.setValue('100')
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures_Deductible.setValue('100')
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind.click()
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind_Limit.setValue('200')
+        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind_Deductible.setValue('200')
         break;
     }
     await t.wait(1000)
   }
 
   async addCpBlanket(nthOption = 1) {
-    await newSubmission_Ext.cpBlanket_AddButton.click()
-    await newSubmission_Ext.cpBlanket_Location.selectNthOption(nthOption)
-    await newSubmission_Ext.cpBlanket_OK_Btn.click()
+    await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizardAddCPBlanket.click()
+    await cLLCpBlanketPopup_New.CLLCpBlanketPopup_Location.selectNthOption(nthOption)
+    await cLLCpBlanketPopup_New.CLLCpBlanketPopup_ok.click()
     await nextSubmissionWizard_Ext.submissionWizardNext.click()
     await t.wait(2000)
   }
 
   async quote() {
     await t.wait(2000)
-    await nextSubmissionWizard_Ext.quote_button.click()
+    await submissionWizard_New.submissionWizard_Quote.click()
   }
 
   async verifyQuote() {
-    await t.wait(3000)
-    let status = await nextSubmissionWizard_Ext.Quotedstatus.component.textContent
+    await t.wait(2000)
+    const status = await submissionWizard_New.submissionWizard_QuoteStatus.component.textContent
     console.log(status)
     await t.expect(status).eql('Submission (Quoted)')
   }
 
   async issuePolicy() {
-    if (await nextSubmissionWizard_Ext.BindOptions_Sel.exists)
-      await nextSubmissionWizard_Ext.BindOptions.click()
-    await nextSubmissionWizard_Ext.issuepolicy.click()
-    t.ctx.PolicyNumber = await newSubmission_Ext.policyNumber.component.textContent
+    if (await submissionWizard_New.submissionWizard_Bind.component.exists)
+      await submissionWizard_New.submissionWizard_Bind.click()
+    await t.setNativeDialogHandler(() => true);
+    await submissionWizard_New.submissionWizard_IssuePolicy.click()
+    t.ctx.PolicyNumber = await jobWizardInfoBarSubmissionWizard_Ext.jobWizardInfoBar_PolicyNumber.component.textContent
     console.log("The newly created policy number is: " + t.ctx.PolicyNumber)
   }
 
@@ -193,15 +181,5 @@ export class PolicySubmissionScenario {
     await newSubmission_Ext.policyMenuAction_Renewal.click()
     await t.eval(() => location.reload(true))
     await newSubmission_Ext.editPolicyTransaction_Btn.click()
-  }
-
-  async polChangeQuoteIssue() {
-    await newSubmission_Ext.Quote_Btn.click()
-    await newSubmission_Ext.polChange_Issue_btn.click()
-  }
-
-  async logout() {
-    await newSubmission_Ext.settings.click();
-    await newSubmission_Ext.logout.click();
   }
 }

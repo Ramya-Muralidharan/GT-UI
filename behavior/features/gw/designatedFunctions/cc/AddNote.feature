@@ -1,4 +1,4 @@
-@claimcenter
+@claimcenter @designatedfunction
 Feature: Adding note in claim center
     As a user, I want to Add Note in Claim Center
 

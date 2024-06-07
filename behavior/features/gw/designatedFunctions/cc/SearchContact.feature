@@ -1,4 +1,4 @@
-@claimcenter
+@claimcenter @designatedfunction
 Feature: Searching contact in claim center
     As a user, I want to Search contact in Claim Center
 

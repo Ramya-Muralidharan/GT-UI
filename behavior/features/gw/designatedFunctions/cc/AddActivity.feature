@@ -1,4 +1,4 @@
-@claimcenter
+@claimcenter @designatedfunction
 Feature: Add Activity in Claim center
     As a user, I want to perform Add Activity transaction in claim center
 
