@@ -18,10 +18,9 @@ When(/^the user issue the new submission/, async function () {
     await policySubmissionScenario.verifyQuote()
     await policySubmissionScenario.saveQuote()
     await policySubmissionScenario.issuePolicy()
-    await policySubmissionScenario.verifyIssue()
-    await policySubmissionScenario.viewSubmission()
 })
 
 Then(/^the policy is issued/, async function () {
-    await policySubmissionScenario.saveIssuedPolicy()
+    await policySubmissionScenario.verifyIssue()
+    await policySubmissionScenario.viewSubmission()
 })

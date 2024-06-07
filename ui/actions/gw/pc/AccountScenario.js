@@ -1,13 +1,15 @@
-import { generateRandomStringFunction } from '../../../util/gw/helper'
+import { generateRandomStringFunction} from '../../../util/gw/helper'
 import { Summary_Ext } from "./scenarioPages/account/Summary_Ext.js"
-import { NewSubmission } from '../../../pages/gw/generated/policysolutions/pages/policy/NewSubmission'
 import { NewAccount_Ext } from "./scenarioPages/account/NewAccount_Ext.js"
+import { OrganizationSearchPopup_Ext } from './scenarioPages/popup/Organization/OrganizationSearchPopup_Ext'
+import { OrganizationBranchSearchPopup } from '../../../pages/gw/generated/policysolutions/pages/popup/Organization/OrganizationBranchSearchPopup'
 import { t } from 'testcafe'
 import world from "../../../../ui/util/gw/world"
 
 const newAccount_Ext = new NewAccount_Ext()
 const summary_Ext = new Summary_Ext()
-const newSubmission = new NewSubmission()
+const organizationBranchSearchPopup = new OrganizationBranchSearchPopup()
+const organizationSearchPopup_Ext = new OrganizationSearchPopup_Ext()
 
 export class AccountScenario {
 
@@ -43,10 +45,10 @@ export class AccountScenario {
 
     async organizationSearchPopup() {
         console.log("On Organizations Screen")
-        await newSubmission.organisationSearch_Btn.click()
-        await newSubmission.organisationName_TextInput.setValue(world.dataMap.get('Organization'))
-        await newSubmission.orgName_Search_Btn.click()
-        await newSubmission.orgSelect_Btn.click()
+        await organizationBranchSearchPopup.organizationBranchSearchPopupOrganizationBranchSearchScreenOrganizationBranchSearchDVSearchAndResetInputSetSearchLinksInputSetSearch.click()
+        await organizationSearchPopup_Ext.organizationSearchPopupOrganizationSearchPopupScreenOrganizationSearchDVGlobalContactNameInputSetName.setValue(world.dataMap.get('Organization'))
+        await organizationSearchPopup_Ext.organizationSearchPopupOrganizationSearchPopupScreenOrganizationSearchDVSearchAndResetInputSetSearchLinksInputSetSearch.click()
+        await organizationSearchPopup_Ext.organizationSearchPopup_FirstRecord.click()
     }
 
     async createAccountNumber() {

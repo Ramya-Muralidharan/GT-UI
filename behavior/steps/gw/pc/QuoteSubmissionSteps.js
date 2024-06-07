@@ -1,8 +1,10 @@
 import { PolicySubmissionScenario } from '../../../../ui/actions/gw/pc/PolicySubmissionScenario'
+import { AccountScenario} from '../../../../ui/actions/gw/pc/AccountScenario'
 import world from "../../../../ui/util/gw/world"
 const { When, Then } = require('@cucumber/cucumber')
 
 const policySubmissionScenario = new PolicySubmissionScenario()
+const accountScenario = new AccountScenario()
 
 When(/^the user quote the new submission/, async function (t) {
     await policySubmissionScenario.selectProduct()

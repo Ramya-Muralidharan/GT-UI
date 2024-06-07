@@ -18,10 +18,9 @@ When(/^the user bind the new submission/, async function (t) {
     await policySubmissionScenario.verifyQuote()
     await policySubmissionScenario.saveQuote()
     await policySubmissionScenario.bindPolicy()
-    await policySubmissionScenario.verifyBind()
-    await policySubmissionScenario.viewSubmission()
 }) 
 
 Then(/^the policy is bound successfully/, async function (t, stepArguments) {
- await policySubmissionScenario.saveBindPolicy()
+    await policySubmissionScenario.verifyIssue()
+    await policySubmissionScenario.viewSubmission()
 })
