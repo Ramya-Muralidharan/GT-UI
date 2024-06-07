@@ -79,8 +79,8 @@ export class PolicySubmissionScenario {
   }
 
   async bindPolicy() {
-    await t.wait(2000)
     await nextSubmissionWizard_Ext.BindOptions.click()
+    await t.setNativeDialogHandler(() => true);
     await nextSubmissionWizard_Ext.bindpolicy.click()
     console.log('clicked on bind policy')
   }
@@ -184,6 +184,7 @@ export class PolicySubmissionScenario {
   async issuePolicy() {
     if (await nextSubmissionWizard_Ext.BindOptions_Sel.exists)
       await nextSubmissionWizard_Ext.BindOptions.click()
+    await t.setNativeDialogHandler(() => true);
     await nextSubmissionWizard_Ext.issuepolicy.click()
     t.ctx.PolicyNumber = await newSubmission_Ext.policyNumber.component.textContent
     console.log("The newly created policy number is: " + t.ctx.PolicyNumber)
