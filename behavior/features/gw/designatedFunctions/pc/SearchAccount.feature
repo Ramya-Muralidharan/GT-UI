@@ -1,4 +1,4 @@
-@policycenter
+@policycenter @designatedfunction
 Feature: Searching for an account
     As a user, I want to search for an account in policy center
 

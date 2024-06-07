@@ -1,4 +1,4 @@
-@policycenter
+@policycenter @designatedfunction
 
 Feature: New Submission to Issue
     As a user, I want to perform Issue Policy transaction in policy center

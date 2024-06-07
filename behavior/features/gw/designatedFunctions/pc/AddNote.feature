@@ -1,4 +1,4 @@
-@policycenter
+@policycenter @designatedfunction
 
 Feature: Add Note in policy center
     As a user, I want to perform Add Note transaction in policy center

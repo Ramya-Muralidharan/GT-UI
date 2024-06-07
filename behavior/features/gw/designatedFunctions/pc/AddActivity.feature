@@ -1,4 +1,4 @@
-@policycenter
+@policycenter @designatedfunction
 
 Feature: Add Activity in policy center
     As a user, I want to perform Add Activity transaction in policy center

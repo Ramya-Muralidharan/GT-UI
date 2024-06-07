@@ -1,4 +1,4 @@
-@policycenter
+@policycenter @designatedfunction
 Feature: Processing a renewal
     As a user, I want to perform Renewal transaction in policy center
 
