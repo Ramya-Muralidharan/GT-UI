@@ -27,14 +27,32 @@ export function generateRandomStringFunction(length) {
 
 //To click on a specific record in a table.
 //This function by default considers first table in a page
-export async function searchTableRecord(columnIndex, stringValue) {
+export async function searchTableRecord(headerNameOrIndex, stringValue) {
     await t.wait(1000)
     const tableRows = Selector('table').nth(0).find('tr');
+    const tablecols = tableRows.nth(0).find('td');
     const rowCount = await tableRows.count;
+    if (typeof headerNameOrIndex === 'string') {
+        const colsCount = await tablecols.count;
+        for (let i = 0; i < colsCount; i++) {
+            let cellText
+            try {
+                cellText = await tablecols.nth(i).find('div.gw-label').textContent;
+            }
+            catch (e) {
+                // Skip a loop if no lable found - checkbox/empty title
+                continue;
+            }
+            if (headerNameOrIndex.includes(cellText) && cellText.trim() !== '' && cellText.trim() !== null) {
+                headerNameOrIndex = i;
+                break;
+            }
+        }
+    }
     for (let i = 1; i < rowCount; i++) {
-        const cellText = await tableRows.nth(i).find('td').nth(Number.parseInt(columnIndex)).textContent;
+        const cellText = await tableRows.nth(i).find('td').nth(Number.parseInt(headerNameOrIndex)).textContent;
         if (cellText.includes(stringValue)) {
-            await t.click(tableRows.nth(i).find('td').nth(Number.parseInt(columnIndex)).find('div.gw-value-readonly-wrapper, div.gw-ActionValueWidget'));
+            await t.click(tableRows.nth(i).find('td').nth(Number.parseInt(headerNameOrIndex)).find('div.gw-value-readonly-wrapper, div.gw-ActionValueWidget'));
             await t.wait(2000)
             break;
         }
