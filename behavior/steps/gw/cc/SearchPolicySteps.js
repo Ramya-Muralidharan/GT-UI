@@ -15,6 +15,6 @@ When(/^the user searches for the policy in Search Claims/, async function () {
 });
 
 Then(/^the claim details are loaded successfully/, async function () {
-    await searchTableRecord(3,world.dataMap.get('ClaimNo')) 
+    await searchTableRecord("Claim", world.dataMap.get('ClaimNo'))
     await viewClaimSummaryScenario.verifySummaryHeader()
 });

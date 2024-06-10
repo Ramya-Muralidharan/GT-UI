@@ -3,8 +3,12 @@
         "PolicyNumber": "7407354463",
         "ClaimNo": "000-00-000766"
     },
-    "searchPolicy_01": {
+    "searchPolicy_02": {
         "PolicyNumber": "7407354463",
         "ClaimNo": "000-00-000766"
+    },
+    "searchPolicy_01": {
+        "PolicyNumber": "PA23789",
+        "ClaimNo": "000-00-000562"
     }
 }

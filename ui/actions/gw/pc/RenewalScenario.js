@@ -8,7 +8,6 @@ import { NewSubmission_Ext } from "./scenarioPages/policy/NewSubmission_Ext.js";
 import { LOBWizardStepGroupSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/LOBWizardStepGroupSubmissionWizard_Ext.js";
 import world from "../../../../ui/util/gw/world"
 
-
 const policyMenuActions = new PolicyMenuActions()
 const navigationScenario = new NavigationScenario()
 const renewal_New = new Renewal_New()
@@ -29,14 +28,6 @@ export class RenewalScenario {
         await renewal_New.RenewalWizard_EditPolicyTransaction.click()
         await navigationScenario.renewalNext()
     }
-
-    // async addCpBlanket(nthOption = 1) {
-    //     await newSubmission_Ext.cpBlanket_AddButton.click()
-    //     await newSubmission_Ext.cpBlanket_Location.selectNthOption(nthOption)
-    //     await newSubmission_Ext.cpBlanket_OK_Btn.click()
-    //     await navigationScenario.renewalNext()
-    //     await t.wait(1000)
-    // }
 
     async clickRenew() {
         await renewal_New.RenewalWizard_BindOptions.click()
