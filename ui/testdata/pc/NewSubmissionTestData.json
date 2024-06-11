@@ -1,5 +1,6 @@
 { 
     "defaultDataSet":{
+        "ProductName": "USA Personal Auto",
         "OrganizationType": "Individual",
         "AutoLiabilityPackage": "25/50/10",
         "BodyType": "ATV",
@@ -17,6 +18,25 @@
         "Screenname":"Policy Review"
     },
     "newSubmission_01":{
+        "ProductName": "USA Personal Auto",
+        "OrganizationType": "Individual",
+        "AutoLiabilityPackage": "25/50/10",
+        "BodyType": "ATV",
+        "LicenseState":"Idaho",
+        "VIN": "JH4KA2630HC019837",
+        "Year":"1987",
+        "Make":"Acura",
+        "Model":"Legend",
+        "Address1": "1737 HURLEY",
+        "City": "Pewaukee",
+        "State": "Florida",
+        "ZIPCode": "53072-0000",
+        "AddressType": "Home",
+        "Organization": "a",
+        "Screenname":"Policy Review"
+    },
+    "newSubmission_02":{
+        "ProductName": "Homeowners Product",
         "OrganizationType": "Individual",
         "AutoLiabilityPackage": "25/50/10",
         "BodyType": "ATV",

@@ -8,5 +8,5 @@ Feature: New Submission to Issue
         Given the user logs into the policy center as "superuser"
         When the user loads "pc" data "newSubmission_01" from json "NewSubmissionTestData"
         And the user creates personal account
-        And the user issue the new submission
+        And the user issue the new submission for personal auto
         Then the policy is issued
