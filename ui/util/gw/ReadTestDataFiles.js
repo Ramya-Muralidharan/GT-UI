@@ -4,7 +4,8 @@ export class ReadTestDataFiles {
         //reading and storing the data in a jsonData
         let jsonData
         jsonData = require(`../../testdata/${module}/${jsonFileName}.json`)
-
+        
+        //If testCaseID doesnt match in json file then takes defaultDataSet
         let testCaseDataMap = new Map()
         if (!jsonData.hasOwnProperty(testCaseID)) {
             testCaseID = "defaultDataSet"
