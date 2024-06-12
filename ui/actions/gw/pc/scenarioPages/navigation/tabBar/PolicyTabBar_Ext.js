@@ -4,4 +4,5 @@ import { PolicyTabBar } from '../../../../../../pages/gw/generated/policysolutio
 export class PolicyTabBar_Ext extends PolicyTabBar{
 	tabBarPolicyTab = PcfComponent('#TabBar-PolicyTab > div:nth-child(3)');
 	tabBar_PolicyRetrievalItem_Button = PcfButton('#TabBar-PolicyTab-PolicyTab_PolicyRetrievalItem_Button');
+	tabBar_Header = PcfComponent('#NewSubmission-NewSubmissionScreen-ttlBar')
 }

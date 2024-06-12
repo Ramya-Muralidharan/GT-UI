@@ -56,5 +56,6 @@ export class AccountScenario {
         console.log('On Account Summary screen')
         t.ctx.AccountNumber = await summary_Ext.accountDetailsDetailViewTile_DVAccountNumber.component.innerText
         console.log("The newly created commercial Account Number is: " + t.ctx.AccountNumber)
+        await t.wait(2000)
     }
 }

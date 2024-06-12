@@ -52,4 +52,11 @@ export class NavigationScenario {
     await searchTabBar_Ext.searchTabSearch_PolicySearch.click()
     console.log('On Search Policy Screen')
   }
+
+  async navigateNewSubmissionScreen(){
+    console.log("On New Submissions screen")
+    await policyTabBar_Ext.tabBarPolicyTab.click()
+    await policyTabBar_Ext.policyTabPolicyTab_NewSubmission.click()
+    await t.expect((policyTabBar_Ext.tabBar_Header).component.exists).ok();
+  }
 }

@@ -28,17 +28,12 @@ const jobWizardInfoBarSubmissionWizard_Ext = new JobWizardInfoBarSubmissionWizar
 
 export class PolicySubmissionScenario {
   async selectProduct() {
-    await accountMenuActions.accountFileAccountFileMenuActions.click()
-    await accountMenuActions.accountFileMenuActions_CreateAccountFileMenuActions_NewSubmission.click()
-    const usaPersonalAuto_New = Selector('td').withExactText('USA Personal Auto').parent().child('td:nth-child(1)')
-    await t.click(usaPersonalAuto_New)
+    await t.click(Selector('td').withExactText(world.dataMap.get('ProductName')).parent().child('td:nth-child(1)'))
   }
   async clickNext() {
     await nextSubmissionWizard_Ext.submissionWizardNext.click()
   }
-  async navigateToScreen(Screenname) {
-    await t.click(Selector(`[aria-label="${Screenname}"]`))
-  }
+
   async policyInfo() {
     console.log("On Policy Info screen")
     await policyInfoScreen.accountInfoInputSetOrganizationType.selectOptionByLabel(world.dataMap.get('OrganizationType'))
@@ -104,20 +99,11 @@ export class PolicySubmissionScenario {
     await t.wait(1000)
     await t.takeScreenshot()
   }
-  
 
- 
   async initiateNewSubmissionPolicy() {
     console.log("On New Submissions screen")
-    await policyTabBar_Ext.tabBarPolicyTab.click()
-    await policyTabBar_Ext.policyTabPolicyTab_NewSubmission.click()
     await newSubmission_Ext.newSubmissionAccountNumber.setValue(t.ctx.AccountNumber)
     await newSubmission_Ext.accountSelectAccount.click()
-    await newSubmission_Ext.newSubmission_GoCommercialPropertySelect.click()
-    console.log("On Policy Info screen")
-    await policyInfoScreen.accountInfoInputSetOrganizationType.selectOptionByLabel(world.dataMap.get('OrganizationType'))
-    await t.wait(2000)
-    await nextSubmissionWizard_Ext.submissionWizardNext.click()
   }
 
   async addCommercialPropertyLineCoverage(coverageName) {
