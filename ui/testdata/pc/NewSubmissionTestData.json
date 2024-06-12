@@ -32,8 +32,7 @@
         "State": "Florida",
         "ZIPCode": "53072-0000",
         "AddressType": "Home",
-        "Organization": "a",
-        "Screenname":"Policy Review"
+        "Organization": "a"
     },
     "newSubmission_02":{
         "ProductName": "Homeowners Product",
@@ -51,6 +50,8 @@
         "ZIPCode": "53072-0000",
         "AddressType": "Home",
         "Organization": "a",
-        "Screenname":"Policy Review"
+        "RefusalType":"Cancelled",
+        "IdentityTheftProtectionLimit":"15,000",
+        "IdentityTheftProtectionDeductible":"500"
     }
 }
