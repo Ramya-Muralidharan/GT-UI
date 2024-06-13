@@ -7,5 +7,4 @@ export class Renewal_New {
 	RenewalWizard_Renew= PcfComponent('#RenewalWizard-PostQuoteWizardStepSet-RenewalWizard_QuoteScreen-JobWizardToolbarButtonSet-BindOptions-SendToRenewal');
 	RenewalWizard_Quote = PcfButton('#RenewalWizard-LOBWizardStepGroup-RenewalWizard_DifferencesScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote')
 	renewalWizard_CpBlanketAdd = PcfButton('#RenewalWizard-LOBWizardStepGroup-LineWizardStepSet-CLLWizardStepGroup-CLLCpBlanketScreen-CLLCpBlanketListPanelSet-AddCpBlanket')
-
 }

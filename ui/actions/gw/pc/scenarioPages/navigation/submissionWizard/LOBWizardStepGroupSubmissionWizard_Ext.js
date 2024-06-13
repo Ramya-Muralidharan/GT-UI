@@ -1,4 +1,4 @@
-import { PcfButton, PcfComponent, PcfTextInput } from '@gtui/gt-ui-framework';
+import { PcfButton, PcfComponent, PcfSelectInput, PcfTextInput } from '@gtui/gt-ui-framework';
 import { LOBWizardStepGroupSubmissionWizard } from '../../../../../../../ui/pages/gw/generated/policysolutions/pages/navigation/submissionWizard/LOBWizardStepGroupSubmissionWizard'
 
 export class LOBWizardStepGroupSubmissionWizard_Ext extends LOBWizardStepGroupSubmissionWizard {
