@@ -39,6 +39,6 @@ Then(/^the user search the check/, async function () {
     await searchScenario.searchCheck();
 });
 
-Then(/^the check details are loaded/, async function (t) {
+Then(/^the check details are loaded/, async function () {
     await searchScenario.validateCheckDetailsHeader();
 });

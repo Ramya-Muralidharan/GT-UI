@@ -5,7 +5,7 @@ import { NavigationScenario } from '../../../../ui/actions/gw/pc/NavigationScena
 const newSubmissionScenario = new NewSubmissionScenario()
 const navigationScenario = new NavigationScenario()
 
-When(/^the user bind the new submission/, async function (t) {
+When(/^the user bind the new submission/, async function () {
     await newSubmissionScenario.bindPolicy()
 }) 
 
