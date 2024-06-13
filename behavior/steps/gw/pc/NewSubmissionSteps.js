@@ -44,6 +44,37 @@ When(/^the user quote the new submission for homeowners/, async function (t) {
     await newSubmissionScenario.verifyQuote()
 })
 
+When(/^the user quote the new submission for umbrella liability/, async function () {
+    await navigationScenario.navigateNewSubmissionScreen()
+    await newSubmissionScenario.initiateNewSubmissionPolicy()
+    await newSubmissionScenario.selectProduct()    
+    await newSubmissionScenario.policyInfo()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.commercialUmbrellaAccessliability()
+    await newSubmissionScenario.addUmbrellaCoverages("Occurrence Limit")
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.quote()
+    await newSubmissionScenario.verifyQuote()
+})
+
+When(/^the user issue the new submission for umbrella liability/, async function () {
+    await navigationScenario.navigateNewSubmissionScreen()
+    await newSubmissionScenario.initiateNewSubmissionPolicy()
+    await newSubmissionScenario.selectProduct()    
+    await newSubmissionScenario.policyInfo()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.commercialUmbrellaAccessliability()
+    await newSubmissionScenario.addUmbrellaCoverages("Occurrence Limit")
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.quote()
+    await newSubmissionScenario.verifyQuote()
+    await newSubmissionScenario.issuePolicy()
+})
+
 Then(/^the quote is saved successfully/, async function () {
     await newSubmissionScenario.saveQuote()
 }) 
