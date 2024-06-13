@@ -1,12 +1,12 @@
 const { Given, When, Then } = require("@cucumber/cucumber")
-import { ViewAccountSummaryScenario } from "../../../../ui/actions/gw/pc/ViewAccountSummaryScenario";
+import { AccountSummaryScenario } from "../../../../ui/actions/gw/pc/AccountSummaryScenario";
 import { NavigationScenario } from "../../../../ui/actions/gw/pc/NavigationScenario";
 
-const viewAccountSummaryScenario = new ViewAccountSummaryScenario()
+const accountSummaryScenario = new AccountSummaryScenario()
 const navigationScenario = new NavigationScenario()
 
 When(/^the view account summary details are loaded/, async function () {
-    await viewAccountSummaryScenario.viewAccountSummary();
+    await accountSummaryScenario.viewAccountSummary();
 })
 
 When(/^the user search with an account number/, async function (t) {

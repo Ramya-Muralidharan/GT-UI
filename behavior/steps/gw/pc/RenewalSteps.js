@@ -1,11 +1,11 @@
 const { When } = require("@cucumber/cucumber")
 import { NavigationScenario } from "../../../../ui/actions/gw/pc/NavigationScenario"
 import { RenewalScenario } from "../../../../ui/actions/gw/pc/RenewalScenario"
-import { PolicySubmissionScenario } from "../../../../ui/actions/gw/pc/PolicySubmissionScenario"
+import { NewSubmissionScenario } from "../../../../ui/actions/gw/pc/NewSubmissionScenario"
  
 const navigationScenario = new NavigationScenario()
 const renewalScenario = new RenewalScenario()
-const policySubmissionScenario = new PolicySubmissionScenario()
+const newSubmissionScenario = new NewSubmissionScenario()
  
 When(/^the renewal is applied successfully/, async function () {
     await renewalScenario.verifyRenewal()

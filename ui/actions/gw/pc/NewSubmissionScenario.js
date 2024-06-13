@@ -1,32 +1,31 @@
 import { Selector } from "testcafe";
-import { AccountMenuActions } from "../../../../ui/pages/gw/generated/policysolutions/pages/navigation/menuActions/AccountMenuActions.js";
 import { NextSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/NextSubmissionWizard_Ext.js";
 import { t } from "testcafe";
-import { PolicyInfoScreen } from "../../../../ui/pages/gw/generated/policysolutions/pages/lOBWizardStepGroup/policyInfo/PolicyInfoScreen.js";
+import { PolicyInfoScreen } from "../../../pages/gw/generated/policysolutions/pages/lOBWizardStepGroup/policyInfo/PolicyInfoScreen.js";
 import { USAPersonalAuto_New } from "./scenarioPages/other/USAPersonalAuto_New.js";
 import { NewAPDPolicyInvolvedPartyPopup } from "../../../pages/gw/generated/policysolutions/pages/popup/New/NewAPDPolicyInvolvedPartyPopup.js";
-import { PolicyTabBar_Ext } from "./scenarioPages/navigation/tabBar/PolicyTabBar_Ext.js";
 import { NewSubmission_Ext } from "./scenarioPages/policy/NewSubmission_Ext.js";
 import { generateRandomStringFunction } from '../../../util/gw/helper'
 import { LOBWizardStepGroupSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/LOBWizardStepGroupSubmissionWizard_Ext"
 import { CLLCpBlanketPopup_New } from "./scenarioPages/navigation/submissionWizard/CLLCpBlanketPopup_New"
 import { SubmissionWizard_New } from "./scenarioPages/navigation/submissionWizard/SubmissionWizard_New"
 import { JobWizardInfoBarSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/JobWizardInfoBarSubmissionWizard_Ext";
-import world from "../../../../ui/util/gw/world"
+import { HomeOwners_New } from "./scenarioPages/policy/HomeOwners_New";
+import world from "../../../util/gw/world"
 
-const accountMenuActions = new AccountMenuActions()
+
 const nextSubmissionWizard_Ext = new NextSubmissionWizard_Ext()
 const policyInfoScreen = new PolicyInfoScreen()
 const usaPersonalAuto_New = new USAPersonalAuto_New()
 const newAPDPolicyInvolvedPartyPopup = new NewAPDPolicyInvolvedPartyPopup()
-const policyTabBar_Ext = new PolicyTabBar_Ext()
 const newSubmission_Ext = new NewSubmission_Ext()
 const lOBWizardStepGroupSubmissionWizard_Ext = new LOBWizardStepGroupSubmissionWizard_Ext()
 const cLLCpBlanketPopup_New = new CLLCpBlanketPopup_New()
 const submissionWizard_New = new SubmissionWizard_New()
 const jobWizardInfoBarSubmissionWizard_Ext = new JobWizardInfoBarSubmissionWizard_Ext()
+const homeOwners_New = new HomeOwners_New()
 
-export class PolicySubmissionScenario {
+export class NewSubmissionScenario {
   async selectProduct() {
     await t.click(Selector('td').withExactText(world.dataMap.get('ProductName')).parent().child('td:nth-child(1)'))
   }
@@ -167,5 +166,32 @@ export class PolicySubmissionScenario {
     await newSubmission_Ext.policyMenuAction_Renewal.click()
     await t.eval(() => location.reload(true))
     await newSubmission_Ext.editPolicyTransaction_Btn.click()
+  }
+
+  async gWHomeownersLine(){
+    await homeOwners_New.submissionWizardRefusalType.selectOptionByLabel(world.dataMap.get('RefusalType'))
+  }
+
+  async addAdditionalCoverageHomeOwners(coverageName){
+    await homeOwners_New.submissionWizardAdditionalCoverage.click()
+    console.log("On GW Homeowners Line-Additional Coverage screen")
+    switch (coverageName) {
+      case ('Identity Theft Protection'):
+        await homeOwners_New.submissionWizardIdentityTheftProtection.click()
+        await homeOwners_New.submissionWizardIdentityTheftProtectionLimit.selectOptionByLabel(world.dataMap.get('IdentityTheftProtectionLimit'))
+        await homeOwners_New.submissionWizardIdentityTheftProtectionDeductible.selectOptionByLabel(world.dataMap.get('IdentityTheftProtectionDeductible'))
+        break;
+      case ('Loss Assessment'):
+        await homeOwners_New.submissionWizardLossAssessment.click()
+        await homeOwners_New.submissionWizardLossAssessmentLimit.selectOptionByLabel(world.dataMap.get('LossAssessmentLimit'))
+        break;
+      default:
+        await homeOwners_New.submissionWizardIdentityTheftProtection.click()
+        await homeOwners_New.submissionWizardIdentityTheftProtectionLimit.selectOptionByLabel("15,000")
+        await homeOwners_New.submissionWizardIdentityTheftProtectionLimit.selectOptionByLabel("500")
+        break;
+    }
+    await t.wait(1000)
+
   }
 }

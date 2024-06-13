@@ -4,12 +4,12 @@ import { FnolScenario } from "../../../../ui/actions/gw/cc/FNOLScenario";
 import { SearchScenario } from "../../../../ui/actions/gw/cc/SearchScenario";
 import { NavigationScenario } from "../../../../ui/actions/gw/cc/NavigationScenario";
 import { searchTableRecord } from "../../../../ui/util/gw/helper";
-import { ViewClaimSummaryScenario } from "../../../../ui/actions/gw/cc/ViewClaimSummaryScenario";
+import { ClaimSummaryScenario } from "../../../../ui/actions/gw/cc/ClaimSummaryScenario";
  
 const fnolScenario = new FnolScenario()
 const searchScenario = new SearchScenario()
 const navigationScenario = new NavigationScenario()
-const viewClaimSummaryScenario = new ViewClaimSummaryScenario()
+const claimSummaryScenario = new ClaimSummaryScenario()
  
 When(/^the user creates new FNOL/, async function () {
     await navigationScenario.navigateToNewClaimWizard()
@@ -24,5 +24,5 @@ When(/^the user search with claim number/, async function () {
 Then(/^the FNOL is added successfully/, async function () {
     await searchScenario.claimSimpleSearch()
     await searchTableRecord(3, t.ctx.claimNo)
-    await viewClaimSummaryScenario.verifySummaryHeader()
+    await claimSummaryScenario.verifySummaryHeader()
 });
