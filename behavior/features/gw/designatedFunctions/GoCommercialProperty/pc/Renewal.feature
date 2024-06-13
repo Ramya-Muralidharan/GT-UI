@@ -8,5 +8,5 @@ Feature: Processing a renewal
         When the user loads "pc" data "renewal_01" from json "RenewalTestData"
         And the user creates commercial account
         And the user creates commercial policy
-        And the user performs renewal transaction on the policy
+        And the user performs renewal on commercial policy
         Then the renewal is applied successfully
