@@ -53,5 +53,16 @@
         "RefusalType":"Cancelled",
         "IdentityTheftProtectionLimit":"15,000",
         "IdentityTheftProtectionDeductible":"500"
+    },
+    "newSubmission_03":{
+        "ProductName": "Commercial Umbrella and Excess Liability",
+        "OrganizationType": "Individual",
+        "Address1": "4700 S MOLSTEADS LN",
+        "State": "Idaho",
+        "ZIPCode": "83814-5113",
+        "AddressType": "Billing",
+        "Organization": "a",
+        "UmbrellaLiability": "Umbrella Liability",
+        "OccurrenceLimit": "1,000,000"
     }
 }
