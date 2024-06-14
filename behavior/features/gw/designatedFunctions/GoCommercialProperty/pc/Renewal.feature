@@ -2,7 +2,7 @@
 Feature: Processing a renewal
     As a user, I want to perform Renewal transaction in policy center
 
-    @renewal
+    @renewal_cp
     Scenario: Perform renewal on commercial policy
         Given the user logs into the policy center as "superuser"
         When the user loads "pc" data "renewal_01" from json "RenewalTestData"

@@ -127,6 +127,21 @@ When(/^the user issue the new homeowner policy/, async function () {
     await newSubmissionScenario.issuePolicy()
 })
 
+When(/^the user quote the new submission for commercial property/, async function (t) {
+    await navigationScenario.navigateNewSubmissionScreen()
+    await newSubmissionScenario.initiateNewSubmissionPolicy()
+    await newSubmissionScenario.selectProduct()   
+    await newSubmissionScenario.policyInfo()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.addCommercialPropertyLineCoverage()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.addCpBlanket()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.quote()
+    await newSubmissionScenario.verifyQuote()
+})
+
 Then(/^the policy is issued/, async function () {
     await newSubmissionScenario.verifyIssue()
     await newSubmissionScenario.viewSubmission()
