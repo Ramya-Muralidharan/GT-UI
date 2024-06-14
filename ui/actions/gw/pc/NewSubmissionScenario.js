@@ -195,26 +195,25 @@ export class NewSubmissionScenario {
   }
 
   async addUmbrellaCoverages(coverageName) {
-    await homeOwners_New.submissionWizardUmbrellaCoverages.click()
     console.log("On Commercial Umbrella And Excess Liability screen")
     switch (coverageName) {
       case ('Occurrence Limit'):
-        await homeOwners_New.submissionWizardOccurrenceLimit.selectOptionByLabel(world.dataMap.get('OccurrenceLimit'))
+        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardOccurrenceLimit.selectOptionByLabel(world.dataMap.get('OccurrenceLimit'))
         break;
       case ('Aggregate Limit'):
-        await homeOwners_New.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('AggregateLimit'))
+        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('AggregateLimit'))
         break;
       case ('Product and Completed Operations Aggregate LImit'):
-        await homeOwners_New.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('ProductandCompletedOperationsAggregateLImit'))
+        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('ProductandCompletedOperationsAggregateLImit'))
         break;
       case ('Umbrella Coverage Form'):
-        await homeOwners_New.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('UmbrellaCoverageForm'))
+        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('UmbrellaCoverageForm'))
         break;
       case ('Self Insured Retention'):
-        await homeOwners_New.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('SelfInsuredRetention'))
+        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('SelfInsuredRetention'))
         break;
       default:
-        await homeOwners_New.submissionWizardOccurrenceLimit.selectOptionByLabel("2,000,000")
+        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardOccurrenceLimit.selectOptionByLabel("2,000,000")
         break;
     }
     await t.wait(1000)
@@ -222,7 +221,7 @@ export class NewSubmissionScenario {
 
   async commercialUmbrellaAccessliability() {
     console.log("On Commercial Umbrella And Excess Liability screen")
-    await homeOwners_New.submissionWizardUmbrellaLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiability'))
-    await homeOwners_New.submissionWizardUmbrellaCoverages.click()
+    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardUmbrellaLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiability'))
+    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardUmbrellaCoverages.click()
   }
 }
