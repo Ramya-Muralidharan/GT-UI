@@ -96,30 +96,4 @@ export class RenewalScenario {
         }
         await t.wait(1000)
       }
-
-      async addUmbrellaCoverages(coverageName) {
-        await homeOwners_New.submissionWizardUmbrellaCoverages.click()
-        console.log("On Commercial Umbrella And Excess Liability screen")
-        switch (coverageName) {
-          case ('Occurrence Limit'):
-            await homeOwners_New.submissionWizardOccurrenceLimit.selectOptionByLabel(world.dataMap.get('OccurrenceLimit'))
-            break;
-          case ('Aggregate Limit'):
-            await homeOwners_New.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('AggregateLimit'))
-            break;
-          case ('Product and Completed Operations Aggregate LImit'):
-            await homeOwners_New.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('ProductandCompletedOperationsAggregateLImit'))
-            break;
-          case ('Umbrella Coverage Form'):
-            await homeOwners_New.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('UmbrellaCoverageForm'))
-            break;
-          case ('Self Insured Retention'):
-            await homeOwners_New.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('SelfInsuredRetention'))
-            break;
-          default:
-            await homeOwners_New.submissionWizardOccurrenceLimit.selectOptionByLabel("2,000,000")
-            break;
-        }
-        await t.wait(1000)
-      }
 }
