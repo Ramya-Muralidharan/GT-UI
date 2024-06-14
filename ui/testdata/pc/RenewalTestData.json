@@ -45,5 +45,17 @@
         "IdentityTheftProtectionDeductible":"500",
         "RenewalLossAssessmentLimit": "1,000",
         "RenewalCode": "Renew - account consideration"
+    },
+    "renewal_03":{
+        "ProductName": "Commercial Umbrella and Excess Liability",
+        "Address1": "4700 S MOLSTEADS LN",
+        "State": "Idaho",
+        "ZIPCode": "83814-5113",
+        "AddressType": "Billing",
+        "Organization": "a",
+        "OrganizationType": "Common ownership",
+        "RenewalCode": "Renew - account consideration",
+        "UmbrellaLiability": "Umbrella Liability",
+        "OccurrenceLimit": "1,000,000"
     }
 }

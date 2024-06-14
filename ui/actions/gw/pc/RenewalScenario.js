@@ -96,7 +96,4 @@ export class RenewalScenario {
         }
         await t.wait(1000)
       }
-
-      
-
 }
