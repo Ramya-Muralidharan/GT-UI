@@ -21,7 +21,7 @@ Feature: Commercial Property new Submission
         Then the policy is bound successfully
 
     @issue_submission_cp
-    Scenario: Creating Commercial Property issue
+    Scenario: Issuing Creating Commercial Property
         Given the user logs into the policy center as "superuser"
         When the user loads "pc" data "newSubmission_04" from json "NewSubmissionTestData"
         And the user creates commercial account
