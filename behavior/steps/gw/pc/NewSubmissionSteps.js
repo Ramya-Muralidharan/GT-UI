@@ -142,6 +142,21 @@ When(/^the user quote the new submission for commercial property/, async functio
     await newSubmissionScenario.verifyQuote()
 })
 
+When(/^the user issue the new USAPersonalAuto policy/, async function () {
+    await navigationScenario.navigateNewSubmissionScreen()
+    await newSubmissionScenario.initiateNewSubmissionPolicy()
+    await newSubmissionScenario.selectProduct()    
+    await newSubmissionScenario.policyInfo()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.usaPersonalAuto_PersonalAutoStandardCoverages()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.quote()
+    await newSubmissionScenario.verifyQuote()
+    await newSubmissionScenario.issuePolicy()
+})
+
 Then(/^the policy is issued/, async function () {
     await newSubmissionScenario.verifyIssue()
     await newSubmissionScenario.viewSubmission()

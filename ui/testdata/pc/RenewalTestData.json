@@ -57,5 +57,17 @@
         "RenewalCode": "Renew - account consideration",
         "UmbrellaLiability": "Umbrella Liability",
         "OccurrenceLimit": "1,000,000"
+    },
+    "renewal_04":{
+        "ProductName": "USA Personal Auto",
+        "AutoLiabilityPackage": "25/50/10",
+        "Address1": "1737 HURLEY",
+        "City": "Pewaukee",
+        "State": "Florida",
+        "ZIPCode": "53072-0000",
+        "AddressType": "Home",
+        "Organization": "a",
+        "OrganizationType": "Common ownership",
+        "RenewalCode": "Renew - account consideration"
     }
 }

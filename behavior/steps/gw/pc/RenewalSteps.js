@@ -46,3 +46,15 @@ When(/^the user performs renewal on commercial umbrella and excess liability pol
     await renewalScenario.clickRenew()
     await renewalScenario.selectRenewalCode()  
 })
+
+When(/^the user performs renewal on USAPersonalAuto policy/, async function (t) {
+    await navigationScenario.openPolicy(t.ctx.PolicyNumber)
+    await renewalScenario.initiatePolicyRenewal()
+    await renewalScenario.editPolicyTransaction()
+    await navigationScenario.renewalNext()
+    await navigationScenario.renewalNext()
+    await navigationScenario.renewalNext()
+    await renewalScenario.renewalQuote()
+    await renewalScenario.clickRenew()
+    await renewalScenario.selectRenewalCode()  
+})
