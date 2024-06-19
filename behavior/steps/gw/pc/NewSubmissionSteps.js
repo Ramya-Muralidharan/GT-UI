@@ -44,6 +44,33 @@ When(/^the user quote the new submission for homeowners/, async function (t) {
     await newSubmissionScenario.verifyQuote()
 })
 
+When(/^the user quote the new submission for small business/, async function (t) {
+    await navigationScenario.navigateNewSubmissionScreen()
+    await newSubmissionScenario.initiateNewSubmissionPolicy()
+    await newSubmissionScenario.selectProduct()    
+    await newSubmissionScenario.policyInfo()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.smallBusinessLineCoverages()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.quote()
+    await newSubmissionScenario.verifyQuote()
+})
+
+When(/^the user issue the new submission for small business/, async function (t) {
+    await navigationScenario.navigateNewSubmissionScreen()
+    await newSubmissionScenario.initiateNewSubmissionPolicy()
+    await newSubmissionScenario.selectProduct()    
+    await newSubmissionScenario.policyInfo()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.smallBusinessLineCoverages()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.clickNext()
+    await newSubmissionScenario.quote()
+    await newSubmissionScenario.verifyQuote()
+    await newSubmissionScenario.issuePolicy()
+})
+
 When(/^the user quote the new submission for umbrella liability/, async function () {
     await navigationScenario.navigateNewSubmissionScreen()
     await newSubmissionScenario.initiateNewSubmissionPolicy()

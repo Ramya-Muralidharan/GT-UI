@@ -1,4 +1,4 @@
-import { PcfButton, PcfComponent, PcfSelectInput, PcfTextInput } from '@gtui/gt-ui-framework';
+import { PcfButton, PcfCheckBox, PcfComponent, PcfSelectInput, PcfTextInput } from '@gtui/gt-ui-framework';
 import { LOBWizardStepGroupSubmissionWizard } from '../../../../../../../ui/pages/gw/generated/policysolutions/pages/navigation/submissionWizard/LOBWizardStepGroupSubmissionWizard'
 
 export class LOBWizardStepGroupSubmissionWizard_Ext extends LOBWizardStepGroupSubmissionWizard {
@@ -28,4 +28,9 @@ export class LOBWizardStepGroupSubmissionWizard_Ext extends LOBWizardStepGroupSu
     submissionWizardProductandCompletedOperationsAggregateLImit = PcfSelectInput('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-CELWizardStepGroup-CELCommUmbExcLiabScreen-CELCommUmbExcLiabPanelSet-UmbrellaCoveragesCovPatterns-CoverageCategoryInputSet-0-CoverageInputSet-CovPatternInputGroup-2-CovTermInputSet-OptionTermInput')
     submissionWizardUmbrellaCoverageForm = PcfSelectInput('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-CELWizardStepGroup-CELCommUmbExcLiabScreen-CELCommUmbExcLiabPanelSet-UmbrellaCoveragesCovPatterns-CoverageCategoryInputSet-0-CoverageInputSet-CovPatternInputGroup-3-CovTermInputSet-TypekeyTermInput')
     submissionWizardSelfInsuredRetention = PcfSelectInput('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-CELWizardStepGroup-CELCommUmbExcLiabScreen-CELCommUmbExcLiabPanelSet-UmbrellaCoveragesCovPatterns-CoverageCategoryInputSet-0-CoverageInputSet-CovPatternInputGroup-4-CovTermInputSet-OptionTermInput')
+	//Small Business
+	submissionWizardBusinessType = PcfSelectInput('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-SBLWizardStepGroup-SBLSmallBusinessScreen-SBLSmallBusinessPanelSet-SBLBusinessType')
+	submissionWizardSmallBusinessLineCoverages = PcfButton('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-SBLWizardStepGroup-SBLSmallBusinessScreen-SBLSmallBusinessPanelSet-SBLLineCoveragesTab')
+	submissionWizardGeneralLiability = PcfCheckBox('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-SBLWizardStepGroup-SBLSmallBusinessScreen-SBLSmallBusinessPanelSet-SBLLineCoveragesCovPatterns-CoverageCategoryInputSet-0-CoverageInputSet-CovPatternInputGroup-_checkbox_checkboxDiv')
+	submissionWizardGeneralLiabilityOccurrenecLimit = PcfSelectInput('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-SBLWizardStepGroup-SBLSmallBusinessScreen-SBLSmallBusinessPanelSet-SBLLineCoveragesCovPatterns-CoverageCategoryInputSet-0-CoverageInputSet-CovPatternInputGroup-0-CovTermInputSet-OptionTermInput')
 }

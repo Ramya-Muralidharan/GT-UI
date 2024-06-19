@@ -79,5 +79,16 @@
         "EachLossCausedBywindDeductible": "200",
         "ContentsOfOtherStructuresLimit": "1%",
         "ContentsOfOtherStructuresDeductible": "150"
+    },
+    "newSubmission_05":{
+        "Address1": "4700 S MOLSTEADS LN",
+        "State": "Idaho",
+        "ZIPCode": "83814-5113",
+        "AddressType": "Billing",
+        "Organization": "a",
+        "ProductName": "Small Business",
+        "OrganizationType": "Common ownership",
+        "BusinessType": "Apartment",
+        "GeneralLiabilityOccurrenecLimit": "300,000"
     }
 }
