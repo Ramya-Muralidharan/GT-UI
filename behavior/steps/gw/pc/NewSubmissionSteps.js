@@ -1,9 +1,12 @@
 const { When, Then } = require('@cucumber/cucumber')
 import { NewSubmissionScenario } from '../../../../ui/actions/gw/pc/NewSubmissionScenario'
 import { NavigationScenario } from '../../../../ui/actions/gw/pc/NavigationScenario'
+import { CommercialPropertyCoverage } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialPropertyCoverage'
+import { t } from 'testcafe'
 
 const newSubmissionScenario = new NewSubmissionScenario()
 const navigationScenario = new NavigationScenario()
+const commercialPropertyCoverage = new CommercialPropertyCoverage()
 
 When(/^the user bind the new submission/, async function () {
     await newSubmissionScenario.bindPolicy()
@@ -84,8 +87,8 @@ When(/^the user creates commercial policy/, async function () {
     await newSubmissionScenario.initiateNewSubmissionPolicy()
     await newSubmissionScenario.selectProduct()   
     await newSubmissionScenario.policyInfo()
-    await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.addCommercialPropertyLineCoverage()
+    await newSubmissionScenario.clickNext()   
+    await commercialPropertyCoverage.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.addCpBlanket()
     await newSubmissionScenario.clickNext()

@@ -134,7 +134,7 @@ export class NewSubmissionScenario {
   }
 
   async addCpBlanket(nthOption = 1) {
-    await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizardAddCPBlanket.click()
+    await submissionWizard_New.submissionWizard_AddCPBlanket.click()
     await cLLCpBlanketPopup_New.CLLCpBlanketPopup_Location.selectNthOption(nthOption)
     await cLLCpBlanketPopup_New.CLLCpBlanketPopup_ok.click()
     await nextSubmissionWizard_Ext.submissionWizardNext.click()

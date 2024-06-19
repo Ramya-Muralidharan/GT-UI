@@ -1,9 +1,11 @@
 const { When } = require("@cucumber/cucumber")
 import { NavigationScenario } from "../../../../ui/actions/gw/pc/NavigationScenario"
 import { RenewalScenario } from "../../../../ui/actions/gw/pc/RenewalScenario"
+import { CommercialPropertyCoverage } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialPropertyCoverage'
  
 const navigationScenario = new NavigationScenario()
 const renewalScenario = new RenewalScenario()
+const commercialPropertyCoverage = new CommercialPropertyCoverage()
  
 When(/^the renewal is applied successfully/, async function () {
     await renewalScenario.verifyRenewal()
@@ -13,7 +15,7 @@ When(/^the user performs renewal on commercial policy/, async function (t) {
     await navigationScenario.openPolicy(t.ctx.PolicyNumber)
     await renewalScenario.initiatePolicyRenewal()
     await renewalScenario.editPolicyTransaction()
-    await renewalScenario.renewalAddCommercialPropertyLineCoverage('Terrorism')
+    await commercialPropertyCoverage.coverageFilter()
     await navigationScenario.renewalNext()
     await navigationScenario.renewalNext()
     await navigationScenario.renewalNext()

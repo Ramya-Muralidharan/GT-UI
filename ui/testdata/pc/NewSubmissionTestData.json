@@ -1,32 +1,32 @@
-{ 
-    "defaultDataSet":{
+{
+    "defaultDataSet": {
         "ProductName": "USA Personal Auto",
         "OrganizationType": "Individual",
         "AutoLiabilityPackage": "25/50/10",
         "BodyType": "ATV",
-        "LicenseState":"Idaho",
+        "LicenseState": "Idaho",
         "VIN": "JH4KA2630HC019837",
-        "Year":"1987",
-        "Make":"Acura",
-        "Model":"Legend",
+        "Year": "1987",
+        "Make": "Acura",
+        "Model": "Legend",
         "Address1": "1737 HURLEY",
         "City": "Pewaukee",
         "State": "Florida",
         "ZIPCode": "53072-0000",
         "AddressType": "Home",
         "Organization": "a",
-        "Screenname":"Policy Review"
+        "Screenname": "Policy Review"
     },
-    "newSubmission_01":{
+    "newSubmission_01": {
         "ProductName": "USA Personal Auto",
         "OrganizationType": "Individual",
         "AutoLiabilityPackage": "25/50/10",
         "BodyType": "ATV",
-        "LicenseState":"Idaho",
+        "LicenseState": "Idaho",
         "VIN": "JH4KA2630HC019837",
-        "Year":"1987",
-        "Make":"Acura",
-        "Model":"Legend",
+        "Year": "1987",
+        "Make": "Acura",
+        "Model": "Legend",
         "Address1": "1737 HURLEY",
         "City": "Pewaukee",
         "State": "Florida",
@@ -34,27 +34,27 @@
         "AddressType": "Home",
         "Organization": "a"
     },
-    "newSubmission_02":{
+    "newSubmission_02": {
         "ProductName": "Homeowners Product",
         "OrganizationType": "Individual",
         "AutoLiabilityPackage": "25/50/10",
         "BodyType": "ATV",
-        "LicenseState":"Idaho",
+        "LicenseState": "Idaho",
         "VIN": "JH4KA2630HC019837",
-        "Year":"1987",
-        "Make":"Acura",
-        "Model":"Legend",
+        "Year": "1987",
+        "Make": "Acura",
+        "Model": "Legend",
         "Address1": "1737 HURLEY",
         "City": "Pewaukee",
         "State": "Florida",
         "ZIPCode": "53072-0000",
         "AddressType": "Home",
         "Organization": "a",
-        "RefusalType":"Cancelled",
-        "IdentityTheftProtectionLimit":"15,000",
-        "IdentityTheftProtectionDeductible":"500"
+        "RefusalType": "Cancelled",
+        "IdentityTheftProtectionLimit": "15,000",
+        "IdentityTheftProtectionDeductible": "500"
     },
-    "newSubmission_03":{
+    "newSubmission_03": {
         "ProductName": "Commercial Umbrella and Excess Liability",
         "OrganizationType": "Individual",
         "Address1": "4700 S MOLSTEADS LN",
@@ -65,7 +65,27 @@
         "UmbrellaLiability": "Umbrella Liability",
         "OccurrenceLimit": "1,000,000"
     },
-    "newSubmission_04":{
+    "newSubmission_04": {
+        "ProductName": "Go Commercial Property",
+        "Address1": "4700 S MOLSTEADS LN",
+        "State": "Idaho",
+        "ZIPCode": "83814-5113",
+        "AddressType": "Billing",
+        "Organization": "a",
+        "OrganizationType": "Common ownership",
+        "Coverage": {
+            "EachLossCausedByWind": "check",
+            "EachLossCausedByWindLimit": "1000",
+            "EachLossCausedByWindDeductible": "200",
+            "ContentsOfOtherStructures": "check",
+            "ContentsOfOtherStructuresLimit": "1%",
+            "ContentsOfOtherStructuresDeductible": "150",
+            "OutsideObjectsAndStructures": "check",
+            "OutsideObjectsAndStructuresLimit": "1000",
+            "OutsideObjectsAndStructuresDeductible": "250"
+        }
+    },
+    "newSubmission_05": {
         "Address1": "4700 S MOLSTEADS LN",
         "State": "Idaho",
         "ZIPCode": "83814-5113",
@@ -73,11 +93,13 @@
         "Organization": "a",
         "ProductName": "Go Commercial Property",
         "OrganizationType": "Common ownership",
-        "OutsideObjectsAndStructuresLimit": "1000",
-        "OutsideObjectsAndStructuresDeductible": "250",
-        "EachLossCausedBywindLimit": "2000",
-        "EachLossCausedBywindDeductible": "200",
-        "ContentsOfOtherStructuresLimit": "1%",
-        "ContentsOfOtherStructuresDeductible": "150"
+        "Coverage": {
+            "OutsideObjectsAndStructuresLimit": "1000",
+            "OutsideObjectsAndStructuresDeductible": "250",
+            "EachLossCausedBywindLimit": "2000",
+            "EachLossCausedBywindDeductible": "200",
+            "ContentsOfOtherStructuresLimit": "1%",
+            "ContentsOfOtherStructuresDeductible": "150"
+        }
     }
 }

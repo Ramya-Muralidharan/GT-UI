@@ -1,5 +1,5 @@
 {
-    "defaultDataSet":{
+    "defaultDataSet": {
         "Address1": "4700 S MOLSTEADS LN",
         "State": "Idaho",
         "ZIPCode": "83814-5113",
@@ -15,23 +15,21 @@
         "ContentsOfOtherStructuresDeductible": "150",
         "RenewalCode": "Renew - account consideration"
     },
-    "renewal_01":{
-        "Address1": "4700 S MOLSTEADS LN",
-        "State": "Idaho",
-        "ZIPCode": "83814-5113",
-        "AddressType": "Billing",
-        "Organization": "a",
-        "ProductName": "Go Commercial Property",
-        "OrganizationType": "Common ownership",
-        "OutsideObjectsAndStructuresLimit": "1000",
-        "OutsideObjectsAndStructuresDeductible": "250",
-        "EachLossCausedBywindLimit": "2000",
-        "EachLossCausedBywindDeductible": "200",
-        "ContentsOfOtherStructuresLimit": "1%",
-        "ContentsOfOtherStructuresDeductible": "150",
-        "RenewalCode": "Renew - account consideration"
+    "renewal_01": {
+        "RenewalCode": "Renew - account consideration",
+        "Coverage": {
+            "OutsideObjectsAndStructures": "uncheck",
+            "OutsideObjectsAndStructuresLimit": "2000",
+            "OutsideObjectsAndStructuresDeductible": "250",
+            "EachLossCausedByWind": "update",
+            "EachLossCausedByWindLimit": "2000",
+            "EachLossCausedByWindDeductible": "200",
+            "ContentsOfOtherStructuresLimit": "1%",
+            "ContentsOfOtherStructuresDeductible": "150",
+            "Terrorism": "check"
+        }
     },
-    "renewal_02":{
+    "renewal_02": {
         "ProductName": "Homeowners Product",
         "OrganizationType": "Individual",
         "Address1": "1737 HURLEY",
@@ -40,13 +38,13 @@
         "ZIPCode": "53072-0000",
         "AddressType": "Home",
         "Organization": "a",
-        "RefusalType":"Cancelled",
-        "IdentityTheftProtectionLimit":"15,000",
-        "IdentityTheftProtectionDeductible":"500",
+        "RefusalType": "Cancelled",
+        "IdentityTheftProtectionLimit": "15,000",
+        "IdentityTheftProtectionDeductible": "500",
         "RenewalLossAssessmentLimit": "1,000",
         "RenewalCode": "Renew - account consideration"
     },
-    "renewal_03":{
+    "renewal_03": {
         "ProductName": "Commercial Umbrella and Excess Liability",
         "Address1": "4700 S MOLSTEADS LN",
         "State": "Idaho",
