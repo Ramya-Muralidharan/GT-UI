@@ -1,3 +1,4 @@
 module.exports = {
-    dataMap : new Map()
+    dataMap : new Map(),
+    coverageDataMap : new Map()
 }

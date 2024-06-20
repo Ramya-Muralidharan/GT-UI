@@ -4,6 +4,9 @@ import { LOBWizardStepGroupSubmissionWizard } from '../../../../../../../ui/page
 export class LOBWizardStepGroupSubmissionWizard_Ext extends LOBWizardStepGroupSubmissionWizard {
 
 	//#region CommercialProperty
+	ContentsOfOtherStructures=PcfCheckBox('[id$="LOBWizardStepGroup-LineWizardStepSet-CLLWizardStepGroup-CLLCPLTypeName1Screen-CLLCPLTypeName1PanelSet-SupplementalCovCovPatterns-CoverageCategoryInputSet-5-CoverageInputSet-CovPatternInputGroup-_checkbox_checkboxDiv"]')
+	ContentsOfOtherStructuresLimit=PcfSelectInput('[id$="LOBWizardStepGroup-LineWizardStepSet-CLLWizardStepGroup-CLLCPLTypeName1Screen-CLLCPLTypeName1PanelSet-SupplementalCovCovPatterns-CoverageCategoryInputSet-5-CoverageInputSet-CovPatternInputGroup-0-CovTermInputSet-OptionTermInput"]')
+	ContentsOfOtherStructuresDeductible=PcfTextInput('[id$="LOBWizardStepGroup-LineWizardStepSet-CLLWizardStepGroup-CLLCPLTypeName1Screen-CLLCPLTypeName1PanelSet-SupplementalCovCovPatterns-CoverageCategoryInputSet-5-CoverageInputSet-CovPatternInputGroup-1-CovTermInputSet-CovTermDirectInputSet-DirectTermInput"]')
 	PropertyOffPremises=PcfCheckBox('[id$="LOBWizardStepGroup-LineWizardStepSet-CLLWizardStepGroup-CLLCPLTypeName1Screen-CLLCPLTypeName1PanelSet-SupplementalCovCovPatterns-CoverageCategoryInputSet-0-CoverageInputSet-CovPatternInputGroup-_checkbox_checkboxDiv"]')
 	PropertyOffPremisesLimit= PcfTextInput('[id$="LOBWizardStepGroup-LineWizardStepSet-CLLWizardStepGroup-CLLCPLTypeName1Screen-CLLCPLTypeName1PanelSet-SupplementalCovCovPatterns-CoverageCategoryInputSet-0-CoverageInputSet-CovPatternInputGroup-0-CovTermInputSet-CovTermDirectInputSet-DirectTermInput"]')
 	PropertyOffPremisesDeductible= PcfTextInput('[id$="LOBWizardStepGroup-LineWizardStepSet-CLLWizardStepGroup-CLLCPLTypeName1Screen-CLLCPLTypeName1PanelSet-SupplementalCovCovPatterns-CoverageCategoryInputSet-0-CoverageInputSet-CovPatternInputGroup-1-CovTermInputSet-CovTermDirectInputSet-DirectTermInput"]')

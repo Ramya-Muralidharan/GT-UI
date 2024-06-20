@@ -19,13 +19,8 @@
         "RenewalCode": "Renew - account consideration",
         "Coverage": {
             "OutsideObjectsAndStructures": "uncheck",
-            "OutsideObjectsAndStructuresLimit": "2000",
-            "OutsideObjectsAndStructuresDeductible": "250",
             "EachLossCausedByWind": "update",
             "EachLossCausedByWindLimit": "2000",
-            "EachLossCausedByWindDeductible": "200",
-            "ContentsOfOtherStructuresLimit": "1%",
-            "ContentsOfOtherStructuresDeductible": "150",
             "Terrorism": "check"
         }
     },

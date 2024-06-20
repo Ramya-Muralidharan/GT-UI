@@ -136,7 +136,7 @@ When(/^the user quote the new submission for commercial property/, async functio
     await newSubmissionScenario.selectProduct()   
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.addCommercialPropertyLineCoverage()
+    await commercialPropertyCoverage.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.addCpBlanket()
     await newSubmissionScenario.clickNext()

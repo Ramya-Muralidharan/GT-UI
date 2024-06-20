@@ -73,7 +73,7 @@
         "AddressType": "Billing",
         "Organization": "a",
         "OrganizationType": "Common ownership",
-        "Coverage": {
+        "Coverage":{
             "EachLossCausedByWind": "check",
             "EachLossCausedByWindLimit": "1000",
             "EachLossCausedByWindDeductible": "200",
@@ -83,7 +83,7 @@
             "OutsideObjectsAndStructures": "check",
             "OutsideObjectsAndStructuresLimit": "1000",
             "OutsideObjectsAndStructuresDeductible": "250"
-        }
+        }        
     },
     "newSubmission_05": {
         "Address1": "4700 S MOLSTEADS LN",
