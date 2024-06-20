@@ -1,20 +1,22 @@
 const { When, Then } = require('@cucumber/cucumber')
 import { NewSubmissionScenario } from '../../../../ui/actions/gw/pc/NewSubmissionScenario'
 import { NavigationScenario } from '../../../../ui/actions/gw/pc/NavigationScenario'
+import { CommercialPropertyCoverage } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialPropertyCoverage'
 
 const newSubmissionScenario = new NewSubmissionScenario()
 const navigationScenario = new NavigationScenario()
+const commercialPropertyCoverage = new CommercialPropertyCoverage()
 
 When(/^the user bind the new submission/, async function () {
     await newSubmissionScenario.bindPolicy()
 }) 
 
-Then(/^the policy is bound successfully/, async function (t, stepArguments) {
+Then(/^the policy is bound successfully/, async function () {
     await newSubmissionScenario.verifyIssue()
     await newSubmissionScenario.viewSubmission()
 })
 
-When(/^the user quote the new submission for personal auto/, async function (t) {
+When(/^the user quote the new submission for personal auto/, async function () {
     await navigationScenario.navigateNewSubmissionScreen()
     await newSubmissionScenario.initiateNewSubmissionPolicy()
     await newSubmissionScenario.selectProduct()    
@@ -30,7 +32,7 @@ When(/^the user quote the new submission for personal auto/, async function (t) 
     await newSubmissionScenario.verifyQuote()
 }) 
 
-When(/^the user quote the new submission for homeowners/, async function (t) {
+When(/^the user quote the new submission for homeowners/, async function () {
     await navigationScenario.navigateNewSubmissionScreen()
     await newSubmissionScenario.initiateNewSubmissionPolicy()
     await newSubmissionScenario.selectProduct()    
@@ -111,8 +113,8 @@ When(/^the user creates commercial policy/, async function () {
     await newSubmissionScenario.initiateNewSubmissionPolicy()
     await newSubmissionScenario.selectProduct()   
     await newSubmissionScenario.policyInfo()
-    await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.addCommercialPropertyLineCoverage()
+    await newSubmissionScenario.clickNext()   
+    await commercialPropertyCoverage.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.addCpBlanket()
     await newSubmissionScenario.clickNext()
@@ -160,7 +162,7 @@ When(/^the user quote the new submission for commercial property/, async functio
     await newSubmissionScenario.selectProduct()   
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.addCommercialPropertyLineCoverage()
+    await commercialPropertyCoverage.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.addCpBlanket()
     await newSubmissionScenario.clickNext()

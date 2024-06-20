@@ -12,13 +12,12 @@ export class ReadTestDataFiles {
         }
         //loading test case data
         for (const [defaultDataKey, defaultDataValue] of Object.entries(jsonData[testCaseID]))
-            if (typeof defaultDataValue === 'object') {
-                for (const [key, value] of Object.entries(defaultDataValue)) {
-                    testCaseDataMap.set(key, value);
-                }
-            } else {
-                testCaseDataMap.set(defaultDataKey, defaultDataValue);
-            }
+        if (typeof defaultDataValue === 'object' && !Array.isArray(defaultDataValue)) {            
+            const subData = new Map(Object.entries(defaultDataValue))
+            testCaseDataMap.set(defaultDataKey, subData);            
+        } else {
+            testCaseDataMap.set(defaultDataKey, defaultDataValue);
+        }
         console.log(`Loaded ${testCaseID} data`);
         return testCaseDataMap;
     }
