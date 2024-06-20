@@ -224,4 +224,12 @@ export class NewSubmissionScenario {
     await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardUmbrellaLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiability'))
     await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardUmbrellaCoverages.click()
   }
+
+  async smallBusinessLineCoverages() {
+    console.log("On Small Business screen")
+    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardBusinessType.selectOptionByLabel(world.dataMap.get('BusinessType'))
+    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardSmallBusinessLineCoverages.click()
+    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardGeneralLiability.click()
+    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardGeneralLiabilityOccurrenecLimit.selectOptionByLabel(world.dataMap.get('GeneralLiabilityOccurrenecLimit'))
+  }
 }

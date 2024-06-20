@@ -85,21 +85,15 @@
             "OutsideObjectsAndStructuresDeductible": "250"
         }        
     },
-    "newSubmission_05": {
+    "newSubmission_05":{
         "Address1": "4700 S MOLSTEADS LN",
         "State": "Idaho",
         "ZIPCode": "83814-5113",
         "AddressType": "Billing",
         "Organization": "a",
-        "ProductName": "Go Commercial Property",
+        "ProductName": "Small Business",
         "OrganizationType": "Common ownership",
-        "Coverage": {
-            "OutsideObjectsAndStructuresLimit": "1000",
-            "OutsideObjectsAndStructuresDeductible": "250",
-            "EachLossCausedBywindLimit": "2000",
-            "EachLossCausedBywindDeductible": "200",
-            "ContentsOfOtherStructuresLimit": "1%",
-            "ContentsOfOtherStructuresDeductible": "150"
-        }
+        "BusinessType": "Apartment",
+        "GeneralLiabilityOccurrenecLimit": "300,000"
     }
 }
