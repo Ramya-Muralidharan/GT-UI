@@ -2,10 +2,13 @@ const { When, Then } = require('@cucumber/cucumber')
 import { NewSubmissionScenario } from '../../../../ui/actions/gw/pc/NewSubmissionScenario'
 import { NavigationScenario } from '../../../../ui/actions/gw/pc/NavigationScenario'
 import { CommercialPropertyCoverage } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialPropertyCoverage'
+import { HomeownersProduct} from '../../../../ui/actions/gw/pc/CoverageScenario/HomeownersProduct'
+import { t } from 'testcafe'
 
 const newSubmissionScenario = new NewSubmissionScenario()
 const navigationScenario = new NavigationScenario()
 const commercialPropertyCoverage = new CommercialPropertyCoverage()
+const homeownersProduct = new HomeownersProduct()
 
 When(/^the user bind the new submission/, async function () {
     await newSubmissionScenario.bindPolicy()
@@ -38,8 +41,9 @@ When(/^the user quote the new submission for homeowners/, async function () {
     await newSubmissionScenario.selectProduct()    
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.gWHomeownersLine()
-    await newSubmissionScenario.addAdditionalCoverageHomeOwners("Identity Theft Protection")
+    await newSubmissionScenario.gWHomeownersLineScreen()
+    await newSubmissionScenario.gWHomeownersLine('AdditionalCoverges')
+    await homeownersProduct.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.quote()
@@ -147,8 +151,9 @@ When(/^the user issue the new homeowner policy/, async function () {
     await newSubmissionScenario.selectProduct()    
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.gWHomeownersLine()
-    await newSubmissionScenario.addAdditionalCoverageHomeOwners("Identity Theft Protection")
+    await newSubmissionScenario.gWHomeownersLineScreen()
+    await newSubmissionScenario.gWHomeownersLine('AdditionalCoverges')
+    await homeownersProduct.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.quote()

@@ -1,4 +1,4 @@
-import { PcfButton, PcfComponent } from '@gtui/gt-ui-framework';
+import { PcfButton, PcfComponent, PcfSelectInput} from '@gtui/gt-ui-framework';
 
 export class SubmissionWizard_New {
 	submissionWizard_Quote = PcfButton('#SubmissionWizard-SubmissionWizard_PolicyReviewScreen-JobWizardToolbarButtonSet-QuoteTypeToolbarButtonSet-Quote');
@@ -9,4 +9,10 @@ export class SubmissionWizard_New {
 	submissionWizard_QuoteNumber = PcfComponent('#SubmissionWizard-SubmissionWizard_QuoteScreen-Quote_SummaryDV-JobNumber')
 	submissionWizard_BindOptions = PcfButton('#SubmissionWizard-SubmissionWizard_QuoteScreen-JobWizardToolbarButtonSet-BindOptions-BindOnly')
 	submissionWizard_AddCPBlanket = PcfButton('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-CLLWizardStepGroup-CLLCpBlanketScreen-CLLCpBlanketListPanelSet-AddCpBlanket')
+	submissionWizardRefusalType = PcfSelectInput('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-HLLWizardStepGroup-HLLGwHomeownersLineScreen-HLLGwHomeownersLinePanelSet-RefusalType');
+    submissionWizardAdditionalCoverage = PcfComponent('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-HLLWizardStepGroup-HLLGwHomeownersLineScreen-HLLGwHomeownersLinePanelSet-AdditionalCoveragesTab')
+	submissionWizardSectionIICoverages= PcfComponent('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-HLLWizardStepGroup-HLLGwHomeownersLineScreen-HLLGwHomeownersLinePanelSet-SectionIICoveragesTab')
+	submissionWizardOptionalCoverages =PcfComponent('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-HLLWizardStepGroup-HLLGwHomeownersLineScreen-HLLGwHomeownersLinePanelSet-OptionalCoveragesTab')
+	submissionWizardExclusionsConditions = PcfComponent('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-HLLWizardStepGroup-HLLGwHomeownersLineScreen-HLLGwHomeownersLinePanelSet-ExclusionsAndconditionsTab')
+	submissionWizardGWHomeownersLine = PcfComponent('#SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-HLLWizardStepGroup-HLLGwHomeownersLineScreen-HLLGwHomeownersLinePanelSet-detailsTab')
 }

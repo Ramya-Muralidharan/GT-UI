@@ -25,19 +25,12 @@
         }
     },
     "renewal_02": {
-        "ProductName": "Homeowners Product",
-        "OrganizationType": "Individual",
-        "Address1": "1737 HURLEY",
-        "City": "Pewaukee",
-        "State": "Florida",
-        "ZIPCode": "53072-0000",
-        "AddressType": "Home",
-        "Organization": "a",
-        "RefusalType": "Cancelled",
-        "IdentityTheftProtectionLimit": "15,000",
-        "IdentityTheftProtectionDeductible": "500",
-        "RenewalLossAssessmentLimit": "1,000",
-        "RenewalCode": "Renew - account consideration"
+        "RenewalCode": "Renew - account consideration",      
+        "Coverage":{
+            "FirstAid": "check",
+            "LossAssessment": "check",
+            "LossAssessmentLimit": "1,000"
+        }
     },
     "renewal_03": {
         "ProductName": "Commercial Umbrella and Excess Liability",

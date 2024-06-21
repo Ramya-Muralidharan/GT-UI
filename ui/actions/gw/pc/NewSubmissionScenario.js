@@ -10,7 +10,6 @@ import { LOBWizardStepGroupSubmissionWizard_Ext } from "./scenarioPages/navigati
 import { CLLCpBlanketPopup_New } from "./scenarioPages/navigation/submissionWizard/CLLCpBlanketPopup_New"
 import { SubmissionWizard_New } from "./scenarioPages/navigation/submissionWizard/SubmissionWizard_New"
 import { JobWizardInfoBarSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/JobWizardInfoBarSubmissionWizard_Ext";
-import { HomeOwners_New } from "./scenarioPages/policy/HomeOwners_New";
 import world from "../../../util/gw/world"
 
 
@@ -23,7 +22,6 @@ const lOBWizardStepGroupSubmissionWizard_Ext = new LOBWizardStepGroupSubmissionW
 const cLLCpBlanketPopup_New = new CLLCpBlanketPopup_New()
 const submissionWizard_New = new SubmissionWizard_New()
 const jobWizardInfoBarSubmissionWizard_Ext = new JobWizardInfoBarSubmissionWizard_Ext()
-const homeOwners_New = new HomeOwners_New()
 
 export class NewSubmissionScenario {
   async selectProduct() {
@@ -105,34 +103,6 @@ export class NewSubmissionScenario {
     await newSubmission_Ext.accountSelectAccount.click()
   }
 
-  async addCommercialPropertyLineCoverage(coverageName) {
-    console.log("On GoCommercialPropertyLine screen")
-    switch (coverageName) {
-      case ('Outside Objects and Structures'):
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures.click()
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures_Limit.setValue(world.dataMap.get('OutsideObjectsAndStructuresLimit'))
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures_Deductible.setValue(world.dataMap.get('OutsideObjectsAndStructuresDeductible'))
-        break;
-      case ('Each loss caused by wind'):
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind.click()
-        await lOBWizardStepGroupSubmissionWizard_Ext.EachLossCausedByWind_Limit.setValue(world.dataMap.get('EachLossCausedBywindLimit'))
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind_Deductible.setValue(world.dataMap.get('EachLossCausedBywindDeductible'))
-        break;
-      case ('Terrorism'):
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_Terrorism.click()
-        break;
-      default:
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures.click()
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures_Limit.setValue('100')
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_OutsideObjectsandStructures_Deductible.setValue('100')
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind.click()
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind_Limit.setValue('200')
-        await lOBWizardStepGroupSubmissionWizard_Ext.lOBWizard_EachLossCausedByWind_Deductible.setValue('200')
-        break;
-    }
-    await t.wait(1000)
-  }
-
   async addCpBlanket(nthOption = 1) {
     await submissionWizard_New.submissionWizard_AddCPBlanket.click()
     await cLLCpBlanketPopup_New.CLLCpBlanketPopup_Location.selectNthOption(nthOption)
@@ -168,30 +138,27 @@ export class NewSubmissionScenario {
     await newSubmission_Ext.editPolicyTransaction_Btn.click()
   }
 
-  async gWHomeownersLine() {
-    await homeOwners_New.submissionWizardRefusalType.selectOptionByLabel(world.dataMap.get('RefusalType'))
-  }
-
-  async addAdditionalCoverageHomeOwners(coverageName) {
-    await homeOwners_New.submissionWizardAdditionalCoverage.click()
-    console.log("On GW Homeowners Line-Additional Coverage screen")
-    switch (coverageName) {
-      case ('Identity Theft Protection'):
-        await homeOwners_New.submissionWizardIdentityTheftProtection.click()
-        await homeOwners_New.submissionWizardIdentityTheftProtectionLimit.selectOptionByLabel(world.dataMap.get('IdentityTheftProtectionLimit'))
-        await homeOwners_New.submissionWizardIdentityTheftProtectionDeductible.selectOptionByLabel(world.dataMap.get('IdentityTheftProtectionDeductible'))
+  async gWHomeownersLine(section) {
+    switch (section) {
+      case ('AdditionalCoverges'):
+        await submissionWizard_New.submissionWizardAdditionalCoverage.click()
         break;
-      case ('Loss Assessment'):
-        await homeOwners_New.submissionWizardLossAssessment.click()
-        await homeOwners_New.submissionWizardLossAssessmentLimit.selectOptionByLabel(world.dataMap.get('LossAssessmentLimit'))
+      case ('SectionIICoverages'):
+        await submissionWizard_New.submissionWizardSectionIICoverages.click()
+        break;
+      case ('Optional Coverages'):
+        await submissionWizard_New.submissionWizardOptionalCoverages.click()
+        break;
+      case ('Exclusions&Conditions'):
+        await submissionWizard_New.submissionWizardExclusionsConditions.click()
         break;
       default:
-        await homeOwners_New.submissionWizardIdentityTheftProtection.click()
-        await homeOwners_New.submissionWizardIdentityTheftProtectionLimit.selectOptionByLabel("15,000")
-        await homeOwners_New.submissionWizardIdentityTheftProtectionLimit.selectOptionByLabel("500")
-        break;
+        await submissionWizard_New.submissionWizardGWHomeownersLine.click()
     }
-    await t.wait(1000)
+  }
+
+  async gWHomeownersLineScreen() {
+    await submissionWizard_New.submissionWizardRefusalType.selectOptionByLabel(world.dataMap.get('RefusalType'))
   }
 
   async addUmbrellaCoverages(coverageName) {

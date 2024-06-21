@@ -37,13 +37,6 @@
     "newSubmission_02": {
         "ProductName": "Homeowners Product",
         "OrganizationType": "Individual",
-        "AutoLiabilityPackage": "25/50/10",
-        "BodyType": "ATV",
-        "LicenseState": "Idaho",
-        "VIN": "JH4KA2630HC019837",
-        "Year": "1987",
-        "Make": "Acura",
-        "Model": "Legend",
         "Address1": "1737 HURLEY",
         "City": "Pewaukee",
         "State": "Florida",
@@ -51,8 +44,11 @@
         "AddressType": "Home",
         "Organization": "a",
         "RefusalType": "Cancelled",
+        "Coverage": {
+        "IdentityTheftProtection": "check",
         "IdentityTheftProtectionLimit": "15,000",
         "IdentityTheftProtectionDeductible": "500"
+        }
     },
     "newSubmission_03": {
         "ProductName": "Commercial Umbrella and Excess Liability",
@@ -73,7 +69,7 @@
         "AddressType": "Billing",
         "Organization": "a",
         "OrganizationType": "Common ownership",
-        "Coverage":{
+        "Coverage": {
             "EachLossCausedByWind": "check",
             "EachLossCausedByWindLimit": "1000",
             "EachLossCausedByWindDeductible": "200",
@@ -83,15 +79,15 @@
             "OutsideObjectsAndStructures": "check",
             "OutsideObjectsAndStructuresLimit": "1000",
             "OutsideObjectsAndStructuresDeductible": "250"
-        }        
+        }
     },
-    "newSubmission_05":{
+    "newSubmission_05": {
+        "ProductName": "Small Business",
         "Address1": "4700 S MOLSTEADS LN",
         "State": "Idaho",
         "ZIPCode": "83814-5113",
         "AddressType": "Billing",
         "Organization": "a",
-        "ProductName": "Small Business",
         "OrganizationType": "Common ownership",
         "BusinessType": "Apartment",
         "GeneralLiabilityOccurrenecLimit": "300,000"
