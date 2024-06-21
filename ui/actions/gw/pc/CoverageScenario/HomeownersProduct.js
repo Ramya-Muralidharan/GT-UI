@@ -1,9 +1,9 @@
 
-import { selectCoverage, enterInputField, selectDropdown} from './CoverageHelper'
+import { selectCoverage, enterInputField, selectDropdown } from './CoverageHelper'
 import world from "../../../../util/gw/world"
-
 export class HomeownersProduct {
 
+    //To load the coverage data from json input and to perform action on provided coverage
     async coverageFilter() {
         if (!(world.coverageDataMap === undefined) && Array.from(world.coverageDataMap.keys()).length > 0) {
             const coverageKeys = Array.from(world.coverageDataMap.keys())
@@ -19,7 +19,7 @@ export class HomeownersProduct {
                         console.log(`${key} is present`)
                         await selectCoverage('LossAssessment')
                         await selectDropdown('LossAssessmentLimit')
-                        break;                    
+                        break;
                     case ('FirstAid'):
                         console.log(`${key} is present`)
                         await selectCoverage('FirstAid')
