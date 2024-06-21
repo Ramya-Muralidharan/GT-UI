@@ -3,12 +3,14 @@ import { NewSubmissionScenario } from '../../../../ui/actions/gw/pc/NewSubmissio
 import { NavigationScenario } from '../../../../ui/actions/gw/pc/NavigationScenario'
 import { CommercialPropertyCoverage } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialPropertyCoverage'
 import { HomeownersProduct} from '../../../../ui/actions/gw/pc/CoverageScenario/HomeownersProduct'
+import { CommercialUmbrellaAccessliability } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialUmbrellaandExcessLiability'
 import { t } from 'testcafe'
 
 const newSubmissionScenario = new NewSubmissionScenario()
 const navigationScenario = new NavigationScenario()
 const commercialPropertyCoverage = new CommercialPropertyCoverage()
 const homeownersProduct = new HomeownersProduct()
+const commercialUmbrellaAccessliability = new CommercialUmbrellaAccessliability()
 
 When(/^the user bind the new submission/, async function () {
     await newSubmissionScenario.bindPolicy()
@@ -84,7 +86,7 @@ When(/^the user quote the new submission for umbrella liability/, async function
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.commercialUmbrellaAccessliability()
-    await newSubmissionScenario.addUmbrellaCoverages("Occurrence Limit")
+    await commercialUmbrellaAccessliability.coverageFilter('Occurrence Limit')
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.clickNext()
@@ -99,7 +101,7 @@ When(/^the user issue the new submission for umbrella liability/, async function
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.commercialUmbrellaAccessliability()
-    await newSubmissionScenario.addUmbrellaCoverages("Occurrence Limit")
+    await commercialUmbrellaAccessliability.coverageFilter('Occurrence Limit')
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.clickNext()
