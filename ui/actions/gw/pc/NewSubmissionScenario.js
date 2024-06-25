@@ -160,36 +160,11 @@ export class NewSubmissionScenario {
   async gWHomeownersLineScreen() {
     await submissionWizard_New.submissionWizardRefusalType.selectOptionByLabel(world.dataMap.get('RefusalType'))
   }
-
-  async addUmbrellaCoverages(coverageName) {
-    console.log("On Commercial Umbrella And Excess Liability screen")
-    switch (coverageName) {
-      case ('Occurrence Limit'):
-        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardOccurrenceLimit.selectOptionByLabel(world.dataMap.get('OccurrenceLimit'))
-        break;
-      case ('Aggregate Limit'):
-        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('AggregateLimit'))
-        break;
-      case ('Product and Completed Operations Aggregate LImit'):
-        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('ProductandCompletedOperationsAggregateLImit'))
-        break;
-      case ('Umbrella Coverage Form'):
-        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('UmbrellaCoverageForm'))
-        break;
-      case ('Self Insured Retention'):
-        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardAggregateLimit.selectOptionByLabel(world.dataMap.get('SelfInsuredRetention'))
-        break;
-      default:
-        await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardOccurrenceLimit.selectOptionByLabel("2,000,000")
-        break;
-    }
-    await t.wait(1000)
-  }
-
+  
   async commercialUmbrellaAccessliability() {
     console.log("On Commercial Umbrella And Excess Liability screen")
-    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardUmbrellaLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiability'))
-    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardUmbrellaCoverages.click()
+    await lOBWizardStepGroupSubmissionWizard_Ext.UmbrellaLiabilityorExcessLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiabilityorExcessLiability'))
+    await lOBWizardStepGroupSubmissionWizard_Ext.UmbrellaLiabilityUmbrellaCoverages.click()
   }
 
   async smallBusinessLineCoverages() {
