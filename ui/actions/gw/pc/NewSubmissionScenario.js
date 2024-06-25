@@ -163,8 +163,8 @@ export class NewSubmissionScenario {
   
   async commercialUmbrellaAccessliability() {
     console.log("On Commercial Umbrella And Excess Liability screen")
-    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardUmbrellaLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiability'))
-    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardUmbrellaCoverages.click()
+    await lOBWizardStepGroupSubmissionWizard_Ext.UmbrellaLiabilityorExcessLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiabilityorExcessLiability'))
+    await lOBWizardStepGroupSubmissionWizard_Ext.UmbrellaLiabilityUmbrellaCoverages.click()
   }
 
   async smallBusinessLineCoverages() {

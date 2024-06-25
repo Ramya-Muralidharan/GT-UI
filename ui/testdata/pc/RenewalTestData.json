@@ -33,21 +33,14 @@
         }
     },
     "renewal_03": {
-        "ProductName": "Commercial Umbrella and Excess Liability",
-        "Address1": "4700 S MOLSTEADS LN",
-        "State": "Idaho",
-        "ZIPCode": "83814-5113",
-        "AddressType": "Billing",
-        "Organization": "a",
-        "OrganizationType": "Common ownership",
         "RenewalCode": "Renew - account consideration",
-        "UmbrellaLiability": "Umbrella Liability",
+        "UmbrellaLiabilityorExcessLiability": "Umbrella Liability",
         "Coverage": {
-            "OccurrenceLimit": "1,000,000",
-            "AggregateLimit": "1,000,000",
-            "ProductandCompletedOperationsAggregateLImit": "1,000,000",
-            "UmbrellaCoverageForm": "Occurrence",
-            "SelfInsuredRetention": "10,000"
+            "UmbrellaLiability": "update",
+            "UmbrellaLiabilityOccurrenceLimit": "2,000,000",
+            "UmbrellaLiabilityAggregateLimit": "2,000,000",
+            "UmbrellaLiabilityProductandCompletedOperationsAggregateLImit": "2,000,000",
+            "UmbrellaLiabilitySelfInsuredRetention": "20,000"
         } 
     },
    "renewal_04":{

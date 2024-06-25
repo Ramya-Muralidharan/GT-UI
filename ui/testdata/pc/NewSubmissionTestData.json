@@ -58,13 +58,14 @@
         "ZIPCode": "83814-5113",
         "AddressType": "Billing",
         "Organization": "a",
-        "UmbrellaLiability": "Umbrella Liability",
+        "UmbrellaLiabilityorExcessLiability": "Umbrella Liability",
         "Coverage": {
-            "OccurrenceLimit": "1,000,000",
-            "AggregateLimit": "1,000,000",
-            "ProductandCompletedOperationsAggregateLImit": "1,000,000",
-            "UmbrellaCoverageForm": "Occurrence",
-            "SelfInsuredRetention": "10,000"
+            "UmbrellaLiability": "update",
+            "UmbrellaLiabilityOccurrenceLimit": "1,000,000",
+            "UmbrellaLiabilityAggregateLimit": "1,000,000",
+            "UmbrellaLiabilityProductandCompletedOperationsAggregateLImit": "1,000,000",
+            "UmbrellaLiabilityUmbrellaCoverageForm": "Occurrence",
+            "UmbrellaLiabilitySelfInsuredRetention": "10,000"
         } 
     },
     "newSubmission_04": {
