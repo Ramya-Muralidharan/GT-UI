@@ -20,7 +20,6 @@
     "newSubmission_01": {
         "ProductName": "USA Personal Auto",
         "OrganizationType": "Individual",
-        "AutoLiabilityPackage": "25/50/10",
         "BodyType": "ATV",
         "LicenseState": "Idaho",
         "VIN": "JH4KA2630HC019837",
@@ -32,7 +31,13 @@
         "State": "Florida",
         "ZIPCode": "53072-0000",
         "AddressType": "Home",
-        "Organization": "a"
+        "Organization": "a",
+        "Coverage": {
+            "LiabilityBodilyInjuryAndPropertyDamage": "check",
+            "LiabilityBodilyInjuryAndPropertyDamageAutoLiabilityPackage": "25/50/10",
+            "PropertyProtectionInsurance": "check",
+            "PropertyProtectionInsurancePropertyProtectionLimits": "1,000,000"
+        } 
     },
     "newSubmission_02": {
         "ProductName": "Homeowners Product",

@@ -36,11 +36,8 @@ export class NewSubmissionScenario {
     await policyInfoScreen.accountInfoInputSetOrganizationType.selectOptionByLabel(world.dataMap.get('OrganizationType'))
 
   }
-  async usaPersonalAuto_PersonalAutoStandardCoverages() {
+  async usaPersonalAutoStandardCoverages() {
     await usaPersonalAuto_New.SubmissionWizard_LineStandardCoveragesTab.click()
-    await t.click(Selector('div').withExactText('Liability - Bodily Injury and Property Damage').parent().find('[role="checkbox"]'))
-    await usaPersonalAuto_New.SubmissionWizard_AutoLiabilityPackage.selectOptionByLabel(world.dataMap.get('AutoLiabilityPackage'))
-    console.log('Liability - Bodily Injury and Property Damage Standard coverage is added')
   }
   async personalVehicle() {
     await usaPersonalAuto_New.SubmissionWizard_AddPersonalVehicle.click()

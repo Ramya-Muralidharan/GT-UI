@@ -5,12 +5,14 @@ import { CommercialPropertyCoverage } from '../../../../ui/actions/gw/pc/Coverag
 import { HomeownersProduct} from '../../../../ui/actions/gw/pc/CoverageScenario/HomeownersProduct'
 import { CommercialUmbrellaAccessliability } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialUmbrellaandExcessLiability'
 import { t } from 'testcafe'
+import { USAPersonalAuto } from '../../../../ui/actions/gw/pc/CoverageScenario/USAPersonalAuto'
 
 const newSubmissionScenario = new NewSubmissionScenario()
 const navigationScenario = new NavigationScenario()
 const commercialPropertyCoverage = new CommercialPropertyCoverage()
 const homeownersProduct = new HomeownersProduct()
 const commercialUmbrellaAccessliability = new CommercialUmbrellaAccessliability()
+const usaPersonalAuto = new USAPersonalAuto()
 
 When(/^the user bind the new submission/, async function () {
     await newSubmissionScenario.bindPolicy()
@@ -27,7 +29,8 @@ When(/^the user quote the new submission for personal auto/, async function () {
     await newSubmissionScenario.selectProduct()    
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.usaPersonalAuto_PersonalAutoStandardCoverages()
+    await newSubmissionScenario.usaPersonalAutoStandardCoverages()
+    await usaPersonalAuto.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.personalVehicle()
     await newSubmissionScenario.vehicleDriver()
@@ -136,7 +139,8 @@ When(/^the user issue the new submission for personal auto/, async function () {
     await newSubmissionScenario.selectProduct()    
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.usaPersonalAuto_PersonalAutoStandardCoverages()
+    await newSubmissionScenario.usaPersonalAutoStandardCoverages()
+    await usaPersonalAuto.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.personalVehicle()
     await newSubmissionScenario.vehicleDriver()

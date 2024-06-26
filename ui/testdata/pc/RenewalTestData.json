@@ -56,21 +56,10 @@
         "RenewalCode": "Renew - account consideration"
     },
   "renewal_05":{
-        "ProductName": "USA Personal Auto",
-        "AutoLiabilityPackage": "25/50/10",
-        "BodyType": "ATV",
-        "LicenseState":"Idaho",
-        "VIN": "JH4KA2630HC019837",
-        "Year":"1987",
-        "Make":"Acura",
-        "Model":"Legend",
-        "Address1": "1737 HURLEY",
-        "City": "Pewaukee",
-        "State": "Florida",
-        "ZIPCode": "53072-0000",
-        "AddressType": "Home",
-        "Organization": "a",
-        "OrganizationType": "Common ownership",
-        "RenewalCode": "Renew - account consideration"
+        "RenewalCode": "Renew - account consideration",
+        "Coverage": {
+            "LiabilityBodilyInjuryAndPropertyDamage": "update",
+            "LiabilityBodilyInjuryAndPropertyDamageAutoLiabilityPackage": "25/50/15"
+        } 
     }
 }
