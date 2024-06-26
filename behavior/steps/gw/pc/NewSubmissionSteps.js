@@ -4,6 +4,7 @@ import { NavigationScenario } from '../../../../ui/actions/gw/pc/NavigationScena
 import { CommercialPropertyCoverage } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialPropertyCoverage'
 import { HomeownersProduct} from '../../../../ui/actions/gw/pc/CoverageScenario/HomeownersProduct'
 import { CommercialUmbrellaAccessliability } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialUmbrellaandExcessLiability'
+import { SmallBusiness } from '../../../../ui/actions/gw/pc/CoverageScenario/SmallBusiness'
 import { t } from 'testcafe'
 import { USAPersonalAuto } from '../../../../ui/actions/gw/pc/CoverageScenario/USAPersonalAuto'
 
@@ -13,6 +14,7 @@ const commercialPropertyCoverage = new CommercialPropertyCoverage()
 const homeownersProduct = new HomeownersProduct()
 const commercialUmbrellaAccessliability = new CommercialUmbrellaAccessliability()
 const usaPersonalAuto = new USAPersonalAuto()
+const smallBusiness = new SmallBusiness()
 
 When(/^the user bind the new submission/, async function () {
     await newSubmissionScenario.bindPolicy()
@@ -61,7 +63,9 @@ When(/^the user quote the new submission for small business/, async function (t)
     await newSubmissionScenario.selectProduct()    
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.smallBusinessLineCoverages()
+    await newSubmissionScenario.smallBusinessBusinessType()
+    await newSubmissionScenario.smallBusinessTabSelection('SmallBusinessLineCoverages')
+    await smallBusiness.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.quote()
@@ -74,7 +78,9 @@ When(/^the user issue the new submission for small business/, async function (t)
     await newSubmissionScenario.selectProduct()    
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await newSubmissionScenario.smallBusinessLineCoverages()
+    await newSubmissionScenario.smallBusinessBusinessType()
+    await newSubmissionScenario.smallBusinessTabSelection('SmallBusinessLineCoverages')
+    await smallBusiness.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.quote()

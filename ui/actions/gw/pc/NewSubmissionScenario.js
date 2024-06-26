@@ -135,8 +135,8 @@ export class NewSubmissionScenario {
     await newSubmission_Ext.editPolicyTransaction_Btn.click()
   }
 
-  async gWHomeownersLine(section) {
-    switch (section) {
+  async gWHomeownersLine(tabSection) {
+    switch (tabSection) {
       case ('AdditionalCoverges'):
         await submissionWizard_New.submissionWizardAdditionalCoverage.click()
         break;
@@ -163,12 +163,27 @@ export class NewSubmissionScenario {
     await lOBWizardStepGroupSubmissionWizard_Ext.UmbrellaLiabilityorExcessLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiabilityorExcessLiability'))
     await lOBWizardStepGroupSubmissionWizard_Ext.UmbrellaLiabilityUmbrellaCoverages.click()
   }
-
-  async smallBusinessLineCoverages() {
+ 
+  async smallBusinessTabSelection(tabSection){
+    switch (tabSection) {
+      case ('SmallBusiness'):
+        await submissionWizard_New.submissionWizardSmallBusienssTab.click()
+        break;
+      case ('SmallBusinessLineCoverages'):
+        await submissionWizard_New.submissionWizardSmallBusinessLineCoveragesTab.click()
+        break;
+      case ('SmallBusinessLineAdditionalCoverages'):
+        await submissionWizard_New.submissionWizardSmallBusinessLineAdditionalCoveragesTab.click()
+        break;
+      case ('Exclusions&Conditions'):
+        await submissionWizard_New.submissionWizardExclusionsConditionsTabSb.click()
+        break;
+      default:
+        throw new Error('No matching tab found. Check input string.')
+    }
+  }
+  async smallBusinessBusinessType() {
     console.log("On Small Business screen")
-    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardBusinessType.selectOptionByLabel(world.dataMap.get('BusinessType'))
-    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardSmallBusinessLineCoverages.click()
-    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardGeneralLiability.click()
-    await lOBWizardStepGroupSubmissionWizard_Ext.submissionWizardGeneralLiabilityOccurrenecLimit.selectOptionByLabel(world.dataMap.get('GeneralLiabilityOccurrenecLimit'))
+    await submissionWizard_New.submissionWizardBusinessType.selectOptionByLabel(world.dataMap.get('BusinessType'))
   }
 }
