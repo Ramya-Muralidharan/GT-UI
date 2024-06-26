@@ -10,10 +10,10 @@ export class USAPersonalAuto {
             const coverageKeys = Array.from(world.coverageDataMap.keys())
             for (const key of coverageKeys) {
                 switch (key) {
-                    case ('LiabilityBodilyInjuryandPropertyDamage'):
+                    case ('LiabilityBodilyInjuryAndPropertyDamage'):
                         console.log(`${key} is present`)
-                        await selectCoverage('LiabilityBodilyInjuryandPropertyDamage')
-                        await selectDropdown('LiabilityBodilyInjuryandPropertyDamageAutoLiabilityPackage')
+                        await selectCoverage('LiabilityBodilyInjuryAndPropertyDamage')
+                        await selectDropdown('LiabilityBodilyInjuryAndPropertyDamageAutoLiabilityPackage')
                         break;
                     case ('PropertyProtectionInsurance'):
                         console.log(`${key} is present`)

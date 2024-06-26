@@ -33,8 +33,8 @@
         "AddressType": "Home",
         "Organization": "a",
         "Coverage": {
-            "LiabilityBodilyInjuryandPropertyDamage": "check",
-            "LiabilityBodilyInjuryandPropertyDamageAutoLiabilityPackage": "25/50/10",
+            "LiabilityBodilyInjuryAndPropertyDamage": "check",
+            "LiabilityBodilyInjuryAndPropertyDamageAutoLiabilityPackage": "25/50/10",
             "PropertyProtectionInsurance": "check",
             "PropertyProtectionInsurancePropertyProtectionLimits": "1,000,000"
         } 

@@ -58,8 +58,8 @@
   "renewal_05":{
         "RenewalCode": "Renew - account consideration",
         "Coverage": {
-            "LiabilityBodilyInjuryandPropertyDamage": "check",
-            "LiabilityBodilyInjuryandPropertyDamageAutoLiabilityPackage": "25/50/15"
+            "LiabilityBodilyInjuryAndPropertyDamage": "update",
+            "LiabilityBodilyInjuryAndPropertyDamageAutoLiabilityPackage": "25/50/15"
         } 
     }
 }
