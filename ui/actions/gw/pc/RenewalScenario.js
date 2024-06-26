@@ -61,4 +61,23 @@ export class RenewalScenario {
         await renewal_New.RenewalWizardGWHomeownersLine.click()
     }
   }
+
+  async smallBusinessTabSelection(tabSection){
+    switch (tabSection) {
+      case ('SmallBusiness'):
+        await renewal_New.RenewalWizardSmallBusienssTab.click()
+        break;
+      case ('SmallBusinessLineCoverages'):
+        await renewal_New.RenewalWizardSmallBusinessLineCoveragesTab.click()
+        break;
+      case ('SmallBusinessLineAdditionalCoverages'):
+        await renewal_New.RenewalWizardSmallBusinessLineAdditionalCoveragesTab.click()
+        break;
+      case ('Exclusions&Conditions'):
+        await renewal_New.RenewalWizardExclusionsConditionsTabSb.click()
+        break;
+      default:
+        throw new Error('No matching tab found. Check input string.')
+    }
+  }
 }

@@ -102,6 +102,10 @@
         "Organization": "a",
         "OrganizationType": "Common ownership",
         "BusinessType": "Apartment",
-        "GeneralLiabilityOccurrenecLimit": "300,000"
+        "Coverage":{
+            "GeneralLiability": "check",
+            "GeneralLiabilityOccurrenceLImit": "300,000",
+            "GeneralLiabilityAggregateLimit": "500,000"
+        }        
     }
 }

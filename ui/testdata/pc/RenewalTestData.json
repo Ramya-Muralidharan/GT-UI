@@ -43,16 +43,11 @@
             "UmbrellaLiabilitySelfInsuredRetention": "20,000"
         } 
     },
-   "renewal_04":{
-        "Address1": "4700 S MOLSTEADS LN",
-        "State": "Idaho",
-        "ZIPCode": "83814-5113",
-        "AddressType": "Billing",
-        "Organization": "a",
-        "ProductName": "Small Business",
-        "OrganizationType": "Common ownership",
-        "BusinessType": "Apartment",
-        "GeneralLiabilityOccurrenecLimit": "300,000",
+   "renewal_04":{        
+    "Coverage":{
+        "GeneralLiability": "update",
+        "GeneralLiabilityAggregateLimit": "300,000"
+    }, 
         "RenewalCode": "Renew - account consideration"
     },
   "renewal_05":{
