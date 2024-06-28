@@ -10,6 +10,7 @@ import { LOBWizardStepGroupSubmissionWizard_Ext } from "./scenarioPages/navigati
 import { CLLCpBlanketPopup_New } from "./scenarioPages/navigation/submissionWizard/CLLCpBlanketPopup_New"
 import { SubmissionWizard_New } from "./scenarioPages/navigation/submissionWizard/SubmissionWizard_New"
 import { JobWizardInfoBarSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/JobWizardInfoBarSubmissionWizard_Ext";
+import { USAPersonalAuto} from "./CoverageScenario/USAPersonalAuto"
 import world from "../../../util/gw/world"
 
 
@@ -22,6 +23,7 @@ const lOBWizardStepGroupSubmissionWizard_Ext = new LOBWizardStepGroupSubmissionW
 const cLLCpBlanketPopup_New = new CLLCpBlanketPopup_New()
 const submissionWizard_New = new SubmissionWizard_New()
 const jobWizardInfoBarSubmissionWizard_Ext = new JobWizardInfoBarSubmissionWizard_Ext()
+const uSAPersonalAuto = new USAPersonalAuto()
 
 export class NewSubmissionScenario {
   async selectProduct() {
@@ -40,15 +42,10 @@ export class NewSubmissionScenario {
     await usaPersonalAuto_New.SubmissionWizard_LineStandardCoveragesTab.click()
   }
   async personalVehicle() {
-    await usaPersonalAuto_New.SubmissionWizard_AddPersonalVehicle.click()
-    console.log('Adding Personal Vehicle')
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_BodyType.selectOptionByLabel(world.dataMap.get('BodyType'))
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_VIN.setValue(world.dataMap.get('VIN'))
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_Year.setValue(world.dataMap.get('Year'))
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_Make.setValue(world.dataMap.get('Make'))
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_Model.setValue(world.dataMap.get('Model'))
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_LicenseState.selectOptionByLabel(world.dataMap.get('LicenseState'))
-  }
+    await usaPersonalAuto_New.SubmissionWizard_AddPersonalVehicle.click()    
+    await uSAPersonalAuto.addVehicle()
+    }
+
   async vehicleDriver() {
     await usaPersonalAuto_New.UALPersonalVehiclePopup_VehicleDriverExposureCardTab.click()
     await usaPersonalAuto_New.UALPersonalVehiclePopup_AddDriver.click()
@@ -157,7 +154,7 @@ export class NewSubmissionScenario {
   async gWHomeownersLineScreen() {
     await submissionWizard_New.submissionWizardRefusalType.selectOptionByLabel(world.dataMap.get('RefusalType'))
   }
-  
+
   async commercialUmbrellaAccessliability() {
     console.log("On Commercial Umbrella And Excess Liability screen")
     await lOBWizardStepGroupSubmissionWizard_Ext.UmbrellaLiabilityorExcessLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiabilityorExcessLiability'))

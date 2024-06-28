@@ -35,7 +35,6 @@ When(/^the user quote the new submission for personal auto/, async function () {
     await usaPersonalAuto.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.personalVehicle()
-    await newSubmissionScenario.vehicleDriver()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.quote()
