@@ -10,7 +10,7 @@ import { LOBWizardStepGroupSubmissionWizard_Ext } from "./scenarioPages/navigati
 import { CLLCpBlanketPopup_New } from "./scenarioPages/navigation/submissionWizard/CLLCpBlanketPopup_New"
 import { SubmissionWizard_New } from "./scenarioPages/navigation/submissionWizard/SubmissionWizard_New"
 import { JobWizardInfoBarSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/JobWizardInfoBarSubmissionWizard_Ext";
-import { USAPersonalAuto } from "./CoverageScenario/USAPersonalAuto"
+import { USAPersonalAuto } from "./LOBLogic/USAPersonalAuto"
 import world from "../../../util/gw/world"
 
 

@@ -1,16 +1,16 @@
 const { When, Then } = require('@cucumber/cucumber')
 import { NewSubmissionScenario } from '../../../../ui/actions/gw/pc/NewSubmissionScenario'
 import { NavigationScenario } from '../../../../ui/actions/gw/pc/NavigationScenario'
-import { CommercialPropertyCoverage } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialPropertyCoverage'
-import { HomeownersProduct } from '../../../../ui/actions/gw/pc/CoverageScenario/HomeownersProduct'
-import { CommercialUmbrellaAccessliability } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialUmbrellaandExcessLiability'
-import { SmallBusiness } from '../../../../ui/actions/gw/pc/CoverageScenario/SmallBusiness'
+import { CommercialProperty } from '../../../../ui/actions/gw/pc/LOBLogic/CommercialProperty'
+import { HomeownersProduct } from '../../../../ui/actions/gw/pc/LOBLogic/HomeownersProduct'
+import { CommercialUmbrellaAccessliability } from '../../../../ui/actions/gw/pc/LOBLogic/CommercialUmbrellaandExcessLiability'
+import { SmallBusiness } from '../../../../ui/actions/gw/pc/LOBLogic/SmallBusiness'
 import { t } from 'testcafe'
-import { USAPersonalAuto } from '../../../../ui/actions/gw/pc/CoverageScenario/USAPersonalAuto'
+import { USAPersonalAuto } from '../../../../ui/actions/gw/pc/LOBLogic/USAPersonalAuto'
 
 const newSubmissionScenario = new NewSubmissionScenario()
 const navigationScenario = new NavigationScenario()
-const commercialPropertyCoverage = new CommercialPropertyCoverage()
+const commercialProperty = new CommercialProperty()
 const homeownersProduct = new HomeownersProduct()
 const commercialUmbrellaAccessliability = new CommercialUmbrellaAccessliability()
 const usaPersonalAuto = new USAPersonalAuto()
@@ -128,7 +128,7 @@ When(/^the user creates commercial policy/, async function () {
     await newSubmissionScenario.selectProduct()
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await commercialPropertyCoverage.coverageFilter()
+    await commercialProperty.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.addCpBlanket()
     await newSubmissionScenario.clickNext()
@@ -177,7 +177,7 @@ When(/^the user quote the new submission for commercial property/, async functio
     await newSubmissionScenario.selectProduct()
     await newSubmissionScenario.policyInfo()
     await newSubmissionScenario.clickNext()
-    await commercialPropertyCoverage.coverageFilter()
+    await commercialProperty.coverageFilter()
     await newSubmissionScenario.clickNext()
     await newSubmissionScenario.addCpBlanket()
     await newSubmissionScenario.clickNext()

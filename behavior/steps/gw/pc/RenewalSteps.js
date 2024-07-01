@@ -1,13 +1,13 @@
 const { When } = require("@cucumber/cucumber")
 import { NavigationScenario } from "../../../../ui/actions/gw/pc/NavigationScenario"
 import { RenewalScenario } from "../../../../ui/actions/gw/pc/RenewalScenario"
-import { CommercialPropertyCoverage } from '../../../../ui/actions/gw/pc/CoverageScenario/CommercialPropertyCoverage'
-import { HomeownersProduct } from '../../../../ui/actions/gw/pc/CoverageScenario/HomeownersProduct'
-import { SmallBusiness } from "../../../../ui/actions/gw/pc/CoverageScenario/SmallBusiness"
+import { CommercialProperty } from '../../../../ui/actions/gw/pc/LOBLogic/CommercialProperty'
+import { HomeownersProduct } from '../../../../ui/actions/gw/pc/LOBLogic/HomeownersProduct'
+import { SmallBusiness } from "../../../../ui/actions/gw/pc/LOBLogic/SmallBusiness"
 
 const navigationScenario = new NavigationScenario()
 const renewalScenario = new RenewalScenario()
-const commercialPropertyCoverage = new CommercialPropertyCoverage()
+const commercialProperty = new CommercialProperty()
 const homeownersProduct = new HomeownersProduct()
 const smallBusiness = new SmallBusiness()
 
@@ -19,7 +19,7 @@ When(/^the user performs renewal on commercial policy/, async function (t) {
     await navigationScenario.openPolicy(t.ctx.PolicyNumber)
     await renewalScenario.initiatePolicyRenewal()
     await renewalScenario.editPolicyTransaction()
-    await commercialPropertyCoverage.coverageFilter()
+    await commercialProperty.coverageFilter()
     await navigationScenario.renewalNext()
     await navigationScenario.renewalNext()
     await navigationScenario.renewalNext()
