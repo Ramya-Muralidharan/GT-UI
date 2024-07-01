@@ -1,6 +1,6 @@
 @claimcenter @designatedfunction
 Feature: Adding note in claim center
-    As a user, I want to Add Note in Claim Center
+    As a user, I want to add note in claim center
 
     @add_note_cc
     Scenario: Adding notes in a claim center

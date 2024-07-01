@@ -1,9 +1,9 @@
 @policycenter @designatedfunction
-Feature: Processing a renewal on Commercial Umbrella and Excess Liability
-    As a user, I want to process Renewal on Commercial Umbrella and Excess Liability policy
+Feature: Processing a renewal on commercial umbrella and excess liability
+    As a user, I want to process renewal on commercial umbrella and excess liability policy
 
     @renewal_co
-    Scenario: Creating Commercial Umbrella and Excess Liability Renewal
+    Scenario: Creating commercial umbrella and excess liability renewal
         Given the user logs into the policy center as "superuser"
         When the user loads "pc" data "newSubmission_03" from json "NewSubmissionTestData"
         And the user creates commercial account

@@ -1,7 +1,7 @@
 @policycenter @designatedfunction
 
-Feature: Add Note in policy center
-    As a user, I want to perform Add Note transaction in policy center
+Feature: Add note in policy center
+    As a user, I want to perform add note transaction in policy center
 
     @add_note_pc
     Scenario: Adding the note from the account level

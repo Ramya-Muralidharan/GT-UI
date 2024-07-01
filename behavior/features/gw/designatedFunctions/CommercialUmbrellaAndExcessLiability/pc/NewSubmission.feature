@@ -1,7 +1,7 @@
 @policycenter @designatedfunction
 
-Feature: Commercial Umbrella and Excess Liability new Submission
-    As a user, I want to perform create new submission(Quote, Bind and Issue)
+Feature: Commercial umbrella and excess liability new submission
+    As a user, I want to perform create new submission(quote, bind and issue)
 
     @bind_submission_co
     Scenario: Creating commercial umbrella and excess liability bind

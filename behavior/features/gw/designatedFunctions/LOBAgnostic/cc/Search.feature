@@ -18,7 +18,7 @@ Feature: Search menu in claim center
         Then the search contact details are loaded
 
     @searchPolicy_cc
-    Scenario Outline: Seaching with policy from Search Claims
+    Scenario Outline: Seaching with policy from search claims
         Given the user logs into the claims center as "superuser"
         When the user loads "cc" data "searchPolicy_01" from json "SearchPolicyTestData"
         And the user searches for the policy in Search Claims
@@ -31,4 +31,5 @@ Feature: Search menu in claim center
         And the user creates new FNOL
         And the user search with claim number
         And the user creates the recovery
-        Then the recovery is added successfully
+        And the user searches for the recovery details
+        Then the recovery details are added successfully

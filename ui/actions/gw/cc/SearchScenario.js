@@ -68,6 +68,10 @@ export class SearchScenario {
         await recoverySearch.recoverySearchRecoverySearchScreenRecoverySearchDVSearchAndResetInputSetSearchLinksInputSetSearch.click()
     }
 
+    async validateRecovery() {
+        await searchTableRecord(7, world.dataMap.get('RecoveryCategory'))
+    }
+
     async recoveryCreation() {
         await claimMenuActions_Ext.claimClaimMenuActions.click()
         await claimMenuActions_Ext.claimMenuActions_NewTransactionClaimMenuActions_NewOtherTrans.click()

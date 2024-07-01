@@ -1,6 +1,6 @@
 @policycenter @designatedfunction
 Feature: Processing a renewal on homeowners policy
-    As a user, I want to process Renewal on homeowners policy
+    As a user, I want to process renewal on homeowners policy
 
     @renewal_ho
     Scenario: Perform renewal on homeowners policy

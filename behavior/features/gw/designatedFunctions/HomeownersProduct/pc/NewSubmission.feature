@@ -1,7 +1,7 @@
 @policycenter @designatedfunction
 
-Feature: Homeowner new Submission
-    As a user, I want to perform create new submission(Quote, Bind and Issue)
+Feature: Homeowner new submission
+    As a user, I want to perform create new submission(quote, bind and issue)
 
     @bind_submission_ho
     Scenario: Creating homeowners bind
