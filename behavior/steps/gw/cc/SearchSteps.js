@@ -31,7 +31,7 @@ Then(/^the user searches for the recovery details/, async function (t) {
     await searchScenario.searchRecovery(t.ctx.claimNo);
 });
 
-When(/^the recovery details are added successfully/, async function (t) {
+When(/^the recovery details are added successfully/, async function () {
     await searchScenario.validateRecovery()
 });
 
