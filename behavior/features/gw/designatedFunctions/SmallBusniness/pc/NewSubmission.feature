@@ -1,7 +1,7 @@
 @policycenter @designatedfunction
 
-Feature: Small business new Submission
-    As a user, I want to perform create new submission(Quote, Bind and Issue)
+Feature: Small business new submission
+    As a user, I want to perform create new submission(quote, bind and issue)
 
     @bind_submission_sm
     Scenario: Creating small business bind

@@ -1,6 +1,6 @@
 @policycenter @designatedfunction
 Feature: Processing a renewal
-    As a user, I want to perform Renewal transaction on small business
+    As a user, I want to perform renewal transaction on small business
 
     @renewal_sm
     Scenario: Perform renewal on small business policy

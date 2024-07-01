@@ -1,9 +1,9 @@
 @policycenter @designatedfunction
 Feature: Processing a renewal on USAPersonalAuto policy
-    As a user, I want to process Renewal on USAPersonalAuto policy
+    As a user, I want to process renewal on usa personal auto policy
 
     @renewal_pa
-    Scenario: Perform renewal on USAPersonalAuto policy
+    Scenario: Perform renewal on usa personal auto policy
         Given the user logs into the policy center as "superuser"
         When the user loads "pc" data "newSubmission_01" from json "NewSubmissionTestData"
         And the user creates personal account

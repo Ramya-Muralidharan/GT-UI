@@ -1,7 +1,7 @@
 @policycenter @designatedfunction
 
-Feature: Add Activity in policy center
-    As a user, I want to perform Add Activity transaction in policy center
+Feature: Add activity in policy center
+    As a user, I want to perform add activity transaction in policy center
 
     @add_activity_pc
     Scenario: Adding the activity from the account level

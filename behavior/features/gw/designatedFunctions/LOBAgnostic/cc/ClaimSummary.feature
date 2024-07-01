@@ -1,6 +1,6 @@
 @claimcenter @designatedfunction
 Feature: View Claim Summary
-    As a user, I want to View Claim Summary Page
+    As a user, I want to view claim summary page
 
     @view_claim_summary @search_claim
     Scenario: Viewing the summary of an claim

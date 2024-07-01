@@ -27,8 +27,12 @@ When(/^the user creates the recovery/, async function () {
     await searchScenario.recoveryCreation();
 });
 
-Then(/^the recovery is added successfully/, async function (t) {
+Then(/^the user searches for the recovery details/, async function (t) {
     await searchScenario.searchRecovery(t.ctx.claimNo);
+});
+
+When(/^the recovery details are added successfully/, async function (t) {
+    await searchScenario.validateRecovery()
 });
 
 Then(/^the search contact details are loaded/, async function () {

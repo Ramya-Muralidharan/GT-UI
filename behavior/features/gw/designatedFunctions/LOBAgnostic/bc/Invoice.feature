@@ -1,6 +1,6 @@
 @billingcenter @designatedfunction
 Feature: Invoice in billing center
-    As a user, I want to update Invoices in Billing center
+    As a user, I want to update invoices in billing center
 
     @invoice_due
     Scenario: Updating billed date for an invoice due

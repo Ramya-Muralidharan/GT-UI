@@ -1,10 +1,10 @@
 @policycenter @designatedfunction
 
-Feature: Commercial Property new Submission
-    As a user, I want to perform create new submission(Quote, Bind and Issue)
+Feature: Commercial property new submission
+    As a user, I want to perform create new submission(quote, bind and issue)
 
     @quote_submission_cp
-    Scenario: Creating Commercial Property quote
+    Scenario: Creating commercial property quote
         Given the user logs into the policy center as "superuser"
         When the user loads "pc" data "newSubmission_04" from json "NewSubmissionTestData"
         And the user creates commercial account
@@ -12,7 +12,7 @@ Feature: Commercial Property new Submission
         Then the quote is saved successfully
 
     @bind_submission_cp
-    Scenario: Creating Commercial Property bind
+    Scenario: Creating commercial property bind
         Given the user logs into the policy center as "superuser"
         When the user loads "pc" data "newSubmission_04" from json "NewSubmissionTestData"
         And the user creates commercial account
@@ -21,7 +21,7 @@ Feature: Commercial Property new Submission
         Then the policy is bound successfully
 
     @issue_submission_cp
-    Scenario: Issuing Commercial Property
+    Scenario: Issuing commercial property
         Given the user logs into the policy center as "superuser"
         When the user loads "pc" data "newSubmission_04" from json "NewSubmissionTestData"
         And the user creates commercial account
