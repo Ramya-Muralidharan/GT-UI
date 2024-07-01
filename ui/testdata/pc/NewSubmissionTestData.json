@@ -20,12 +20,21 @@
     "newSubmission_01": {
         "ProductName": "USA Personal Auto",
         "OrganizationType": "Individual",
-        "BodyType": "ATV",
-        "LicenseState": "Idaho",
-        "VIN": "JH4KA2630HC019837",
-        "Year": "1987",
-        "Make": "Acura",
-        "Model": "Legend",
+        "AutoLiabilityPackage": "25/50/10",
+        "Vehicles": {
+            "Vehicle1": {
+                "BodyType": "ATV",
+                "LicenseState": "Idaho",
+                "VIN": "JH4KA2630HC019837",
+                "Year": "1987",
+                "Make": "Acura",
+                "Model": "Legend"
+            },
+            "Vehicle2": {
+                "BodyType": "ATV",
+                "VIN": "3G5DB03E42S524192"
+            }
+        },
         "Address1": "1737 HURLEY",
         "City": "Pewaukee",
         "State": "Florida",
@@ -50,9 +59,9 @@
         "Organization": "a",
         "RefusalType": "Cancelled",
         "Coverage": {
-        "IdentityTheftProtection": "check",
-        "IdentityTheftProtectionLimit": "15,000",
-        "IdentityTheftProtectionDeductible": "500"
+            "IdentityTheftProtection": "check",
+            "IdentityTheftProtectionLimit": "15,000",
+            "IdentityTheftProtectionDeductible": "500"
         }
     },
     "newSubmission_03": {
@@ -71,7 +80,7 @@
             "UmbrellaLiabilityProductandCompletedOperationsAggregateLImit": "1,000,000",
             "UmbrellaLiabilityUmbrellaCoverageForm": "Occurrence",
             "UmbrellaLiabilitySelfInsuredRetention": "10,000"
-        } 
+        }
     },
     "newSubmission_04": {
         "ProductName": "Go Commercial Property",
