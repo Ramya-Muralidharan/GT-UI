@@ -1,10 +1,12 @@
 
 import { selectCoverage, textInput, selectInput } from './ActionHelper'
-import { USAPersonalAuto_New } from '../scenarioPages/other/USAPersonalAuto_New'
+import { UALPersonalVehiclePopup_New } from '../scenarioPages/other/UALPersonalVehiclePopup_New'
+import { SubmissionWizard_New } from '../scenarioPages/navigation/submissionWizard/SubmissionWizard_New'
 import world from "../../../../util/gw/world"
 import { t } from 'testcafe'
 
-const usaPersonalAuto_New = new USAPersonalAuto_New()
+const uALPersonalVehiclePopup_New = new UALPersonalVehiclePopup_New()
+const submissionWizard_New = new SubmissionWizard_New()
 
 const pcfCategory = {
     selectInput: ['BodyType', 'LicenseState', 'PropertyProtectionInsurancePropertyProtectionLimits', 'LiabilityBodilyInjuryAndPropertyDamageAutoLiabilityPackage'],
@@ -59,10 +61,10 @@ export class USAPersonalAuto {
                         await textInput(dataKey)
                     }
                 }
-                await usaPersonalAuto_New.UALPersonalVehiclePopup_Ok.click()
+                await uALPersonalVehiclePopup_New.UALPersonalVehiclePopup_Ok.click()
                 i++
                 if (i < world.vehicleDataMap.size) {
-                    await usaPersonalAuto_New.SubmissionWizard_AddPersonalVehicle.click()
+                    await submissionWizard_New.SubmissionWizard_AddPersonalVehicle.click()
                     console.log("Adding next Vehicle")
                 }
             }

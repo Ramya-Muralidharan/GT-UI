@@ -2,7 +2,7 @@ import { Selector } from "testcafe";
 import { NextSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/NextSubmissionWizard_Ext.js";
 import { t } from "testcafe";
 import { PolicyInfoScreen } from "../../../pages/gw/generated/policysolutions/pages/lOBWizardStepGroup/policyInfo/PolicyInfoScreen.js";
-import { USAPersonalAuto_New } from "./scenarioPages/other/USAPersonalAuto_New.js";
+import { UALPersonalVehiclePopup_New } from "./scenarioPages/other/UALPersonalVehiclePopup_New.js";
 import { NewAPDPolicyInvolvedPartyPopup } from "../../../pages/gw/generated/policysolutions/pages/popup/New/NewAPDPolicyInvolvedPartyPopup.js";
 import { NewSubmission_Ext } from "./scenarioPages/policy/NewSubmission_Ext.js";
 import { generateRandomStringFunction } from '../../../util/gw/helper'
@@ -10,13 +10,13 @@ import { LOBWizardStepGroupSubmissionWizard_Ext } from "./scenarioPages/navigati
 import { CLLCpBlanketPopup_New } from "./scenarioPages/navigation/submissionWizard/CLLCpBlanketPopup_New"
 import { SubmissionWizard_New } from "./scenarioPages/navigation/submissionWizard/SubmissionWizard_New"
 import { JobWizardInfoBarSubmissionWizard_Ext } from "./scenarioPages/navigation/submissionWizard/JobWizardInfoBarSubmissionWizard_Ext";
-import { USAPersonalAuto} from "./CoverageScenario/USAPersonalAuto"
+import { USAPersonalAuto } from "./CoverageScenario/USAPersonalAuto"
 import world from "../../../util/gw/world"
 
 
 const nextSubmissionWizard_Ext = new NextSubmissionWizard_Ext()
 const policyInfoScreen = new PolicyInfoScreen()
-const usaPersonalAuto_New = new USAPersonalAuto_New()
+const uALPersonalVehiclePopup_New = new UALPersonalVehiclePopup_New()
 const newAPDPolicyInvolvedPartyPopup = new NewAPDPolicyInvolvedPartyPopup()
 const newSubmission_Ext = new NewSubmission_Ext()
 const lOBWizardStepGroupSubmissionWizard_Ext = new LOBWizardStepGroupSubmissionWizard_Ext()
@@ -36,21 +36,22 @@ export class NewSubmissionScenario {
   async policyInfo() {
     console.log("On Policy Info screen")
     await policyInfoScreen.accountInfoInputSetOrganizationType.selectOptionByLabel(world.dataMap.get('OrganizationType'))
+  }
 
-  }
   async usaPersonalAutoStandardCoverages() {
-    await usaPersonalAuto_New.SubmissionWizard_LineStandardCoveragesTab.click()
+    await submissionWizard_New.SubmissionWizard_LineStandardCoveragesTab.click()
   }
+
   async personalVehicle() {
-    await usaPersonalAuto_New.SubmissionWizard_AddPersonalVehicle.click()    
+    await submissionWizard_New.SubmissionWizard_AddPersonalVehicle.click()
     await uSAPersonalAuto.addVehicle()
-    }
+  }
 
   async vehicleDriver() {
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_VehicleDriverExposureCardTab.click()
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_AddDriver.click()
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_PolicyDriverMenuIcon.click()
-    await usaPersonalAuto_New.UALPersonalVehiclePopup_NewPerson.click()
+    await uALPersonalVehiclePopup_New.UALPersonalVehiclePopup_VehicleDriverExposureCardTab.click()
+    await uALPersonalVehiclePopup_New.UALPersonalVehiclePopup_AddDriver.click()
+    await uALPersonalVehiclePopup_New.UALPersonalVehiclePopup_PolicyDriverMenuIcon.click()
+    await uALPersonalVehiclePopup_NewUALPersonalVehiclePopup_NewPerson.click()
     await newAPDPolicyInvolvedPartyPopup.newAPDPolicyInvolvedPartyPopupContactDetailScreenNewPolicyContactRoleDetailsCVPolicyContactDetailsDVPolicyContactRoleNameInputSetGlobalPersonNameInputSetFirstName.setValue(generateRandomStringFunction(5))
     await newAPDPolicyInvolvedPartyPopup.newAPDPolicyInvolvedPartyPopupContactDetailScreenNewPolicyContactRoleDetailsCVPolicyContactDetailsDVPolicyContactRoleNameInputSetGlobalPersonNameInputSetLastName.setValue(generateRandomStringFunction(5))
     await newAPDPolicyInvolvedPartyPopup.NewAPDPolicyInvolvedPartyPopup_LinkAddressMenuMenuIcon.click()
@@ -59,7 +60,6 @@ export class NewSubmissionScenario {
     await nextSubmissionWizard_Ext.ok_Button.click()
     console.log('Added Driver in Personal Vehicle screen')
     await nextSubmissionWizard_Ext.ok_Button.click()
-
   }
 
   async verifyQuote() {
@@ -68,6 +68,7 @@ export class NewSubmissionScenario {
     console.log(status)
     await t.expect(status).eql('Submission (Quoted)')
   }
+
   async saveQuote() {
     t.ctx.QuoteNumber = await submissionWizard_New.submissionWizard_QuoteNumber.component.textContent
     console.log(t.ctx.QuoteNumber, 'Submission is quoted successfully')
@@ -160,8 +161,8 @@ export class NewSubmissionScenario {
     await lOBWizardStepGroupSubmissionWizard_Ext.UmbrellaLiabilityorExcessLiability.selectOptionByLabel(world.dataMap.get('UmbrellaLiabilityorExcessLiability'))
     await lOBWizardStepGroupSubmissionWizard_Ext.UmbrellaLiabilityUmbrellaCoverages.click()
   }
- 
-  async smallBusinessTabSelection(tabSection){
+
+  async smallBusinessTabSelection(tabSection) {
     switch (tabSection) {
       case ('SmallBusiness'):
         await submissionWizard_New.submissionWizardSmallBusienssTab.click()

@@ -1,14 +1,14 @@
 import { LOBWizardStepGroupSubmissionWizard_Ext } from "../scenarioPages/navigation/submissionWizard/LOBWizardStepGroupSubmissionWizard_Ext"
-import { USAPersonalAuto_New } from "../scenarioPages/other/USAPersonalAuto_New";
+import { UALPersonalVehiclePopup_New } from "../scenarioPages/other/UALPersonalVehiclePopup_New";
 import world from "../../../../util/gw/world"
 import { t } from "testcafe";
 
 const lOBWizardStepGroupSubmissionWizard_Ext = new LOBWizardStepGroupSubmissionWizard_Ext()
-const uSAPersonalAuto_New = new USAPersonalAuto_New()
+const uALPersonalVehiclePopup_New = new UALPersonalVehiclePopup_New()
 
 const ModIdentifier = {
     coverage: lOBWizardStepGroupSubmissionWizard_Ext,
-    vehicle: uSAPersonalAuto_New
+    vehicle: uALPersonalVehiclePopup_New
 };
 
 //Function to check and uncheck coveareg checkbox
@@ -29,7 +29,7 @@ export async function textInput(fieldName) {
             await ModIdentifier.coverage[fieldName].setValue(world.coverageDataMap.get(fieldName))
             break;
         case ('Vehicles'):
-            await ModIdentifier.vehicle[fieldName].setValue(t.ctx.Data)
+            await ModIdentifier.vehicle[fieldName].setValue(t.ctx.VehicleData)
             break;
         default:
             throw new Error('Incorrect module provided')
@@ -43,10 +43,9 @@ export async function selectInput(fieldName) {
             await ModIdentifier.coverage[fieldName].selectOptionByLabel(world.coverageDataMap.get(fieldName))
             break;
         case ('Vehicles'):
-            await ModIdentifier.vehicle[fieldName].selectOptionByLabel(t.ctx.Data)
+            await ModIdentifier.vehicle[fieldName].selectOptionByLabel(t.ctx.VehicleData)
             break;
         default:
             throw new Error('Incorrect module provided')
     }
-
 }
